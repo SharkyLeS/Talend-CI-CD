@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <model:JobletProcess defaultContext="Default">
+    <context confirmationNeeded="false" name="Default"/>
+    <parameters>
+      <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+      <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+      <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+      <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+      <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+      <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+      <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+      <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+      <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="ORACLE_10"/>
+      <routinesParameter id="_hV9lMAKeEeii_ZlQkWWJDw" name="DataOperation"/>
+      <routinesParameter id="_hWkpMAKeEeii_ZlQkWWJDw" name="Mathematical"/>
+      <routinesParameter id="_hXBVIAKeEeii_ZlQkWWJDw" name="Numeric"/>
+      <routinesParameter id="_hXdaAAKeEeii_ZlQkWWJDw" name="Relational"/>
+      <routinesParameter id="_hUK1cAKeEeii_ZlQkWWJDw" name="SQLike"/>
+      <routinesParameter id="_hXw8AAKeEeii_ZlQkWWJDw" name="StringHandling"/>
+      <routinesParameter id="_hYWx4AKeEeii_ZlQkWWJDw" name="TalendDataGenerator"/>
+      <routinesParameter id="_hY8nwAKeEeii_ZlQkWWJDw" name="TalendDate"/>
+      <routinesParameter id="_hZQJwAKeEeii_ZlQkWWJDw" name="TalendString"/>
+      <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+      <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+      <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    </parameters>
+    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-64" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="EXTERNAL" name="MAP" value=""/>
+      <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+      <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+      <elementParameter field="IMAGE" name="PREVIEW" value="_1-fmYDl7EeiKX_-QIsGrsQ-tMap_2-PREVIEW.bmp"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+      <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+      <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="5000000"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+      <metadata connector="FLOW" name="out2">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      </metadata>
+      <nodeData xsi:type="TalendMapper:MapperData">
+        <uiProperties/>
+        <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+        <outputTables name="out2" sizeState="INTERMEDIATE">
+          <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,row1.date_a_traiter)  " name="date_test" nullable="true" type="id_Date"/>
+        </outputTables>
+        <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+          <mapperTableEntries name="date_a_traiter" nullable="true" type="id_String"/>
+        </inputTables>
+      </nodeData>
+    </node>
+    <node componentName="tMSSqlSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlSP_1"/>
+      <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+      <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+      <elementParameter field="TEXT" name="HOST" value="context.b2bNewRefServer"/>
+      <elementParameter field="TEXT" name="PORT" value="context.b2bNewRefPort"/>
+      <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" value="context.b2bNewRefDataBase"/>
+      <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+      <elementParameter field="TEXT" name="USER" value="context.b2bNewRefLogin"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SLbl1YGd/pWF1xJ9Pctqh2ypoQ+t1ZNwFafMrswrIkk9NPL9EQlSvJA/8/3P2oqk5ovSlreh"/>
+      <elementParameter field="TEXT" name="SP_NAME" value="&quot;dbo.spSalesForce_GetItems&quot;"/>
+      <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
+      <elementParameter field="COLUMN_LIST" name="RETURN" value="test"/>
+      <elementParameter field="TABLE" name="SP_ARGS">
+        <elementValue elementRef="COLUMN" value="date_test"/>
+        <elementValue elementRef="TYPE" value="IN"/>
+        <elementValue elementRef="COLUMN" value="test"/>
+        <elementValue elementRef="TYPE" value="RECORDSET"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tMSSqlSP_1">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="test" nullable="true" pattern="" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tParseRecordSet" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tParseRecordSet_1"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="PREV_COLUMN_LIST" name="RECORDSET_FIELD" value="test"/>
+      <elementParameter field="TABLE" name="ATTRIBUTE_TABLE">
+        <elementValue elementRef="SCHEMA_COLUMN" value="date_test"/>
+        <elementValue elementRef="VALUE" value=""/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+        <elementValue elementRef="VALUE" value="&quot;Name&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SKU"/>
+        <elementValue elementRef="VALUE" value="&quot;SKU&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="EAN"/>
+        <elementValue elementRef="VALUE" value="&quot;EAN&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="MFPN"/>
+        <elementValue elementRef="VALUE" value="&quot;MFPN&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Active"/>
+        <elementValue elementRef="VALUE" value="&quot;Active&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="PRID"/>
+        <elementValue elementRef="VALUE" value="&quot;PRID&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="VATCategoryId"/>
+        <elementValue elementRef="VALUE" value="&quot;VATCategoryId&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="VATRate"/>
+        <elementValue elementRef="VALUE" value="&quot;VATRate&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="VATType"/>
+        <elementValue elementRef="VALUE" value="&quot;VATType&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="ItemGroup"/>
+        <elementValue elementRef="VALUE" value="&quot;ItemGroup&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="ItemType"/>
+        <elementValue elementRef="VALUE" value="&quot;ItemType&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Support"/>
+        <elementValue elementRef="VALUE" value="&quot;Support&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="WEEETax"/>
+        <elementValue elementRef="VALUE" value="&quot;WEEETax&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CopyTax"/>
+        <elementValue elementRef="VALUE" value="&quot;CopyTax&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SellingPrice"/>
+        <elementValue elementRef="VALUE" value="&quot;SellingPrice&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="PurchasePrice"/>
+        <elementValue elementRef="VALUE" value="&quot;PurchasePrice&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="MFName"/>
+        <elementValue elementRef="VALUE" value="&quot;MFName&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="EnergyClass"/>
+        <elementValue elementRef="VALUE" value="&quot;EnergyClass&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="EnergyClassURL"/>
+        <elementValue elementRef="VALUE" value="&quot;EnergyClassURL&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="UpdateDate"/>
+        <elementValue elementRef="VALUE" value="&quot;UpdateDate&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Availability"/>
+        <elementValue elementRef="VALUE" value="&quot;Availability&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="MainImageURL"/>
+        <elementValue elementRef="VALUE" value="&quot;MainImageURL&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="B2C"/>
+        <elementValue elementRef="VALUE" value="&quot;B2C&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="B2B"/>
+        <elementValue elementRef="VALUE" value="&quot;B2B&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Available"/>
+        <elementValue elementRef="VALUE" value="&quot;Available&quot;"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tParseRecordSet_1">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Name" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SKU" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EAN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFPN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Active" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PRID" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATCategoryId" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATRate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemGroup" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Support" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="WEEETax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="CopyTax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SellingPrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PurchasePrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClass" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClassURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="UpdateDate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Availability" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MainImageURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2C" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2B" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Available" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_2"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tReplicate_2">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Name" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SKU" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EAN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFPN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Active" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PRID" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATCategoryId" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATRate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemGroup" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Support" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="WEEETax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="CopyTax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SellingPrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PurchasePrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClass" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClassURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="UpdateDate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Availability" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MainImageURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2C" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2B" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Available" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="EXTERNAL" name="MAP" value=""/>
+      <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+      <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+      <elementParameter field="IMAGE" name="PREVIEW" value="_1-fmYDl7EeiKX_-QIsGrsQ-tMap_3-PREVIEW.bmp"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+      <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+      <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="5000000"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+      <metadata connector="FLOW" name="desc_ok">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Name" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SKU" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EAN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFPN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Description" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Active" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PRID" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATCategoryId" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATRate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemGroup" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Support" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="WEEETax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="CopyTax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SellingPrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PurchasePrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClass" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClassURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="UpdateDate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Availability" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MainImageURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2C" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2B" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Available" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      </metadata>
+      <nodeData xsi:type="TalendMapper:MapperData">
+        <uiProperties/>
+        <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+        <outputTables name="desc_ok" sizeState="INTERMEDIATE">
+          <mapperTableEntries expression="row9.date_test" name="date_test" nullable="true" type="id_Date"/>
+          <mapperTableEntries expression="row9.Name" name="Name" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.SKU" name="SKU" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.EAN" name="EAN" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.MFPN" name="MFPN" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="" name="Description" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.Active" name="Active" nullable="true" type="id_Boolean"/>
+          <mapperTableEntries expression="row9.PRID" name="PRID" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.VATCategoryId" name="VATCategoryId" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.VATRate" name="VATRate" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.VATType" name="VATType" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.ItemGroup" name="ItemGroup" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.ItemType" name="ItemType" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.Support" name="Support" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.WEEETax" name="WEEETax" nullable="true" type="id_Double"/>
+          <mapperTableEntries expression="row9.CopyTax" name="CopyTax" nullable="true" type="id_Double"/>
+          <mapperTableEntries expression="row9.SellingPrice" name="SellingPrice" nullable="true" type="id_Double"/>
+          <mapperTableEntries expression="row9.PurchasePrice" name="PurchasePrice" nullable="true" type="id_Double"/>
+          <mapperTableEntries expression="row9.MFName" name="MFName" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.EnergyClass" name="EnergyClass" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.EnergyClassURL" name="EnergyClassURL" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.UpdateDate" name="UpdateDate" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.Availability" name="Availability" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.MainImageURL" name="MainImageURL" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row9.B2C" name="B2C" nullable="true" type="id_Boolean"/>
+          <mapperTableEntries expression="row9.B2B" name="B2B" nullable="true" type="id_Boolean"/>
+          <mapperTableEntries expression="row9.Available " name="Available" nullable="true" type="id_Boolean"/>
+        </outputTables>
+        <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
+          <mapperTableEntries name="date_test" nullable="true" type="id_Date"/>
+          <mapperTableEntries name="Name" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SKU" nullable="true" type="id_String"/>
+          <mapperTableEntries name="EAN" nullable="true" type="id_String"/>
+          <mapperTableEntries name="MFPN" nullable="true" type="id_String"/>
+          <mapperTableEntries name="Active" nullable="true" type="id_Boolean"/>
+          <mapperTableEntries name="PRID" nullable="true" type="id_String"/>
+          <mapperTableEntries name="VATCategoryId" nullable="true" type="id_String"/>
+          <mapperTableEntries name="VATRate" nullable="true" type="id_String"/>
+          <mapperTableEntries name="VATType" nullable="true" type="id_String"/>
+          <mapperTableEntries name="ItemGroup" nullable="true" type="id_String"/>
+          <mapperTableEntries name="ItemType" nullable="true" type="id_String"/>
+          <mapperTableEntries name="Support" nullable="true" type="id_String"/>
+          <mapperTableEntries name="WEEETax" nullable="true" type="id_Double"/>
+          <mapperTableEntries name="CopyTax" nullable="true" type="id_Double"/>
+          <mapperTableEntries name="SellingPrice" nullable="true" type="id_Double"/>
+          <mapperTableEntries name="PurchasePrice" nullable="true" type="id_Double"/>
+          <mapperTableEntries name="MFName" nullable="true" type="id_String"/>
+          <mapperTableEntries name="EnergyClass" nullable="true" type="id_String"/>
+          <mapperTableEntries name="EnergyClassURL" nullable="true" type="id_String"/>
+          <mapperTableEntries name="UpdateDate" nullable="true" type="id_String"/>
+          <mapperTableEntries name="Availability" nullable="true" type="id_String"/>
+          <mapperTableEntries name="MainImageURL" nullable="true" type="id_String"/>
+          <mapperTableEntries name="B2C" nullable="true" type="id_Boolean"/>
+          <mapperTableEntries name="B2B" nullable="true" type="id_Boolean"/>
+          <mapperTableEntries name="Available" nullable="true" type="id_Boolean"/>
+        </inputTables>
+      </nodeData>
+    </node>
+    <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_3"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tReplicate_3">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Name" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SKU" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EAN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFPN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Description" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Active" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PRID" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATCategoryId" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATRate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemGroup" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Support" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="WEEETax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="CopyTax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SellingPrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PurchasePrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClass" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClassURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="UpdateDate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Availability" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MainImageURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2C" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2B" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Available" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_4"/>
+      <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+      <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+      <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+      <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
+      <elementParameter field="FILE" name="FILENAME" value="context.b2bSFInFnacProductTmp + context.slhOuAslh + &quot;spSalesForce_GetItems.csv&quot;"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
+      <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\r\n&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="APPEND" value="false"/>
+      <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+      <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+      <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="true"/>
+      <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+      <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+      <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
+      <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+      <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+      <elementParameter field="CHECK" name="CREATE" value="true"/>
+      <elementParameter field="CHECK" name="SPLIT" value="false"/>
+      <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000"/>
+      <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+      <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1"/>
+      <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+      <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+      <metadata connector="FLOW" name="tFileOutputDelimited_4">
+        <column comment="" key="false" length="0" name="date_test" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Name" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SKU" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EAN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFPN" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Description" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Active" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PRID" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATCategoryId" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATRate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="VATType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemGroup" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="ItemType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Support" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="WEEETax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="CopyTax" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="SellingPrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="PurchasePrice" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MFName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClass" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="EnergyClassURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="UpdateDate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Availability" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="MainImageURL" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2C" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="B2B" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+        <column comment="" key="false" length="0" name="Available" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tMap_2">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_a_traiter"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMSSqlSP_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="out2"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row" lineStyle="0" metaname="tMSSqlSP_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlSP_1" target="tParseRecordSet_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tParseRecordSet_1" offsetLabelX="0" offsetLabelY="0" source="tParseRecordSet_1" target="tReplicate_2">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SKU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EAN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFPN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Active"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PRID"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATCategoryId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATRate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemGroup"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Support"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WEEETax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CopyTax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SellingPrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PurchasePrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFName"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClass"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClassURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="UpdateDate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Availability"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MainImageURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2C"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2B"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Available"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DisplayUrl"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tReplicate_2" offsetLabelX="0" offsetLabelY="0" source="tReplicate_2" target="tMap_3">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SKU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EAN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFPN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Active"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PRID"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATCategoryId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATRate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemGroupId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemTypeId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SupportId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WEEETax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CopyTax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SellingPrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PurchasePrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFName"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClass"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClassURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="UpdateDate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Availability"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MainImageURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2C"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2B"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="desc_ok" lineStyle="0" metaname="desc_ok" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tReplicate_3">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SKU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EAN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFPN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Active"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PRID"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATCategoryId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATRate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemGroup"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Support"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WEEETax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CopyTax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SellingPrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PurchasePrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFName"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClass"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClassURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="UpdateDate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Availability"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MainImageURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2C"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2B"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Available"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="desc_ok"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row40" lineStyle="0" metaname="tReplicate_3" offsetLabelX="0" offsetLabelY="0" source="tReplicate_3" target="tFileOutputDelimited_4">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_test"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SKU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EAN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFPN"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Active"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PRID"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATCategoryId"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATRate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="VATType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemGroup"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="ItemType"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Support"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WEEETax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CopyTax"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SellingPrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="PurchasePrice"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MFName"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClass"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="EnergyClassURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="UpdateDate"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Availability"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="MainImageURL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2C"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="B2B"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="Available"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row40"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="-256" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+      <elementParameter field="CHECK" name="START" value="true"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" name="INPUT_1">
+        <column comment="" key="false" length="0" name="date_a_traiter" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </jobletNodes>
+  </model:JobletProcess>
+  <TalendProperties:ByteArray innerContent="89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7AF40000032C49444154789CC5975B4853711CC7BF1114410F3D48F510D45BD09B19E483B76A1084D9249D9897D49A9754EAC9A07A28A3B7E84AE55113350DCD4B8E5444F38268B99CBD88D10531422B2B3412F421EADBEF781CD8B6B3EDCC5983CF7E3B3BDB7E9FF3FB7FCF390C24F13F597C0A0F0F7FAFE27CF35F6E07FC0311FBF6CCE554623E5B01A34CA18C34EDFE955C81F280048C905D8FED795598CFAF06CF7781975E8045FD604E23682D0553CAF0D6F0121821AF1AB367EAC13BAFC1AA0F60D9047875143CFB0CCC7A02669483490A4602CA8080E5B81D7D1D2CB915E0CD5760E334D839073EFE0A968CCB2446C0DCA760429D4C4296254E41845E53DD0CF814A8414F619DD6D0F60D1CFC09B6CE6853B8FC123CD50DC637C91444E0A8826623021E71FDA2B5121F0B44E0864CE0C124D8F405AC9D026FBD012F4816AC9DE0E1063055041215F41A5902BF0432ABD09B5B035E7480D7C6C0DBD2F8BAC814CBF84F4B10532403A65A30DDC70402CEC0B14A5CB1DE07F365D44512BA737609DF73B0B00F3CDE0EC63E0263CAB50C1C519018F40CC8634D6639E633E4144C6F93D477688D936CE0213933A224A0C9D23C45C1ACB7A30E3803F2D81893BDA5E6440998269330CB721C7C28475D051E28D5469FA6602156C136A3A7A15F02533F2698DA14C6B08490FD96BB78671591938A469682DF6605E37B15348429D810F4EB80B3B95A97A61122AC8F2B8165F97A4BF362A147D81AB40C389B378EDDA3AF2392C6EB8422A152D8B1E20C1869EE22922B3884CD016720D0E64B026B851C41F12B03A12633D58F7AC39FC60E07A32593D443F66FF2980155A05D6EA47D9231FB24393A4D8ECF909FE6C8EF0BC605A47A44DD171919FDD92D036A83D512181EFE1B75BF5B06822560B76B02523934E4194F02869740BD2C7B12181CD404A4BA3130A061D95944E9D962580072CBC5B0E0F08E2AD0DFAF8F9BC0E20BFF9620DAD712F4F4681390AA8BDB120453A0AB4B1390AACB4A32E053A0A3431390AA4BC019F047A0AD4D1390BA486BAB3BAB9A019B4D1390AACBAA66A0B9591390AA8B6E069CD7FC5DF1058BB86E3B05BCFDD56A6860B429D44C15E7F5DF75DB63065C7EB05BC5CBF64AFF9CB6B865E07FF1073F036B3DCBCB274D0000000049454E44AE426082"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_21f33f23-141a-4dcb-b9fa-fd93083b661d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Tmapczq+yKCqUFZ6O/V+ulw9Opd9s5+cTrakErdoIX6pSd+1XUq9x0G1nbeciYzcGscDSXkqaLW1
+7pX8CvCvsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_08e04cb0-940e-4b4f-b218-0fb45f342dc5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lkLivAsCXgaEdFC7+XYsFMqiDuS+zKD9QESxmcKXDJmzivRd8RFFsfDN9JLDzac/vx7lMlmJ1GFK
+OtZldT/fGw==</DigestValue></Reference></SignedInfo><SignatureValue>C3c5AI/PTkx33uB9rT7ZNbkTqXrCXNpc8rymGc2x9fO3/SZvXKKQcJ3+cXpE1CMes7fMCOWRZtiU
+2uZ701mGzm+UUouTAmmPwhayckNt6rCn7imrCFNmT2t9CBqJn6qs3piADMOksaVUD+7b6AsQ2hGp
+Rc7DiIXvt5IHB4oRv1UpZAk4xOe6cx3kSVLR6B49rsOLzdbvPPiaxaC/s9WxHCBkX19ke/g3ORYr
+IqMfpzjbOFr+vvDEWWEPziRtslhbv4OTxWjjNhPa4Q7drozEql0tPN8nreVEfFHFcswXpSg9cFO+
+QccmgSzEk4O0fuJ3zShnKWlOht4/MWt8GXtsuw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_08e04cb0-940e-4b4f-b218-0fb45f342dc5" Target="#_21f33f23-141a-4dcb-b9fa-fd93083b661d"><Timestamp>2020-08-31 09:00:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

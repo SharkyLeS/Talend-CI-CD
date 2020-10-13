@@ -1,0 +1,1974 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="td_exec_parallele" prompt="td_exec_parallele?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host" prompt="td_export_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_password" prompt="td_export_host_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_username" prompt="td_export_host_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_database" prompt="td_export_param_database?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_host" prompt="td_export_param_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_password" prompt="td_export_param_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_username" prompt="td_export_param_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_script" prompt="td_export_script?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_list_tables_export" prompt="td_list_tables_export?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_param_env" prompt="td_param_env?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_Password" value="enc:system.encryption.key.v1:B+ELG1NaakmhVeaPLxgIaQrXifI5VoZZv73RbD9ZOAk+bQIwwAQ="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_user"/>
+  </context>
+  <context confirmationNeeded="false" name="REC_DARTY">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvrec1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="td_exec_parallele" prompt="td_exec_parallele?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host" prompt="td_export_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_password" prompt="td_export_host_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_username" prompt="td_export_host_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_database" prompt="td_export_param_database?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_host" prompt="td_export_param_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_password" prompt="td_export_param_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_username" prompt="td_export_param_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_script" prompt="td_export_script?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_list_tables_export" prompt="td_list_tables_export?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_param_env" prompt="td_param_env?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_Password" value="enc:system.encryption.key.v1:USDg3xPTAOtXldnJiZAzcZnIeroQomDQczBLwG2aurXDXQV37Ss="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_user"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD_DARTY">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpprd1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="td_exec_parallele" prompt="td_exec_parallele?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host" prompt="td_export_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_password" prompt="td_export_host_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_username" prompt="td_export_host_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_database" prompt="td_export_param_database?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_host" prompt="td_export_param_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_password" prompt="td_export_param_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_username" prompt="td_export_param_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_script" prompt="td_export_script?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_list_tables_export" prompt="td_list_tables_export?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_param_env" prompt="td_param_env?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_Password" value="enc:system.encryption.key.v1:ItDLntOxSqZM6K7isZ0Jr5SRZSAL1YMO+zpBE2v8Wt2yNoPNnWQ="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_user"/>
+  </context>
+  <context confirmationNeeded="false" name="DEV_DARTY">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="td_exec_parallele" prompt="td_exec_parallele?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host" prompt="td_export_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_password" prompt="td_export_host_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_host_username" prompt="td_export_host_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_database" prompt="td_export_param_database?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_host" prompt="td_export_param_host?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_password" prompt="td_export_param_password?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_param_username" prompt="td_export_param_username?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_export_script" prompt="td_export_script?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_list_tables_export" prompt="td_list_tables_export?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="td_param_env" prompt="td_param_env?" promptNeeded="false" repositoryContextId="_pevewLXKEeiVU8vp-uzp7w" type="id_String" value="null"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_Password" value="enc:system.encryption.key.v1:YCPDFFlFKc0HPwOVTgXjDNpYglo1dx8ykmVlt0wZRfO9yXjkRIk="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_KynuUP0KEeq6s-5NnII35w" type="id_String" value="talend_user"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="34"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="224"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="true"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:mFg0xsuuFJyBXj9hwEDJseUkr9Fa5QbRrlvSZscE"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend/FNACDARTY/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" show="false" value="_3eWoUP0JEeq6s-5NnII35w"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="URL" show="false" value=""/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="context.AMC_V7_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.AMC_V7_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.AMC_V7_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="context.AMC_V7_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.AMC_V7_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.AMC_V7_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.AMC_V7_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:oNqYXlEbE8iSsn/Q8nMH6/LR3Fp9f2QdyGiPnY2jJThY7sox4qJUaMdXQk/hmPbP4VS+"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;statcatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;logcatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;flowmetercatcher&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_icMU4EikEeihcO-XxTeHYw" name="DataOperation"/>
+    <routinesParameter id="_idEeoEikEeihcO-XxTeHYw" name="Mathematical"/>
+    <routinesParameter id="_idmDEEikEeihcO-XxTeHYw" name="Numeric"/>
+    <routinesParameter id="_ieVC4EikEeihcO-XxTeHYw" name="Relational"/>
+    <routinesParameter id="_iX_KUEikEeihcO-XxTeHYw" name="SQLike"/>
+    <routinesParameter id="_ie5qoEikEeihcO-XxTeHYw" name="StringHandling"/>
+    <routinesParameter id="_ifkZAEikEeihcO-XxTeHYw" name="TalendDataGenerator"/>
+    <routinesParameter id="_igPHYEikEeihcO-XxTeHYw" name="TalendDate"/>
+    <routinesParameter id="_ig-uQEikEeihcO-XxTeHYw" name="TalendString"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    <routinesParameter id="_vL2V8FqNEei_XfYzc95zxg" name="JobletFluxBaseVersHadoop"/>
+    <routinesParameter id="_uwlkMD1rEeinEKNqHdAwXQ" name="Number"/>
+    <routinesParameter id="_JAZ3IOthEeq_ptn1x42mDg" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_2"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;GENERATE_ID_EXPORT&quot;"/>
+      <elementValue elementRef="VALUE" value="String.format(&quot;LOT1_INDUS_%s&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd_HH:mm:ss.SSS&quot;,new Date())).toUpperCase() "/>
+      <elementValue elementRef="KEY" value="&quot;START_DATE&quot;"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-dd_HH:mm:ss.SSS&quot;,new Date())"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="PARAM_FLUX_TD" name="tSetGlobalVar_2">
+      <column comment="" key="false" length="0" name="ID_EXPORT" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STATUS" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STEP" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tTeradataInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="TERADATA"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="context.td_export_param_host"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="context.td_export_param_database"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="context.td_export_param_username"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:0VnG+f7gPjbEaZieDiDLwaSgMWQwUqATN0mziVeed7jsQSqG0bpbAVxTZ5nJFQh4IelRbQ9HC/IQy9p1"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="(String)globalMap.get(&quot;EXEC_ALIM_TABLE&quot;)"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="String.format(&quot;select ID_EXPORT,STATUS,STEP from %s.%s where id_export like 'LOT1_INDUS_%%' and status&lt;&gt;'finish'&quot;,context.td_export_param_database,(String)globalMap.get(&quot;EXEC_ALIM_TABLE&quot;))  "/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="teradata_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_EXPORT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STEP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="PARAM_FLUX_TD" name="tTeradataInput_1">
+      <column comment="" key="false" length="0" name="ID_EXPORT" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STATUS" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STEP" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_3"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;LAST_ID_EXPORT&quot;"/>
+      <elementValue elementRef="VALUE" value="row28.ID_EXPORT"/>
+      <elementValue elementRef="KEY" value="&quot;STATUS&quot;"/>
+      <elementValue elementRef="VALUE" value="row28.STATUS"/>
+      <elementValue elementRef="KEY" value="&quot;STEP&quot;"/>
+      <elementValue elementRef="VALUE" value="row28.STEP"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="PARAM_FLUX_TD" name="tSetGlobalVar_3">
+      <column comment="" key="false" length="0" name="ID_EXPORT" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STATUS" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STEP" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_3"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="String.format(&quot;select coalesce('%s','%s')&quot;,(String)globalMap.get(&quot;LAST_ID_EXPORT&quot;),(String)globalMap.get(&quot;GENERATE_ID_EXPORT&quot;)).replace(&quot;'null'&quot;,&quot;null&quot;)"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_3"/>
+  </node>
+  <node componentName="tTeradataInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1024">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataInput_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="TERADATA"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="context.td_export_param_host"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="context.td_export_param_database"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="context.td_export_param_username"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:gqZJJ9q0oXjMPW6Tc22Ts6cLPeYES7q9jykXxulMitopf7mzdNpQ95vvvzLbkHGwag1Ma7GIrs9ueP38"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="(String)globalMap.get(&quot;EXEC_ALIM_TABLE&quot;)"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="String.format(&quot;select coalesce('%s','%s')&quot;,(String)globalMap.get(&quot;LAST_ID_EXPORT&quot;),(String)globalMap.get(&quot;GENERATE_ID_EXPORT&quot;)).replace(&quot;'null'&quot;,&quot;null&quot;)"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="teradata_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_EXPORT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="PARAM_FLUX_TD" name="tTeradataInput_2">
+      <column comment="" key="false" length="0" name="ID_EXPORT" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_4"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;ID_EXPORT&quot;"/>
+      <elementValue elementRef="VALUE" value="row29.ID_EXPORT"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="PARAM_FLUX_TD" name="tSetGlobalVar_4">
+      <column comment="" key="false" length="0" name="ID_EXPORT" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_4"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;ID_EXPORT: &quot; + ((String)globalMap.get(&quot;ID_EXPORT&quot;))"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_4"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_2"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="String.format(&quot;ERROR Flux déjà en cours d'exécution pour le MOTEUR DEDUP with ID_EXPORT = %s&quot;,(String)globalMap.get(&quot;ID_EXPORT&quot;))"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_2"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1376">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_5"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;TYPE_UPDATE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;update_status&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;LAST_STATUS&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;IN PROGRESS&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;STEP&quot;"/>
+      <elementValue elementRef="VALUE" value="globalMap.get(&quot;STEP&quot;)==null?&quot;&quot;:globalMap.get(&quot;STEP&quot;).toString()"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tSetGlobalVar_STEP_UPDATE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_5">
+      <column comment="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_base_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_cible" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_debut" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_fin" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="status" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="directory" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="etape" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="JBL_UPDATE_SUIVI_TD" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1536">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_UPDATE_SUIVI_TD_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_5"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_UPDATE_SUIVI_TD"/>
+    <elementParameter field="TEXT" name="HINT" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value=""/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1696">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_5"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;JOB LOT1 INDUS START &quot;+(String)globalMap.get(&quot;START_DATE&quot;) +&quot; STEP :&quot; +(String)globalMap.get(&quot;STEP&quot;)"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_5"/>
+  </node>
+  <node componentName="tParallelize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
+    <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
+    <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_16"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;TYPE_UPDATE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;update_step&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;LAST_STEP&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;UNION_PERSO_GROUPE&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_16"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2304" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_14"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;TYPE_UPDATE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;update_status&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;LAST_STATUS&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;error&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="TD_UPDATE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_14">
+      <column comment="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_base_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_cible" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_debut" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_fin" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="status" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="directory" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="etape" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="-8" offsetLabelY="-1" posX="2688" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_3"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;ERROR&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="6"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDie_ERROR"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_3"/>
+  </node>
+  <node componentName="tParallelize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_2"/>
+    <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
+    <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1536">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_12"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;TYPE_UPDATE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;update_status&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;LAST_STATUS&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;finish&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;NUMBER_OF_EXPORTED_LIGNES&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;0&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="TD_UPDATE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="PARAM_FLUX_TD" name="tSetGlobalVar_12">
+      <column comment="" key="false" length="0" name="ID_EXPORT" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STATUS" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STEP" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="-14" offsetLabelY="0" posX="640" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_18"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;TYPE_UPDATE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;create_delta_table&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;LAST_STEP&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;TBL_PERSO_ACCOUNT&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="STEP_UPDATE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_18">
+      <column comment="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_base_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_cible" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_debut" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_fin" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="status" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="directory" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="etape" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_13"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Traitement UNION_PERSO_GROUPE finit&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="5"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_13"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Querys"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ACCOUNT;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ACCOUNT&#13;&#10;SELECT &#13;&#10;CAST(CPT_ELEM_SRC AS VARCHAR(1))||'_'||TRIM(CAST(CPT_ELEM_ID AS VARCHAR(30))) AS CPTE_UNQ_ID,&#13;&#10;ACC.FLD_ACCOUNT_ID_PK AS CPT_ELEM_ID,&#13;&#10;1 AS CPT_ELEM_SRC, &#13;&#10;1 AS CPT_ELEM_ENSEIGNE, &#13;&#10;ACC.FLD_ACCOUNT_CREATEDATE AS CPT_ELEM_DT_CREA,&#13;&#10;ACC.FLD_ACCOUNT_LASTUPDT AS CPT_ELEM_DT_MAJ,&#13;&#10;LOWER(RGPDACC.FLD_ACCOUNT_LASTNAME) AS CPT_ELEM_NOM,&#13;&#10;LOWER(RGPDACC.FLD_ACCOUNT_FIRSTNAME) AS CPT_ELEM_PRENOM,&#13;&#10;CAST(RGPDACC.FLD_ACCOUNT_BIRTHDATE AS DATE FORMAT 'YY/MM/DD') AS CPT_ELEM_DTNAIS,&#13;&#10;CASE WHEN ACC.FLD_ACCOUNT_GENDER_FK = 1 THEN 0 &#13;&#10;&#9;WHEN ACC.FLD_ACCOUNT_GENDER_FK = 2 THEN 1 &#13;&#10;&#9;WHEN ACC.FLD_ACCOUNT_GENDER_FK = 3 THEN 2 &#13;&#10;&#9;WHEN ACC.FLD_ACCOUNT_GENDER_FK = 4 THEN 2 END AS GENDER_ID,&#13;&#10;CASE WHEN ACC.FLD_ACCOUNT_GENDER_FK = 1 THEN 0 &#13;&#10;&#9;WHEN ACC.FLD_ACCOUNT_GENDER_FK = 2 THEN 1 &#13;&#10;&#9;WHEN ACC.FLD_ACCOUNT_GENDER_FK = 3 THEN 2 &#13;&#10;&#9;WHEN ACC.FLD_ACCOUNT_GENDER_FK = 4 THEN 3 END AS CIVILITE_ID,&#13;&#10;NULL AS CSP,&#13;&#10;NULL AS CHILD_NB,&#13;&#10;CASE WHEN FLD_ACCOUNT_ISMIXEDACCOUNT = 1 THEN 3 &#13;&#10;&#9; WHEN FLD_ACCOUNT_ISPRO = 1 THEN 2 &#13;&#10;&#9;ELSE 1 END AS CATEGORY_ID,&#13;&#10;NULL AS CPT_ELEM_EXTERNAL_ID , &#13;&#10;ACC.FLD_ACCOUNT_REFERENCE AS REFERENCE,&#13;&#10;NULL AS CPT_ELEM_OPTIN , &#13;&#10;ADHESION.MEM_NUM,&#13;&#10;ACC.FLD_ACCOUNT_ADHERENTNUMBER AS ADHERENTNUMBER,&#13;&#10;RGPDACC.FLD_ACCOUNT_ADHERENTCARDNUMBER AS FLD_ACCOUNT_ADHERENTCARDNUMBER, &#13;&#10;NULL AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DWH_FWE_DWH.CUSTOMER_TBL_ACCOUNT ACC&#13;&#10;INNER JOIN ${DBENV}DWH_FWE_DWH.RGPD_CUSTOMER_TBL_ACCOUNT RGPDACC&#13;&#10;ON ACC.FLD_ACCOUNT_ID_PK = RGPDACC.FLD_ACCOUNT_ID_PK&#13;&#10;LEFT JOIN ${DBENV}DWH_FSA_DWH.SIEBEL_FNAC_ADH_GAM ADHESION&#13;&#10;ON LPAD(ACC.FLD_ACCOUNT_ADHERENTNUMBER, 10,'0') = LPAD(ADHESION.INTEGRATION_ID, 10,'0');&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ACCOUNT;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ADHESION;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ADHESION&#13;&#10;SELECT &#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID,&#13;&#10;CPT_ELEM_SRC,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;CPT_ELEM_DT_CREA,&#13;&#10;CPT_ELEM_DT_MAJ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM,&#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CPT_ELEM_EXTERNAL_ID ,&#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN , &#13;&#10;CLIENT.INTEGRATION_ID AS INTEGRATION_ID,&#13;&#10;CLIENT.X_FID_CREATION_DT AS CLIENT_X_FID_CREATION_DT ,&#13;&#10;CLIENT_RGPD.BIRTH_DT AS BIRTH_DT_CLIENT,&#13;&#10;CARTE.CARD_TYPE_CD AS CARD_TYPE_CD,&#13;&#10;CARTE.X_FID_CREATED AS CARTE_X_FID_CREATED ,&#13;&#10;CLIENT_RGPD.LAST_NAME AS CLIENT_LAST_NAME,&#13;&#10;CLIENT_RGPD.FST_NAME AS CLIENT_FST_NAME,&#13;&#10;CARTE.EXP_DT AS CARTE_EXP_DT,&#13;&#10;CARTE_RGPD.CARD_NUM AS CARTE_CARD_NUM, &#13;&#10;ADHERENTNUMBER,&#13;&#10;FLD_ACCOUNT_ADHERENTCARDNUMBER, &#13;&#10;CASE WHEN (CPT_ELEM_DTNAIS = CAST(CLIENT_RGPD.BIRTH_DT AS DATE FORMAT 'YY/MM/DD')) THEN 1 ELSE 0 END AS ACCOUNT_ADHERENT,&#13;&#10;PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ACCOUNT ACC&#13;&#10;LEFT OUTER JOIN ${DBENV}DWH_FSA_DWH.SIEBEL_FNAC_CARTE CARTE&#13;&#10;ON ACC.MEM_NUM = CARTE.MEM_NUM&#13;&#10;LEFT OUTER JOIN ${DBENV}DWH_FSA_DWH.RGPD_SIEBEL_FNAC_CARTE CARTE_RGPD&#13;&#10;ON CARTE.ROW_ID = CARTE_RGPD.ROW_ID&#13;&#10;LEFT OUTER JOIN ${DBENV}DWH_FSA_DWH.SIEBEL_FNAC_CLIENT CLIENT&#13;&#10;ON CARTE.INTEGRATION_ID = CLIENT.INTEGRATION_ID&#13;&#10;LEFT OUTER JOIN ${DBENV}DWH_FSA_DWH.RGPD_SIEBEL_FNAC_CLIENT CLIENT_RGPD&#13;&#10;ON CLIENT_RGPD.ROW_ID = CLIENT.ROW_ID; &#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ADHESION;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_CLIENT;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_CLIENT&#13;&#10;SELECT&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID,&#13;&#10;CPT_ELEM_SRC,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;CPT_ELEM_DT_CREA,&#13;&#10;CPT_ELEM_DT_MAJ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM,&#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CPT_ELEM_EXTERNAL_ID , &#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN , &#13;&#10;INTEGRATION_ID,&#13;&#10;CLIENT_X_FID_CREATION_DT ,&#13;&#10;CARD_TYPE_CD,&#13;&#10;CARTE_X_FID_CREATED ,&#13;&#10;CLIENT_LAST_NAME,&#13;&#10;CLIENT_FST_NAME,&#13;&#10;CARTE_EXP_DT,&#13;&#10;CARTE_CARD_NUM, &#13;&#10;FLD_ACCOUNT_ADHERENTCARDNUMBER, &#13;&#10;ACCOUNT_ADHERENT,&#13;&#10;NB_CLIENT,&#13;&#10;CASE WHEN CPT_ELEM_NOM_NORM = CLIENT_LAST_NAME THEN 1 ELSE 0 END AS SAME_LAST_NAME, &#13;&#10;CASE WHEN CPT_ELEM_PRENOM_NORM = CLIENT_FST_NAME THEN 1 ELSE 0 END AS SAME_FST_NAME,&#13;&#10;CASE WHEN FLD_ACCOUNT_ADHERENTCARDNUMBER = CARTE_CARD_NUM THEN 1 ELSE 0 END AS SAME_CARD_NUM, &#13;&#10;PURGED,&#13;&#10;CPT_ELEM_DT_EXTRACT&#13;&#10;FROM &#13;&#10;(SELECT &#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID,&#13;&#10;CPT_ELEM_SRC,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;CPT_ELEM_DT_CREA,&#13;&#10;CPT_ELEM_DT_MAJ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM,&#13;&#10;REGEXP_REPLACE(REGEXP_REPLACE(LOWER(OTRANSLATE(UPPER(TRIM(TRANSLATE(CPT_ELEM_NOM USING LATIN_TO_UNICODE WITH ERROR))),(select TO_BE_NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION),(select NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION))),'[^a-zA-Z0-9 ]+', ' ',1,0,'i'),' +',' ') AS CPT_ELEM_NOM_NORM,&#13;&#10;REGEXP_REPLACE(REGEXP_REPLACE(LOWER(OTRANSLATE(UPPER(TRIM(TRANSLATE(CPT_ELEM_PRENOM USING LATIN_TO_UNICODE WITH ERROR))),(select TO_BE_NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION),(select NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION))),'[^a-zA-Z0-9 ]+', ' ',1,0,'i'),' +',' ') AS CPT_ELEM_PRENOM_NORM,&#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CPT_ELEM_EXTERNAL_ID , &#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN , &#13;&#10;INTEGRATION_ID,&#13;&#10;CLIENT_X_FID_CREATION_DT ,&#13;&#10;CARD_TYPE_CD,&#13;&#10;CARTE_X_FID_CREATED ,&#13;&#10;REGEXP_REPLACE(REGEXP_REPLACE(LOWER(OTRANSLATE(UPPER(TRIM(TRANSLATE(CLIENT_LAST_NAME USING LATIN_TO_UNICODE WITH ERROR))),(select TO_BE_NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION),(select NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION))),'[^a-zA-Z0-9 ]+', ' ',1,0,'i'),' +',' ') AS CLIENT_LAST_NAME,&#13;&#10;REGEXP_REPLACE(REGEXP_REPLACE(LOWER(OTRANSLATE(UPPER(TRIM(TRANSLATE(CLIENT_FST_NAME USING LATIN_TO_UNICODE WITH ERROR))),(select TO_BE_NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION),(select NORMALIZED from ${DBENV}DTM_GRP_SAS_RCG.REF_NORMALISATION))),'[^a-zA-Z0-9 ]+', ' ',1,0,'i'),' +',' ') AS CLIENT_FST_NAME,&#13;&#10;CARTE_EXP_DT,&#13;&#10;CARTE_CARD_NUM, &#13;&#10;FLD_ACCOUNT_ADHERENTCARDNUMBER, &#13;&#10;ACCOUNT_ADHERENT,&#13;&#10;COUNT(INTEGRATION_ID) OVER (PARTITION BY CPTE_UNQ_ID) AS NB_CLIENT,&#13;&#10;PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_ADHESION ACC) A;&#13;&#10;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_CLIENT;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_COM_FULL;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_COM_FULL&#13;&#10;SELECT&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID,&#13;&#10;CPT_ELEM_SRC,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;CPT_ELEM_DT_CREA,&#13;&#10;CPT_ELEM_DT_MAJ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM,&#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;ENFANT.NB_CHILD as CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CASE WHEN ACCOUNT_ADHERENT = 0 AND NB_CLIENT &gt; 1 THEN NULL ELSE INTEGRATION_ID END AS CPT_ELEM_ADH,&#13;&#10;CPT_ELEM_EXTERNAL_ID , &#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN , &#13;&#10;PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_CLIENT ACC&#13;&#10;left outer join&#13;&#10;    (SELECT trim(FLD_CHILDREN_FK) as FLD_CHILDREN_FK,  COUNT(DISTINCT trim(FLD_CHILDREN_FK)) AS NB_CHILD&#13;&#10;&#9;FROM ${DBENV}DWH_FWE_DWH.RGPD_CUSTOMER_TBL_CHILDREN &#13;&#10;&#9;WHERE (CURRENT_DATE - CAST(CAST(FLD_CHILDREN_BIRTHDATE as timestamp(3)) as DATE FORMAT 'DD/MM/YYYY'))/365 &lt; 18 AND &#13;&#10;&#9;LENGTH(FLD_CHILDREN_FIRSTNAME) &gt;= 3&#13;&#10;&#9;GROUP BY 1) ENFANT&#13;&#10;ON ACC.CPT_ELEM_ID = ENFANT.FLD_CHILDREN_FK&#13;&#10;QUALIFY ROW_NUMBER() OVER(PARTITION BY CPTE_UNQ_ID ORDER BY ACCOUNT_ADHERENT DESC,CARD_TYPE_CD DESC,CLIENT_X_FID_CREATION_DT DESC,CARTE_X_FID_CREATED DESC, SAME_LAST_NAME DESC, SAME_FST_NAME DESC, CARTE_EXP_DT DESC, SAME_CARD_NUM DESC, INTEGRATION_ID DESC) = 1; &#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_COM_FULL;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="Querys" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_1"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;sub_query2&quot;"/>
+      <elementValue elementRef="VALUE" value="Querys"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_1"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:KcCbxfcl2H9gOCUCM7UCpAz5USkzxIvX6IgUbTKQ"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="globalMap.get(&quot;sub_query2&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env)"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Querys"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC&#13;&#10;SELECT&#13;&#10;CAST(CPT_ELEM_SRC AS VARCHAR(1))||'_'||TRIM(CAST(CPT_ELEM_ID AS VARCHAR(30))) AS CPTE_UNQ_ID,&#13;&#10;CAST (ACC.INTEGRATION_ID AS INT) AS CPT_ELEM_ID,&#13;&#10;2 AS CPT_ELEM_SRC, &#13;&#10;1 AS CPT_ELEM_ENSEIGNE, &#13;&#10;ACC.X_FID_CREATION_DT AS CPT_ELEM_DT_CREA,&#13;&#10;ACC.LAST_UPD AS CPT_ELEM_DT_MAJ,&#13;&#10;LOWER(TRIM(RGPDACC.LAST_NAME)) AS CPT_ELEM_NOM,&#13;&#10;LOWER(TRIM(RGPDACC.FST_NAME)) AS CPT_ELEM_PRENOM,&#13;&#10;CAST(RGPDACC.BIRTH_DT AS DATE FORMAT 'YY/MM/DD') AS CPT_ELEM_DTNAIS,&#13;&#10;CASE WHEN UPPER(RGPDACC.PER_TITLE) = 'M' THEN 1 &#13;&#10;&#9;WHEN UPPER(RGPDACC.PER_TITLE) = 'MLLE' THEN 2 &#13;&#10;&#9;WHEN UPPER(RGPDACC.PER_TITLE) = 'MME' THEN 2 &#13;&#10;&#9;ELSE 0 END AS GENDER_ID,&#13;&#10;CASE WHEN UPPER(RGPDACC.PER_TITLE) = 'M' THEN 1&#13;&#10;&#9;WHEN UPPER(RGPDACC.PER_TITLE) = 'MLLE' THEN 3 &#13;&#10;&#9;WHEN UPPER(RGPDACC.PER_TITLE) = 'MME' THEN 2&#13;&#10;&#9;ELSE 0 END AS CIVILITE_ID,&#13;&#10;ACC.X_FID_CSP AS CSP,&#13;&#10;1 AS CATEGORY_ID,&#13;&#10;TRIM(ACC.INTEGRATION_ID) AS CPT_ELEM_ADH,&#13;&#10;NULL AS CPT_ELEM_EXTERNAL_ID,&#13;&#10;NULL AS REFERENCE,&#13;&#10;NULL AS CPT_ELEM_OPTIN,&#13;&#10;NULL AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DWH_FSA_DWH.SIEBEL_FNAC_CLIENT ACC&#13;&#10;INNER JOIN ${DBENV}DWH_FSA_DWH.RGPD_SIEBEL_FNAC_CLIENT RGPDACC&#13;&#10;ON ACC.ROW_ID = RGPDACC.ROW_ID;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC_FULL;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC_FULL&#13;&#10;SELECT&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID,&#13;&#10;CPT_ELEM_SRC, &#13;&#10;CPT_ELEM_ENSEIGNE, &#13;&#10;CPT_ELEM_DT_CREA,&#13;&#10;CPT_ELEM_DT_MAJ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM,&#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;ENFANT.NB_CHILD AS CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CPT_ELEM_ADH,&#13;&#10;CPT_ELEM_EXTERNAL_ID,&#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN,&#13;&#10;PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC ACC&#13;&#10;LEFT OUTER JOIN &#13;&#10;&#9;(SELECT A.INTEGRATION_ID AS INTEGRATION_ID,  COUNT(DISTINCT A.ROW_ID) AS NB_CHILD&#13;&#10;&#9;FROM ${DBENV}DWH_FSA_DWH.SIEBEL_FNAC_CLIENT_ENFANT A &#13;&#10;&#9;INNER JOIN ${DBENV}DWH_FSA_DWH.RGPD_SIEBEL_FNAC_CLIENT_ENFANT B &#13;&#10;&#9;ON A.ROW_ID = B.ROW_ID &#13;&#10;&#9;WHERE (CURRENT_DATE- CAST(B.ATTRIB_12 as DATE FORMAT 'DD/MM/YYYY'))/365 &lt; 18 AND &#13;&#10;&#9;LENGTH(B.ATTRIB_35) &gt;= 3&#13;&#10;&#9;GROUP BY 1) ENFANT&#13;&#10;ON ACC.CPT_ELEM_ID = CAST(ENFANT.INTEGRATION_ID AS INT);&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC_FULL;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="-1" name="Querys" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_2"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;sub_query3&quot;"/>
+      <elementValue elementRef="VALUE" value="Querys"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_2"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:slvwE4z4tRmTGT9wTLC1BkerMXaJtSHii363lTlT"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="globalMap.get(&quot;sub_query3&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env)"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_3"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Querys"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_DARTY;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_DARTY&#13;&#10;SELECT &#13;&#10;SIEB.ROW_ID,&#13;&#10;CAST(CPT_ELEM_SRC AS VARCHAR(1))||'_'||TRIM(CAST(CPT_ELEM_ID AS VARCHAR(30))) AS CPTE_UNQ_ID,&#13;&#10;TRIM(SIEB.INTEGRATION_ID) as CPT_ELEM_ID,&#13;&#10;3 as CPT_ELEM_SRC, &#13;&#10;2 as CPT_ELEM_ENSEIGNE, &#13;&#10;SIEB.created as CPT_ELEM_DT_CREA,&#13;&#10;SIEB.LAST_UPD as CPT_ELEM_DT_MAJ,&#13;&#10;LOWER(TRIM(SIEBRGPD.LAST_NAME)) as CPT_ELEM_NOM,&#13;&#10;LOWER(TRIM(SIEBRGPD.FST_NAME)) as CPT_ELEM_PRENOM,&#13;&#10;CAST(SIEBRGPD.BIRTH_DT AS DATE FORMAT 'YY/MM/DD') as CPT_ELEM_DTNAIS, &#13;&#10;CASE WHEN UPPER(SIEB.PER_TITLE) = 'MONSIEUR' THEN 1&#13;&#10;&#9;WHEN UPPER(SIEB.PER_TITLE) IN ('MADAME','MADEMOISELLE','MADAME VEUVE') THEN 2&#13;&#10;&#9;ELSE 0 END AS GENDER_ID,&#13;&#10;CASE WHEN UPPER(SIEB.PER_TITLE) = 'MONSIEUR' THEN 1&#13;&#10;&#9;WHEN UPPER(SIEB.PER_TITLE) = 'MADEMOISELLE' THEN 3&#13;&#10;&#9;WHEN UPPER(SIEB.PER_TITLE) IN ('MADAME','MADAME VEUVE') THEN 2&#13;&#10;&#9;ELSE 0 END AS CIVILITE_ID, &#13;&#10;NULL AS CSP,&#13;&#10;NULL AS CHILD_NB,&#13;&#10;CASE WHEN UPPER(SIEB.PER_TITLE) IN ('S.A.R.L.','SOCIETE ANONYME','SOCIETE','ETABLISSEMENT') THEN 2&#13;&#10;&#9;WHEN UPPER(SIEB.PER_TITLE) IN ('MADAME','MADEMOISELLE','MADAME VEUVE','MONSIEUR','MONSIEUR/MADAME') THEN 1&#13;&#10;&#9;ELSE 0 END AS CATEGORY_ID,&#13;&#10;TRIM(SIEB.INTEGRATION_ID) as CPT_ELEM_EXTERNAL_ID, &#13;&#10;NULL AS REFERENCE,&#13;&#10;NULL AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) as CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DWH_DTY_DWH.SIEBEL_S_CONTACT_DARTY SIEB &#13;&#10;INNER JOIN ${DBENV}DWH_DTY_DWH.RGPD_SIEBEL_S_CONTACT_DARTY SIEBRGPD &#13;&#10;ON SIEB.ROW_ID = SIEBRGPD.ROW_ID &#13;&#10;QUALIFY ROW_NUMBER() OVER (PARTITION BY TRIM(SIEB.INTEGRATION_ID) ORDER BY SIEB.LAST_UPD DESC, SIEB.DEDUP_KEY_UPD_DT DESC) = 1 ;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_DARTY;&#13;&#10;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_DARTY_FULL;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_DARTY_FULL&#13;&#10;SELECT &#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID,&#13;&#10;CPT_ELEM_SRC,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;CPT_ELEM_DT_CREA,&#13;&#10;CPT_ELEM_DT_MAJ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM,&#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CASE WHEN S_CONTACT_XM.PAR_ROW_ID IS NOT NULL THEN CPT_ELEM_ID ELSE NULL END AS CPT_ELEM_ADH,&#13;&#10;CPT_ELEM_EXTERNAL_ID,&#13;&#10;REFERENCE,&#13;&#10;CASE WHEN SUBSTR(CONTACT_KEY.KEY_TYPE_CD,1,2)='F_' THEN 0 WHEN SUBSTR(CONTACT_KEY.KEY_TYPE_CD,1,1)='M' THEN 0 END AS CPT_ELEM_OPTIN,&#13;&#10;PURGED,&#13;&#10;CURRENT_TIMESTAMP(0)  AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_DARTY ACC&#13;&#10;LEFT OUTER JOIN (SELECT KEY_TYPE_CD,CONTACT_ID,LAST_UPD FROM ${DBENV}DWH_DTY_DWH.SIEBEL_S_CONTACT_KEY_DARTY&#13;&#10;WHERE SUBSTR(KEY_TYPE_CD,1,2)='F_' OR SUBSTR(KEY_TYPE_CD,1,1)='M'&#13;&#10;QUALIFY ROW_NUMBER() OVER (PARTITION BY CONTACT_ID ORDER BY LAST_UPD DESC) = 1) CONTACT_KEY &#13;&#10;ON ACC.ROW_ID = CONTACT_KEY.CONTACT_ID&#13;&#10;LEFT OUTER JOIN (SELECT DISTINCT PAR_ROW_ID FROM ${DBENV}DWH_DTY_DWH.SIEBEL_S_CONTACT_XM_DARTY WHERE UPPER(TYPE_) IN ('FIDELITE','DARTYPLUS')) S_CONTACT_XM&#13;&#10;ON ACC.ROW_ID = S_CONTACT_XM.PAR_ROW_ID;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_DARTY_FULL;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_3">
+      <column comment="" key="false" length="-1" name="Querys" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_3"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;sub_query4&quot;"/>
+      <elementValue elementRef="VALUE" value="Querys"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_3"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_3"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_2"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:UkfuakO+nv1gGBnBiIfknyoFkbf9t1E97Hhz02nI"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="globalMap.get(&quot;sub_query4&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env)"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_3"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_4"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Querys"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE&#13;&#10;SELECT&#13;&#10;CAST(CPT_ELEM_SRC AS VARCHAR(1))||'_'||TRIM(CAST(CPT_ELEM_ID AS VARCHAR(30))) AS CPTE_UNQ_ID,&#13;&#10;ACC.USER_ID AS CPT_ELEM_ID, &#13;&#10;4 AS CPT_ELEM_SRC, &#13;&#10;2 AS CPT_ELEM_ENSEIGNE, &#13;&#10;NULL AS CPT_ELEM_DT_CREA,&#13;&#10;ACC.LAST_UPDATE AS CPT_ELEM_DT_MAJ,&#13;&#10;RGPDACC.BIRTHDAY AS CPT_ELEM_DTNAIS,&#13;&#10;ACC.SIEBEL_ID AS CPT_ELEM_EXTERNAL_ID, &#13;&#10;ACC.EXTERNAL_ID AS EXTERNAL_ID,&#13;&#10;NULL AS CPT_ELEM_OPTIN,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DWH_DTY_DWH.WEBSPHERE_XECUSER ACC&#13;&#10;INNER JOIN ${DBENV}DWH_DTY_DWH.RGPD_WEBSPHERE_XECUSER RGPDACC &#13;&#10;ON ACC.USER_ID = RGPDACC.USER_ID ;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE;&#13;&#10;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR&#13;&#10;SELECT&#13;&#10;CPTE_UNQ_ID,&#13;&#10;ACC.CPT_ELEM_ID , &#13;&#10;ACC.CPT_ELEM_SRC ,&#13;&#10;ACC.CPT_ELEM_ENSEIGNE ,&#13;&#10;ACC.CPT_ELEM_DT_CREA ,&#13;&#10;ACC.CPT_ELEM_DT_MAJ ,&#13;&#10;ADR.ADDRESS_ID AS ADDRESS_ID,&#13;&#10;ACC.CPT_ELEM_DTNAIS,&#13;&#10;CASE WHEN UPPER(ADR.PERSONTITLE) IN ('M','M.','MR.','M') THEN 1&#13;&#10;&#9;WHEN UPPER(ADR.PERSONTITLE) IN ('MLE','MME','MME V','MME') THEN 2&#13;&#10;&#9;ELSE 0 END AS GENDER_ID,&#13;&#10;CASE WHEN UPPER(ADR.PERSONTITLE) IN ('M','M.','MR.','M') THEN 1&#13;&#10;&#9;WHEN UPPER(ADR.PERSONTITLE) IN ('MME','MME V','MME') THEN 2&#13;&#10;&#9;WHEN UPPER(ADR.PERSONTITLE) IN ('MLE') THEN 3&#13;&#10;&#9;ELSE 0 END AS CIVILITE_ID,&#13;&#10;NULL AS CSP,&#13;&#10;NULL AS CHILD_NB,&#13;&#10;NULL AS CATEGORY_ID,&#13;&#10;ACC.CPT_ELEM_EXTERNAL_ID ,&#13;&#10;EXTERNAL_ID,&#13;&#10;NULL AS REFERENCE,&#13;&#10;ACC.CPT_ELEM_OPTIN , &#13;&#10;NULL AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE ACC&#13;&#10;INNER JOIN ${DBENV}DWH_DTY_DWH.WEBSPHERE_XECADDRESS ADR&#13;&#10;ON ACC.CPT_ELEM_ID = ADR.USER_ID&#13;&#10;QUALIFY ROW_NUMBER() OVER (PARTITION BY ACC.CPT_ELEM_ID ORDER BY ADR.ADDRESS_RANGE ASC, ADR.LAST_UPDATE DESC, ADR.ADDRESS_NUMBER DESC, ADR.ADDRESS_ID DESC)=1; &#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR;&#13;&#10;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR_RGPD;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR_RGPD&#13;&#10;SELECT&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID , &#13;&#10;CPT_ELEM_SRC ,&#13;&#10;CPT_ELEM_ENSEIGNE ,&#13;&#10;CPT_ELEM_DT_CREA ,&#13;&#10;CPT_ELEM_DT_MAJ ,&#13;&#10;TRIM(LOWER(RGPDADDR.LASTNAME)) AS CPT_ELEM_NOM,&#13;&#10;TRIM(LOWER(RGPDADDR.FIRSTNAME)) AS CPT_ELEM_PRENOM,  &#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CPT_ELEM_EXTERNAL_ID , &#13;&#10;EXTERNAL_ID,&#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN,&#13;&#10;PURGED, &#13;&#10;CURRENT_TIMESTAMP(0)  AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR ACC&#13;&#10;INNER JOIN ${DBENV}DWH_DTY_DWH.RGPD_WEBSPHERE_XECADDRESS RGPDADDR&#13;&#10;ON ACC.ADDRESS_ID = RGPDADDR.ADDRESS_ID; &#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR_RGPD;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_SIEBEL_FULL;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_SIEBEL_FULL&#13;&#10;SELECT&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ID , &#13;&#10;CPT_ELEM_SRC ,&#13;&#10;CPT_ELEM_ENSEIGNE ,&#13;&#10;CPT_ELEM_DT_CREA ,&#13;&#10;CPT_ELEM_DT_MAJ ,&#13;&#10;CPT_ELEM_NOM,&#13;&#10;CPT_ELEM_PRENOM, &#13;&#10;CPT_ELEM_DTNAIS,&#13;&#10;GENDER_ID,&#13;&#10;CIVILITE_ID,&#13;&#10;CSP,&#13;&#10;CHILD_NB,&#13;&#10;CATEGORY_ID,&#13;&#10;CASE WHEN S_CONTACT_XM.PAR_ROW_ID IS NOT NULL THEN TRIM(CONTACT.INTEGRATION_ID) ELSE NULL END AS CPT_ELEM_ADH,&#13;&#10;CASE WHEN CPT_ELEM_EXTERNAL_ID IS NULL OR TRIM(CPT_ELEM_EXTERNAL_ID) = '' THEN TRIM(CONTACT.INTEGRATION_ID) ELSE CPT_ELEM_EXTERNAL_ID END AS CPT_ELEM_EXTERNAL_ID,&#13;&#10;REFERENCE,&#13;&#10;CPT_ELEM_OPTIN,&#13;&#10;PURGED,  &#13;&#10;CURRENT_TIMESTAMP(0) AS CPT_ELEM_DT_EXTRACT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_ADR_RGPD ACC&#13;&#10;LEFT OUTER JOIN ${DBENV}DWH_DTY_DWH.SIEBEL_S_CONTACT_KEY_DARTY KEY_SIEBEL&#13;&#10;ON ACC.EXTERNAL_ID = KEY_SIEBEL.KEY_TYPE_CD&#13;&#10;LEFT OUTER JOIN ${DBENV}DWH_DTY_DWH.SIEBEL_S_CONTACT_DARTY CONTACT&#13;&#10;ON KEY_SIEBEL.CONTACT_ID = CONTACT.ROW_ID&#13;&#10;LEFT OUTER JOIN (SELECT PAR_ROW_ID FROM ${DBENV}DWH_DTY_DWH.SIEBEL_S_CONTACT_XM_DARTY WHERE UPPER(TYPE_) IN ('FIDELITE','DARTYPLUS')) S_CONTACT_XM&#13;&#10;ON CONTACT.ROW_ID = S_CONTACT_XM.PAR_ROW_ID&#13;&#10;QUALIFY ROW_NUMBER() OVER (PARTITION BY CPTE_UNQ_ID ORDER BY KEY_SIEBEL.LAST_UPD DESC, CONTACT.LAST_UPD DESC)=1;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_SIEBEL_FULL;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_4">
+      <column comment="" key="false" length="-1" name="Querys" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_4"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;sub_query5&quot;"/>
+      <elementValue elementRef="VALUE" value="Querys"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_4"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_4"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_2"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:2g1vjkvRj7X/Ss6Y8ScNP9n3FhPyKH976Jf06phP"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="globalMap.get(&quot;sub_query5&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env)"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_4"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_7"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Querys"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_DARTY;&#13;&#10;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_DARTY&#13;&#10;SELECT &#13;&#10;NULL AS GROUPE_ID,&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;TRIM(CPT_ELEM_ID) AS CPTE_ID,&#13;&#10;CPT_ELEM_SRC AS SRC_ID, &#13;&#10;CPT_ELEM_DT_CREA AS CPTE_CREATE_DT,&#13;&#10;CPT_ELEM_DT_MAJ AS CPTE_UPDATE_DT,&#13;&#10;CPT_ELEM_NOM AS LASTNAME,&#13;&#10;CPT_ELEM_PRENOM AS FIRSTNAME,&#13;&#10;CPT_ELEM_DTNAIS AS BIRTHDATE,&#13;&#10;GENDER_ID AS GENDER_ID,&#13;&#10;CIVILITE_ID AS CIVILITY_ID,&#13;&#10;CSP AS CSP,&#13;&#10;CHILD_NB AS CHILD_NB,&#13;&#10;CATEGORY_ID AS CATEGORY_ID,&#13;&#10;CPT_ELEM_ADH AS ADH_CPTE,&#13;&#10;CPT_ELEM_EXTERNAL_ID AS EXTERNAL_ID,&#13;&#10;REFERENCE AS REFERENCE,&#13;&#10;CPT_ELEM_OPTIN AS OPTIN_DATA,&#13;&#10;PURGED AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CREATE_DT,&#13;&#10;CURRENT_TIMESTAMP(0) AS UPDATE_DT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_DARTY_FULL; &#13;&#10;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_DARTY&#13;&#10;SELECT &#13;&#10;NULL AS GROUPE_ID,&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;TRIM(CPT_ELEM_ID) AS CPTE_ID,&#13;&#10;CPT_ELEM_SRC AS SRC_ID, &#13;&#10;CPT_ELEM_DT_CREA AS CPTE_CREATE_DT,&#13;&#10;CPT_ELEM_DT_MAJ AS CPTE_UPDATE_DT,&#13;&#10;CPT_ELEM_NOM AS LASTNAME,&#13;&#10;CPT_ELEM_PRENOM AS FIRSTNAME,&#13;&#10;CPT_ELEM_DTNAIS AS BIRTHDATE,&#13;&#10;GENDER_ID AS GENDER_ID,&#13;&#10;CIVILITE_ID AS CIVILITY_ID,&#13;&#10;CSP AS CSP,&#13;&#10;CHILD_NB AS CHILD_NB,&#13;&#10;CATEGORY_ID AS CATEGORY_ID,&#13;&#10;CPT_ELEM_ADH AS ADH_CPTE,&#13;&#10;CPT_ELEM_EXTERNAL_ID AS EXTERNAL_ID,&#13;&#10;REFERENCE AS REFERENCE,&#13;&#10;CPT_ELEM_OPTIN AS OPTIN_DATA,&#13;&#10;PURGED AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CREATE_DT,&#13;&#10;CURRENT_TIMESTAMP(0) AS UPDATE_DT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_WEBSPHERE_SIEBEL_FULL;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_DARTY;&#13;&#10;&#13;&#10;UPDATE A&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_DARTY A, ( SELECT GROUPE_ID, CPTE_UNQ_ID&#13;&#10;                                                                                                                                                                  FROM ${DBENV}DTM_GRP_SAS_RCG.HISTO_ASSO_GROUPE_ID &#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;                                          WHERE END_DT IS NULL&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;                                                  ) B&#13;&#10;SET GROUPE_ID = B.GROUPE_ID&#13;&#10;WHERE  A.CPTE_UNQ_ID = B.CPTE_UNQ_ID;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_RCG.TBL_PERSON_ACCOUNT_DARTY;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_RCG.TBL_PERSON_ACCOUNT_DARTY&#13;&#10;SELECT &#13;&#10;*&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_DARTY&#13;&#10;WHERE CPTE_ID IS NOT NULL &#13;&#10;AND CPTE_ID &lt;&gt; '0';"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_7">
+      <column comment="" key="false" length="-1" name="Querys" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_7"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;sub_query1&quot;"/>
+      <elementValue elementRef="VALUE" value="Querys"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_7"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_7"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:p3Dl17ColhSZkb1Z6XnXSzMORmSkMrEKK5pwASa8"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="globalMap.get(&quot;sub_query1&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env)"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_7"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="1408">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_5"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Querys"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="DELETE FROM ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_FNAC;&#13;&#10;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_FNAC&#13;&#10;SELECT &#13;&#10;NULL AS GROUPE_ID,&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;TRIM(CPT_ELEM_ID) AS CPTE_ID,&#13;&#10;CPT_ELEM_SRC AS SRC_ID, &#13;&#10;CPT_ELEM_DT_CREA AS CPTE_CREATE_DT,&#13;&#10;CPT_ELEM_DT_MAJ AS CPTE_UPDATE_DT,&#13;&#10;CPT_ELEM_NOM AS LASTNAME,&#13;&#10;CPT_ELEM_PRENOM AS FIRSTNAME,&#13;&#10;CPT_ELEM_DTNAIS AS BIRTHDATE,&#13;&#10;GENDER_ID AS GENDER_ID,&#13;&#10;CIVILITE_ID AS CIVILITY_ID,&#13;&#10;CSP AS CSP,&#13;&#10;CHILD_NB AS CHILD_NB,&#13;&#10;CATEGORY_ID AS CATEGORY_ID,&#13;&#10;CPT_ELEM_ADH AS ADH_CPTE,&#13;&#10;CPT_ELEM_EXTERNAL_ID AS EXTERNAL_ID,&#13;&#10;REFERENCE AS REFERENCE,&#13;&#10;CPT_ELEM_OPTIN AS OPTIN_DATA,&#13;&#10;PURGED AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CREATE_DT,&#13;&#10;CURRENT_TIMESTAMP(0) AS UPDATE_DT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_FNAC_COM_FULL; &#13;&#10;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_FNAC&#13;&#10;SELECT &#13;&#10;NULL AS GROUPE_ID,&#13;&#10;CPTE_UNQ_ID,&#13;&#10;CPT_ELEM_ENSEIGNE,&#13;&#10;TRIM(CPT_ELEM_ID) AS CPTE_ID,&#13;&#10;CPT_ELEM_SRC AS SRC_ID, &#13;&#10;CPT_ELEM_DT_CREA AS CPTE_CREATE_DT,&#13;&#10;CPT_ELEM_DT_MAJ AS CPTE_UPDATE_DT,&#13;&#10;CPT_ELEM_NOM AS LASTNAME,&#13;&#10;CPT_ELEM_PRENOM AS FIRSTNAME,&#13;&#10;CPT_ELEM_DTNAIS AS BIRTHDATE,&#13;&#10;GENDER_ID AS GENDER_ID,&#13;&#10;CIVILITE_ID AS CIVILITY_ID,&#13;&#10;CSP AS CSP,&#13;&#10;CHILD_NB AS CHILD_NB,&#13;&#10;CATEGORY_ID AS CATEGORY_ID,&#13;&#10;CPT_ELEM_ADH AS ADH_CPTE,&#13;&#10;CPT_ELEM_EXTERNAL_ID AS EXTERNAL_ID,&#13;&#10;REFERENCE AS REFERENCE,&#13;&#10;CPT_ELEM_OPTIN AS OPTIN_DATA,&#13;&#10;PURGED AS PURGED,&#13;&#10;CURRENT_TIMESTAMP(0) AS CREATE_DT,&#13;&#10;CURRENT_TIMESTAMP(0) AS UPDATE_DT&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TMP_DM_CPT_ELEM_SIEBEL_FNAC_FULL;&#13;&#10;&#13;&#10;COLLECT STATISTICS ON ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_FNAC;&#13;&#10;&#13;&#10;UPDATE A&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_FNAC A, ( SELECT GROUPE_ID, CPTE_UNQ_ID&#13;&#10;                                                                                                                                                               FROM ${DBENV}DTM_GRP_SAS_RCG.HISTO_ASSO_GROUPE_ID &#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;                                       WHERE END_DT IS NULL&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;                                              ) B&#13;&#10;SET GROUPE_ID = B.GROUPE_ID&#13;&#10;WHERE  A.CPTE_UNQ_ID = B.CPTE_UNQ_ID;&#13;&#10;&#13;&#10;DELETE FROM ${DBENV}DTM_GRP_RCG.TBL_PERSON_ACCOUNT_FNAC;&#13;&#10;INSERT INTO ${DBENV}DTM_GRP_RCG.TBL_PERSON_ACCOUNT_FNAC&#13;&#10;SELECT &#13;&#10;*&#13;&#10;FROM ${DBENV}DTM_GRP_SAS_RCG.TBL_PERSON_ACCOUNT_FNAC&#13;&#10;WHERE CPTE_ID IS NOT NULL &#13;&#10;AND CPTE_ID &lt;&gt; '0';"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_5">
+      <column comment="" key="false" length="-1" name="Querys" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="1408">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_5"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;sub_query2&quot;"/>
+      <elementValue elementRef="VALUE" value="Querys"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_5"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="1408">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_2"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zkOu7DSaGaxF0lsPgeHMwWRMC70xhmq6duQs1Trj"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="globalMap.get(&quot;sub_query2&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env)"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_5"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ficPropertiesName = context.Dir_conf+&quot;/&quot;+ context.CtxPathFile;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="init parametres"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1">
+      <column comment="" key="false" length="0" name="date_exec" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="JBL_LoadingConf" componentVersion="5.2" offsetLabelX="0" offsetLabelY="0" posX="544" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_LoadingConf_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tJava_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_LoadingConf"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Context chargé :&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_1"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;EXEC_ALIM_TABLE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;EXEC_ALIM_TD&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="-160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connction to TERADATA could not be established&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="6"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tTeradataConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataConnection_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="HOST" value="context.td_export_param_host"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.td_export_param_database"/>
+    <elementParameter field="TEXT" name="USER" value="context.td_export_param_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:a5gVK+8V1QqCHHz96vyXpbxAGTe31heSPg4j8pC3ggInVBCjJ0u4mRkc8YxH2MdZvVUPukwrSSnZDDBu"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="CHECK" name="QUERY_BAND" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_2"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connexion 1 Teradata&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;************** TBL_PERSO_ACCOUNT_FNAC_COM *************************&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_4"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;************** TBL_PERSO_ACCOUNT_FNAC_SIEBEL *************************&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_4"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_5"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;************** TBL_PERSO_ACCOUNT_DARTY_SIEBEL *************************&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_5"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_6"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;************** TBL_PERSO_ACCOUNT_DARTY_WEBSPHER *************************&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_6"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_7"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;************** UNION_PERSO_GROUPE_DARTY *************************&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_7"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="1408">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_8"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;************** UNION_PERSO_GROUPE_FNAC *************************&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_8"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_9"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;TBL_PERSO_ACCOUNT_FNAC_COM REQUEST EXECUTED: &quot; + globalMap.get(&quot;sub_query2&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_9"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_11"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;TBL_PERSO_ACCOUNT_FNAC_SIEBEL REQUEST EXECUTED: &quot; + globalMap.get(&quot;sub_query3&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_11"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_12"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;TBL_PERSO_ACCOUNT_DARTY_SIEBEL REQUEST EXECUTED: &quot; + globalMap.get(&quot;sub_query4&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_12"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_13"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;TBL_PERSO_ACCOUNT_DARTY_WEBSPHER REQUEST EXECUTED: &quot; + globalMap.get(&quot;sub_query5&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_13"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2272" posY="1312">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_11"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;TYPE_UPDATE&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;update_status&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;LAST_STATUS&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;error&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="TD_UPDATE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_11">
+      <column comment="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_base_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_source" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="nom_table_cible" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_debut" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date_fin" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="status" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="directory" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="etape" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="-8" offsetLabelY="-1" posX="2688" posY="1312">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_5"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;ERROR&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="6"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDie_ERROR"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_5"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1984" posY="1024">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_14"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;UNION_PERSO_GROUPE_DARTY REQUEST EXECUTED: &quot; + globalMap.get(&quot;sub_query1&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_14"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1984" posY="1536">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_15"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;UNION_PERSO_GROUPE_FNAC REQUEST EXECUTED: &quot; + globalMap.get(&quot;sub_query2&quot;).toString().replace(&quot;${DBENV}&quot;, context.td_param_env));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_15"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="-160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_6"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connction to TERADATA could not be established&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="6"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_6"/>
+  </node>
+  <node componentName="tTeradataConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataConnection_2"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="HOST" value="context.td_export_param_host"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.td_export_param_database"/>
+    <elementParameter field="TEXT" name="USER" value="context.td_export_param_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Bi7XzJStejPC196Lizgo/AL1ESuiWChj2uZiqJIYUQm7dVrZLUiKZlLuuID9TftfVIvjM9tWmyd7jx2g"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="CHECK" name="QUERY_BAND" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_9"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connexion 2 Teradata&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_9"/>
+  </node>
+  <node componentName="JBL_UPDATE_SUIVI_INDUS" componentVersion="0.3" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_UPDATE_SUIVI_INDUS_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_16"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_UPDATE_SUIVI_INDUS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="JBL_UPDATE_SUIVI_INDUS" componentVersion="0.3" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1728">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_UPDATE_SUIVI_INDUS_2"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_12"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_UPDATE_SUIVI_INDUS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="JBL_UPDATE_SUIVI_INDUS" componentVersion="0.3" offsetLabelX="0" offsetLabelY="0" posX="800" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_UPDATE_SUIVI_INDUS_3"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_18"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_UPDATE_SUIVI_INDUS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="2240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="2240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_11"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;SUCCESS&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="18"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_11"/>
+  </node>
+  <node componentName="JBL_UPDATE_SUIVI_INDUS" componentVersion="0.3" offsetLabelX="0" offsetLabelY="0" posX="2496" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_UPDATE_SUIVI_INDUS_4"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_14"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_UPDATE_SUIVI_INDUS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="JBL_UPDATE_SUIVI_INDUS" componentVersion="0.3" offsetLabelX="0" offsetLabelY="0" posX="2464" posY="1312">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_UPDATE_SUIVI_INDUS_5"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_11"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_UPDATE_SUIVI_INDUS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;terajdbc4.jar&quot;"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_2" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_2" target="tTeradataInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row28" lineStyle="0" metaname="tTeradataInput_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataInput_1" target="tSetGlobalVar_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CONNECTION_STRING"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DATABASE_USERNAME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DATABASE_PASSWORD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SOURCE_DATABASE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SOURCE_TABLE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_DATABASE_SAS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_TABLE_SAS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_DATABASE_DWH"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_TABLE_DWH"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IMPORT_TYPE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELTA_COLUMNS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LAST_VALUE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LAST_VALUE_REPRISE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="UNIQUE_PRIMARY_INDEX_FIELDS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NUMBER_OF_MAPPERS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ID_EXPORT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STATUS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STEP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row28"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_3" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_3" target="tWarn_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk5"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_3" offsetLabelX="0" offsetLabelY="0" source="tWarn_3" target="tTeradataInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row29" lineStyle="0" metaname="tTeradataInput_2" offsetLabelX="0" offsetLabelY="0" source="tTeradataInput_2" target="tSetGlobalVar_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CONNECTION_STRING"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DATABASE_USERNAME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DATABASE_PASSWORD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SOURCE_DATABASE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SOURCE_TABLE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_DATABASE_SAS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_TABLE_SAS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_DATABASE_DWH"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_TABLE_DWH"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IMPORT_TYPE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELTA_COLUMNS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LAST_VALUE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LAST_VALUE_REPRISE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="UNIQUE_PRIMARY_INDEX_FIELDS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NUMBER_OF_MAPPERS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ID_EXPORT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STATUS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row29"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="running" lineStyle="6" metaname="tSetGlobalVar_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSetGlobalVar_4" target="tDie_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(globalMap.get(&quot;STATUS&quot;)!=null) &amp;&amp; (globalMap.get(&quot;STATUS&quot;).toString().equals(&quot;IN PROGRESS&quot;))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="running"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="not_running" lineStyle="6" metaname="tSetGlobalVar_4" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_4" target="tWarn_4">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(globalMap.get(&quot;STATUS&quot;)==null) || (!globalMap.get(&quot;STATUS&quot;).toString().toLowerCase().equals(&quot;in progress&quot;))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="not_running"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_4" offsetLabelX="0" offsetLabelY="0" source="tWarn_4" target="tSetGlobalVar_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk7"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_5" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_5" target="JBL_UPDATE_SUIVI_TD_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_2" label="OnComponentOk (TRIGGER_OUTPUT_STATUS(TRIGGER_OUTPUT_2))" lineStyle="3" metaname="JBL_UPDATE_SUIVI_TD_1" offsetLabelX="0" offsetLabelY="0" source="JBL_UPDATE_SUIVI_TD_1" target="tWarn_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk8"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="test_step" lineStyle="6" metaname="tWarn_5" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tWarn_5" target="tSetGlobalVar_18">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(globalMap.get(&quot;STEP&quot;)== null || globalMap.get(&quot;STEP&quot;).toString().equals(&quot;&quot;))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="test_step"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tWarn_5" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tWarn_5" target="tParallelize_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="globalMap.get(&quot;STEP&quot;).toString().equals(&quot;UNION_PERSO_GROUPE&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tWarn_5" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tWarn_5" target="tParallelize_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="globalMap.get(&quot;STEP&quot;).toString().equals(&quot;TBL_PERSO_ACCOUNT&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SYNCHRONIZE" label="Synchronize" lineStyle="12" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" source="tParallelize_1" target="tSetGlobalVar_16">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Synchronize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tParallelize_1" target="tJava_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tParallelize_1" target="tJava_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tParallelize_1" target="tJava_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tParallelize_1" target="tJava_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_16" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_16" target="JBL_UPDATE_SUIVI_INDUS_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_14" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_14" target="JBL_UPDATE_SUIVI_INDUS_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk12"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SYNCHRONIZE" label="Synchronize" lineStyle="12" metaname="tParallelize_2" offsetLabelX="0" offsetLabelY="0" source="tParallelize_2" target="tSetGlobalVar_12">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Synchronize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tParallelize_2" target="tJava_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tParallelize_2" target="tJava_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_12" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_12" target="JBL_UPDATE_SUIVI_INDUS_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_18" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_18" target="JBL_UPDATE_SUIVI_INDUS_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk8"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tWarn_13" offsetLabelX="0" offsetLabelY="0" source="tWarn_13" target="tParallelize_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk12"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tFlowToIterate_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Querys"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_1" target="tTeradataRow_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataRow_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_1" target="tJava_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk10"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tTeradataRow_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_1" target="tSetGlobalVar_14">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tFlowToIterate_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Querys"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_2" target="tTeradataRow_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tTeradataRow_2" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_2" target="tSetGlobalVar_14">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataRow_2" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_2" target="tJava_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk11"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFixedFlowInput_3" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_3" target="tFlowToIterate_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Querys"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_3" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_3" target="tTeradataRow_3">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataRow_3" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_3" target="tJava_12">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk12"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tTeradataRow_3" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_3" target="tSetGlobalVar_14">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError4"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFixedFlowInput_4" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_4" target="tFlowToIterate_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Querys"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_4" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_4" target="tTeradataRow_4">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate4"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tTeradataRow_4" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_4" target="tSetGlobalVar_14">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError7"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataRow_4" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_4" target="tJava_13">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk16"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFixedFlowInput_7" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_7" target="tFlowToIterate_7">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Querys"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_7" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_7" target="tTeradataRow_7">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate7"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataRow_7" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_7" target="tJava_14">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk15"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tTeradataRow_7" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_7" target="tSetGlobalVar_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError5"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFixedFlowInput_5" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_5" target="tFlowToIterate_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Querys"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_5" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_5" target="tTeradataRow_5">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate6"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataRow_5" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_5" target="tJava_15">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk19"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tTeradataRow_5" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_5" target="tSetGlobalVar_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError6"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tLibraryLoad_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="JBL_LoadingConf_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="JBL_LoadingConf_1" offsetLabelX="0" offsetLabelY="0" source="JBL_LoadingConf_1" target="tWarn_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_1" offsetLabelX="0" offsetLabelY="0" source="tWarn_1" target="tSetGlobalVar_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tTeradataConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk4"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tTeradataConnection_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataConnection_1" target="tDie_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataConnection_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataConnection_1" target="tTeradataConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk11"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataConnection_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataConnection_1" target="tWarn_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk9"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk20"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_4" offsetLabelX="0" offsetLabelY="0" source="tJava_4" target="tFixedFlowInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk21"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_5" offsetLabelX="0" offsetLabelY="0" source="tJava_5" target="tFixedFlowInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk22"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_6" offsetLabelX="0" offsetLabelY="0" source="tJava_6" target="tFixedFlowInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk23"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_7" offsetLabelX="0" offsetLabelY="0" source="tJava_7" target="tFixedFlowInput_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk24"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_8" offsetLabelX="0" offsetLabelY="0" source="tJava_8" target="tFixedFlowInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk25"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_11" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_11" target="JBL_UPDATE_SUIVI_INDUS_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tTeradataConnection_2" offsetLabelX="0" offsetLabelY="0" source="tTeradataConnection_2" target="tDie_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tTeradataConnection_2" offsetLabelX="0" offsetLabelY="0" source="tTeradataConnection_2" target="tWarn_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk19"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_4" label="OnComponentOk (TRIGGER_OUTPUT_INSERT_OR_STEP(TRIGGER_OUTPUT_4))" lineStyle="3" metaname="JBL_UPDATE_SUIVI_INDUS_1" offsetLabelX="0" offsetLabelY="0" source="JBL_UPDATE_SUIVI_INDUS_1" target="tWarn_13">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk26"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_4" label="OnComponentOk (TRIGGER_OUTPUT_INSERT_OR_STEP(TRIGGER_OUTPUT_4))" lineStyle="3" metaname="JBL_UPDATE_SUIVI_INDUS_3" offsetLabelX="0" offsetLabelY="0" source="JBL_UPDATE_SUIVI_INDUS_3" target="tParallelize_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk27"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tWarn_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk17"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_4" label="OnComponentOk (TRIGGER_OUTPUT_INSERT_OR_STEP(TRIGGER_OUTPUT_4))" lineStyle="3" metaname="JBL_UPDATE_SUIVI_INDUS_4" offsetLabelX="0" offsetLabelY="0" source="JBL_UPDATE_SUIVI_INDUS_4" target="tDie_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk28"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_2" label="OnComponentOk (TRIGGER_OUTPUT_STATUS(TRIGGER_OUTPUT_2))" lineStyle="3" metaname="JBL_UPDATE_SUIVI_INDUS_5" offsetLabelX="0" offsetLabelY="0" source="JBL_UPDATE_SUIVI_INDUS_5" target="tDie_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk19"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tLibraryLoad_1" offsetLabelX="0" offsetLabelY="0" source="tLibraryLoad_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk36"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_UPDATE_SUIVI_TD_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_16"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_14"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_12"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_18"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_13"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_7"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_LoadingConf_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_6"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_7"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_8"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_9"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_11"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_12"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_13"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_11"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_14"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_15"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_6"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataConnection_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_9"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_UPDATE_SUIVI_INDUS_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_UPDATE_SUIVI_INDUS_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_UPDATE_SUIVI_INDUS_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_11"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_UPDATE_SUIVI_INDUS_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_UPDATE_SUIVI_INDUS_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_85c1f3b0-0f1a-4f3c-86d7-95f2d8ceb9ec"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FYvxvQIXajMbUWsot3qfSy40JH6BfH44/41lOsfQxOl29suy1007Gw09ShsWbGweDCDYZudKZi6S
+d0A4HqJIxg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4d14c69d-fab8-47cc-9651-ae4dbf800708"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bJ5etxYoX4DzWYp8T3ITJh7wktK2EpTKvvNHgOiVj7ByNOjaTpye/nOr2W7b4eANutnKagwdPPSO
+k5/zlxdDIQ==</DigestValue></Reference></SignedInfo><SignatureValue>IMRKu6QFsUvIgQfDZ/trWaWEZrZoOycb17SyZzk4HjeWGMd242ueLEWDEY8oJ0f3itGjKtgCg2BJ
+Ew7O1yWqSnsmFZwSUTco4W9nsMl1moGRLl+yDJ2cm62dm6qvAckM6j2gOCt1y9LZLrU0g97B/ZgN
+SzymgQHJHbu8okSXeAwsDrblqvg+ruVgYAxDHY25qf3GDj788Vhd+yEaCfntIeWsBkvJZmyBuQTB
+aYbXMHFlUDwlfTSAFZHC9lgmJS048wPMQdPUX+6EgDSjAEV+vQmA1LE2vdTaRh7RyUZ0ADQu2iie
+0gbwk9TKWD/EAk7qgA/J/ZDtefJ965bg00eVaA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4d14c69d-fab8-47cc-9651-ae4dbf800708" Target="#_85c1f3b0-0f1a-4f3c-86d7-95f2d8ceb9ec"><Timestamp>2020-09-22 20:00:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

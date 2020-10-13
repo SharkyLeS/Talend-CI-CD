@@ -1,0 +1,192 @@
+package routines;
+
+//import com.sforce.async.SObject;
+//import antlr.collections.List;
+
+import com.sforce.dataset.util.FileUtilsExt;
+import com.sforce.dataset.loader.DatasetLoader;
+import com.sforce.soap.partner.Error;
+import com.sforce.soap.partner.PartnerConnection;
+import com.sforce.soap.partner.SaveResult;
+import com.sforce.soap.partner.sobject.SObject;
+import java.io.IOException;
+import java.io.File;
+import java.io.InputStream;
+import java.io.PrintStream;
+//import java.io.BufferedInputStream;
+//import java.io.BufferedOutputStream;
+//import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+//import java.io.FileWriter;
+import java.util.Map;
+//import java.util.HashMap;
+import java.util.LinkedHashMap;
+//import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+//import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import java.text.NumberFormat;
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class analytics {
+
+	private static final int EOF = -1;
+	private static final int DEFAULT_BUFFER_SIZE = 8*1024*1024;
+	public static final NumberFormat nf = NumberFormat.getIntegerInstance();
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     */
+   /* public static void helloExample(String message) {
+        if (message == null) {
+            message = "World"; //$NON-NLS-1$
+        }
+        System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+    }*/
+	public static void insertData (String DName,Object Metadata){
+		SObject sfo = new SObject();
+		sfo.setType("InsightsExternalData");
+		sfo.setField("Format", "Csv");
+		sfo.setField("EdgemartAlias", DName);
+		sfo.setField("MetadataJson", Metadata);
+		sfo.setField("Operation", "Overwrite");
+		sfo.setField("Action", "None");
+		SaveResult[] rslt = null;
+		try{
+		rslt = PartnerConnection.class.newInstance().create(new SObject[]{sfo});
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+	 String parentID;
+	for(SaveResult sv:rslt){
+		 if(sv.isSuccess()){
+			  parentID = sv.getId();
+		 }else {
+			for(Error err : sv.getErrors()){
+				System.out.println(err.getStatusCode() +" : "+ err.getMessage());
+				System.out.println("Champs du compte ayant affecté cette erreur "+ err.getFields());
+			}
+		}
+	}
+	/*
+	File dataFile= null;
+	//File archiveFile;
+	File archiveFile = null;
+	PrintStream logger = null;
+	try {
+		List<File> fileParts = chunkBinary(dataFile);
+	} catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	}
+	*/
+	
+	}
+
+
+	
+	
+	//List<File> fileParts = chunkB
+	
+	
+/*	public static Map<Integer,File> chunkBinary(File inputFile, File archiveDir, PrintStream logger) throws IOException 
+	{
+		if(inputFile == null)
+		{
+			throw new IOException("chunkBinary() inputFile parameter is null");
+		}
+		if(!inputFile.canRead())
+		{
+			throw new IOException("chunkBinary() cannot read inputFile {"+inputFile+"}");
+		}
+		if(inputFile.length()==0)
+		{
+			throw new IOException("chunkBinary() inputFile {"+inputFile+"} is 0 bytes");
+		}
+//		logger.println("\n*******************************************************************************");					
+//		logger.println("Chunking file {"+inputFile+"} into {"+nf.format(DEFAULT_BUFFER_SIZE)+"} size chunks\n");
+		long startTime = System.currentTimeMillis();
+		InputStream input = null;
+		FileOutputStream tmpOut = null;
+        LinkedHashMap<Integer,File> fileParts = new LinkedHashMap<Integer,File>();
+		try 
+		{
+			input = new FileInputStream(inputFile);
+			byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
+            Arrays.fill(buffer, (byte)0);
+			int n = 0;
+			int count = -1;
+			int filePartNumber = 0;
+			while (EOF != (n = input.read(buffer))) {
+				filePartNumber++;
+	        	File tmpFile = new File(archiveDir,FilenameUtils.getBaseName(inputFile.getName())+"."+filePartNumber + "." + FilenameUtils.getExtension(inputFile.getName()));
+				if(tmpFile != null && tmpFile.exists())
+				{
+					FileUtilsExt.deleteQuietly(tmpFile);
+					if(tmpFile.exists())
+					{
+						logger.println("Failed to cleanup file {"+tmpFile+"}");
+					}
+				}
+	            tmpOut = new FileOutputStream(tmpFile);			
+	            tmpOut.write(buffer, 0, n);
+	            Arrays.fill(buffer, (byte)0);
+	            tmpOut.close();
+	            tmpOut = null;
+	            fileParts.put(Integer.valueOf(filePartNumber),tmpFile);
+//	            logger.println("Creating File part {"+tmpFile+"}, size {"+nf.format(tmpFile.length())+"}");
+				count = ((count == -1) ? n : (count + n));
+			}
+			if(count == -1)
+			{
+				throw new IOException("failed to chunkBinary file {"+inputFile+"}");
+			}
+		}finally {
+			if (input != null)
+				try {
+					input.close();
+				} catch (IOException e) {e.printStackTrace();}
+			if (tmpOut != null)
+				try {
+					tmpOut.close();
+				} catch (IOException e) {e.printStackTrace();}
+		}
+		long endTime = System.currentTimeMillis();
+		if(fileParts.size()>1)
+		{
+			logger.println("\n*******************************************************************************");					
+			logger.println("\nChunked file into {"+fileParts.size()+"} chunks in {"+nf.format(endTime-startTime)+"} msecs");
+			logger.println("*******************************************************************************\n");
+		}
+		return fileParts;
+}*/ 
+}

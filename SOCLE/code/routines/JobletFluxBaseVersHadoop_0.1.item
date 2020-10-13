@@ -1,0 +1,250 @@
+package routines;
+
+import java.text.Collator;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
+import java.util.TreeSet;
+//import org.apache.log4j.*;
+
+import com.google.common.base.Joiner;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class JobletFluxBaseVersHadoop {
+	
+	//static Logger logg = Logger.getLogger(JobletFluxBaseVersHadoop.class);
+	
+	public static void initLogger() {
+		// Logger.getRootLogger().setLevel(Level.WARN);
+	}
+
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     */
+    public static void helloExample(String message) {
+        if (message == null) {
+            message = "World"; //$NON-NLS-1$
+        }
+        System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+        
+    public static String getDistinctFields(String fields, String separator){
+    	String [] tab = fields.split(separator);
+    	Set<String> temp = new LinkedHashSet<String>(Arrays.asList(tab));
+    	String[] result = temp.toArray( new String[temp.size()] );
+    	String resultUnique = Arrays.toString(result).replaceAll(" ","");
+    	return resultUnique.substring(1, resultUnique.length()-1);
+    	
+    }
+    
+    public static String getQueryConcatFieldsWithPrefixe(String fields,String nullValue, String prefixe) {
+    	String[] liste = fields.split(",");
+    	String result="";
+    	int cpt = 0;
+    	int length = liste.length;
+    	String field="";
+    	for(String base_field:liste) {
+    		if(prefixe.equals(""))
+    			field=base_field;
+    		else
+    			field=String.format("%s.%s",prefixe, base_field);
+    			
+    		
+    		if(cpt<length-1)
+    			result +=String.format("cast(case when %s is NULL then '%s' else string(%s) end as string),\n",field,nullValue,field);
+    		else
+    			result +=String.format("cast(case when %s is NULL then '%s' else string(%s) end as string)\n",field,nullValue,field);
+    		cpt++;
+    	}
+    	return result.toUpperCase();
+    	
+    }
+    
+    public static String getQueryConcatFields(String fields,String nullValue) {
+    	return JobletFluxBaseVersHadoop.getQueryConcatFieldsWithPrefixe(fields, nullValue, "");
+    	
+    }
+    
+    /*public static String getQueryConcatMaxFields(String fields) {
+    	String[] liste = fields.split(",");
+    	String result="";
+    	int cpt = 0;
+    	int length = liste.length;
+    	for(String field:liste) {
+    		if(cpt<length-1)
+    			result +=String.format("cast(max(%s) as string),",field);
+    		else
+    			result +=String.format("cast(max(%s) as string)",field);
+    		cpt++;
+    	}
+    	return result.toUpperCase();
+    	
+    }*/
+    
+    public static String getQueryConcatMaxFields(String fields, String last_value) {
+    	String[] liste = fields.split(",");
+    	String[] values = last_value.split(",");
+    	String result="";
+    	int cpt = 0;
+    	int length = liste.length;
+    	for(String field:liste) {
+    		String value = values[cpt];
+    		if(cpt<length-1)
+    			result +=String.format("CASE WHEN max(%s) IS NULL THEN '%s' else cast(max(%s) as string) end,",field,value,field);
+    		else
+    			result +=String.format("CASE WHEN max(%s) IS NULL THEN '%s' else cast(max(%s) as string) end",field,value,field);
+    		cpt++;
+    	}
+    	return result.toUpperCase();
+    	
+    }
+    
+    
+    public static String updateFields(String fields,String dwhFileds,String tab){
+    	String result="";
+    	String[] listTmp = fields.split(",");
+    	String[] listDWH = dwhFileds.split(",");
+    	int compteur=0;
+    	int listLength=listTmp.length;
+    	for(String field:listTmp) {
+    		if(compteur<listLength-1)
+    			result +=String.format("%s=%s.%s,",listDWH[compteur],tab,field);
+    		else
+    			result +=String.format("%s=%s.%s",listDWH[compteur],tab,field);
+    		compteur++;
+    	}
+    	return result.toUpperCase();
+    }
+    
+    public static String whereFields(String fields,String dwhFileds,String tab,String tab1){
+    	String result="";
+    	String[] listDWH = dwhFileds.split(",");
+    	
+    	List<String> listTmp = Arrays.asList(fields.split(","));
+    	Collections.sort(listTmp, Collator.getInstance(Locale.FRANCE));
+    	int compteur=0;
+    	int listLength=listTmp.size();
+    	if (tab1.isEmpty()){
+    	for(String field:listTmp) {
+    		if(compteur<listLength-1)
+    			result +=String.format("%s=%s.%s and ",listDWH[compteur],tab,field);
+    		else
+    			result +=String.format("%s=%s.%s",listDWH[compteur],tab,field);
+    		compteur++;
+    	}
+    	}
+    	else
+    	{
+        	for(String field:listTmp) {
+        		String newDwhFields=String.format("%s.%s",tab1,field);
+        		String value=listDWH[compteur];
+        		String dwhFieldsReplaced=value.replace(field, newDwhFields);
+        		
+        		if(compteur<listLength-1)
+        			result +=String.format("%s=%s.%s and ",dwhFieldsReplaced,tab,field);
+        		else
+        			result +=String.format("%s=%s.%s",dwhFieldsReplaced,tab,field);
+        		compteur++;
+        	}	
+    	}
+    	return result.toUpperCase();
+    }
+    
+    //pas encore utilisé
+    public static int getIndex(String values, String elem){
+    	String []tab = values.split(",");
+    	int index= 0;
+    	for(String value:tab) {
+    		if (value.toLowerCase().equals(elem.toLowerCase()))
+    			return index;
+    		index ++;
+    	}
+    	return -1;
+    	
+    	
+    }
+    
+    public static String addPrefixe(String fields, String separator, String prefixe){
+    	String result ="";
+    	String [] tab = fields.split(separator);
+    	for(String str:tab)
+    	{
+    		result += prefixe + "." + str + ",";
+    	}
+    	return result.substring(0,result.length()-1);
+    }
+    
+    public static String addAlias(String fields, String separator){
+    	String result ="";
+    	String [] tab = fields.split(separator);
+    	for(String str:tab)
+    	{
+    		//result += str + " " + alias + str + ",";
+    		result += String.format("%s as %s,",str,str);
+    	}
+    	return result.substring(0,result.length()-1);
+    }
+    
+    public static String subsLists(String globalList,String keylList){
+    	String[] listGlob = globalList.toUpperCase().split(",");
+    	String[] listKey = keylList.toUpperCase().split(",");
+    	String[] columnsOutOfSchema = new String[]{"D_MAJ","D_CRE"};
+    	
+    	TreeSet<String> setcolumnsOutOfSchema = new TreeSet(Arrays.asList(columnsOutOfSchema));
+    	TreeSet<String> glob = new TreeSet(Arrays.asList(listGlob));
+    	TreeSet<String> key = new TreeSet(Arrays.asList(listKey));
+    	
+    	glob.removeAll(setcolumnsOutOfSchema);
+    	glob.removeAll(key);
+    	String result = Joiner.on(",").join(glob);
+    	return result;
+    }
+    
+    public static String addNVLfunction(String fields,String nullValue) {
+    	String[] liste = fields.split(",");
+    	String result="";
+    	int cpt = 0;
+    	int length = liste.length;
+    	for(String column:liste) {
+    		if (cpt<length-1)
+    			result += String.format("nvl(%s,%s),", column, nullValue);
+    		else
+    			result += String.format("nvl(%s,%s)", column, nullValue);
+    		cpt ++;
+    	}
+    	return result.toUpperCase();
+    	
+    }
+}

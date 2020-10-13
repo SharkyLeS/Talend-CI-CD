@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn" prompt="ssh_max_time_to_check_yarn?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Data_Sources" prompt="C30_Directory_HDFS_Data_Sources?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Sqoop_Tmp" prompt="C30_Directory_HDFS_Sqoop_Tmp?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="nom_base_source" prompt="nom_base_source?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="nom_table_cible" prompt="nom_table_cible?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_autres_jars" prompt="sqoop_autres_jars?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_cc" prompt="sqoop_check_schema_cc?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_from" prompt="sqoop_check_schema_from?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_to" prompt="sqoop_check_schema_to?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_fields_delimited" prompt="sqoop_fields_delimited?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_files_type" prompt="sqoop_files_type?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host" prompt="sqoop_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_password" prompt="sqoop_host_password?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_username" prompt="sqoop_host_username?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_host" prompt="sqoop_serveur_smtp_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_port" prompt="sqoop_serveur_smtp_port?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_tmp_hive_database" prompt="sqoop_tmp_hive_database?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_cluster_host" prompt="ssh_cluster_host?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_password" prompt="ssh_cluster_host_password?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_username" prompt="ssh_cluster_host_username?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_log_import_directory" prompt="ssh_log_import_directory?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_job_ms" prompt="ssh_max_time_to_check_job_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn_ms" prompt="ssh_max_time_to_check_yarn_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+  </context>
+  <context confirmationNeeded="false" name="REC_DARTY">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn" prompt="ssh_max_time_to_check_yarn?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="maprfs://hdpsrvrec1:7222"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvrec1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpsrvrec1"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Data_Sources" prompt="C30_Directory_HDFS_Data_Sources?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Sqoop_Tmp" prompt="C30_Directory_HDFS_Sqoop_Tmp?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="nom_base_source" prompt="nom_base_source?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="nom_table_cible" prompt="nom_table_cible?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_autres_jars" prompt="sqoop_autres_jars?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_cc" prompt="sqoop_check_schema_cc?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_from" prompt="sqoop_check_schema_from?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_to" prompt="sqoop_check_schema_to?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_fields_delimited" prompt="sqoop_fields_delimited?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_files_type" prompt="sqoop_files_type?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host" prompt="sqoop_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_password" prompt="sqoop_host_password?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_username" prompt="sqoop_host_username?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_host" prompt="sqoop_serveur_smtp_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_port" prompt="sqoop_serveur_smtp_port?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_tmp_hive_database" prompt="sqoop_tmp_hive_database?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_cluster_host" prompt="ssh_cluster_host?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_password" prompt="ssh_cluster_host_password?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_username" prompt="ssh_cluster_host_username?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_log_import_directory" prompt="ssh_log_import_directory?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_job_ms" prompt="ssh_max_time_to_check_job_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn_ms" prompt="ssh_max_time_to_check_yarn_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD_DARTY">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn" prompt="ssh_max_time_to_check_yarn?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpprd1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpprd1"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Data_Sources" prompt="C30_Directory_HDFS_Data_Sources?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Sqoop_Tmp" prompt="C30_Directory_HDFS_Sqoop_Tmp?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="nom_base_source" prompt="nom_base_source?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="nom_table_cible" prompt="nom_table_cible?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_autres_jars" prompt="sqoop_autres_jars?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_cc" prompt="sqoop_check_schema_cc?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_from" prompt="sqoop_check_schema_from?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_to" prompt="sqoop_check_schema_to?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_fields_delimited" prompt="sqoop_fields_delimited?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_files_type" prompt="sqoop_files_type?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host" prompt="sqoop_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_password" prompt="sqoop_host_password?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_username" prompt="sqoop_host_username?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_host" prompt="sqoop_serveur_smtp_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_port" prompt="sqoop_serveur_smtp_port?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_tmp_hive_database" prompt="sqoop_tmp_hive_database?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_cluster_host" prompt="ssh_cluster_host?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_password" prompt="ssh_cluster_host_password?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_username" prompt="ssh_cluster_host_username?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_log_import_directory" prompt="ssh_log_import_directory?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_job_ms" prompt="ssh_max_time_to_check_job_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn_ms" prompt="ssh_max_time_to_check_yarn_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+  </context>
+  <context confirmationNeeded="false" name="DEV_DARTY">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn" prompt="ssh_max_time_to_check_yarn?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Data_Sources" prompt="C30_Directory_HDFS_Data_Sources?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Sqoop_Tmp" prompt="C30_Directory_HDFS_Sqoop_Tmp?" promptNeeded="false" repositoryContextId="_OQLqIElKEeiLYrbxKHcLOA" type="id_String" value="null"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="nom_base_source" prompt="nom_base_source?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="nom_table_cible" prompt="nom_table_cible?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_autres_jars" prompt="sqoop_autres_jars?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_cc" prompt="sqoop_check_schema_cc?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_from" prompt="sqoop_check_schema_from?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_check_schema_to" prompt="sqoop_check_schema_to?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_fields_delimited" prompt="sqoop_fields_delimited?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_files_type" prompt="sqoop_files_type?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host" prompt="sqoop_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_password" prompt="sqoop_host_password?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_host_username" prompt="sqoop_host_username?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value=""/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_host" prompt="sqoop_serveur_smtp_host?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_serveur_smtp_port" prompt="sqoop_serveur_smtp_port?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="sqoop_tmp_hive_database" prompt="sqoop_tmp_hive_database?" promptNeeded="false" repositoryContextId="_ccDLUCovEeimJexi8-6KoQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_cluster_host" prompt="ssh_cluster_host?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_password" prompt="ssh_cluster_host_password?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_cluster_host_username" prompt="ssh_cluster_host_username?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value=""/>
+    <contextParameter comment="" name="ssh_log_import_directory" prompt="ssh_log_import_directory?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_job_ms" prompt="ssh_max_time_to_check_job_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+    <contextParameter comment="" name="ssh_max_time_to_check_yarn_ms" prompt="ssh_max_time_to_check_yarn_ms?" promptNeeded="false" repositoryContextId="_KIntMCthEeiFLK6jGosZig" type="id_String" value="null"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;]}"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="true"/>
+    <routinesParameter id="_icMU4EikEeihcO-XxTeHYw" name="DataOperation"/>
+    <routinesParameter id="_idEeoEikEeihcO-XxTeHYw" name="Mathematical"/>
+    <routinesParameter id="_idmDEEikEeihcO-XxTeHYw" name="Numeric"/>
+    <routinesParameter id="_ieVC4EikEeihcO-XxTeHYw" name="Relational"/>
+    <routinesParameter id="_iX_KUEikEeihcO-XxTeHYw" name="SQLike"/>
+    <routinesParameter id="_ie5qoEikEeihcO-XxTeHYw" name="StringHandling"/>
+    <routinesParameter id="_ifkZAEikEeihcO-XxTeHYw" name="TalendDataGenerator"/>
+    <routinesParameter id="_igPHYEikEeihcO-XxTeHYw" name="TalendDate"/>
+    <routinesParameter id="_ig-uQEikEeihcO-XxTeHYw" name="TalendString"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    <routinesParameter id="_uwlkMD1rEeinEKNqHdAwXQ" name="Number"/>
+    <routinesParameter id="_vL2V8FqNEei_XfYzc95zxg" name="JobletFluxBaseVersHadoop"/>
+    <routinesParameter id="_Cbfy8G4cEei_P8UU2qZPRg" name="DQTechnical"/>
+    <routinesParameter id="_CZg18G4cEei_P8UU2qZPRg" name="DataQuality"/>
+    <routinesParameter id="_CbJNoG4cEei_P8UU2qZPRg" name="DqStringHandling"/>
+  </parameters>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_9"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="hive_insert_static"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="hbase_insert_static"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="SELECT ROW_ID, CREATED, CREATED_BY, LAST_UPD, LAST_UPD_BY, MODIFICATION_NUM, CONFLICT_ID, PAR_ROW_ID, &#13;&#10;CASE WHEN UPPER(TYPE) IN('FNACPLUS','DARTYPLUS') THEN 'RGPD' ELSE NAME END as NAME,&#13;&#10;TYPE, ATTRIB_08, ATTRIB_09, ATTRIB_10, ATTRIB_11, &#13;&#10;ATTRIB_12, ATTRIB_13, ATTRIB_14, ATTRIB_15, ATTRIB_16, ATTRIB_17, ATTRIB_18, ATTRIB_19, ATTRIB_20, ATTRIB_21, ATTRIB_22, ATTRIB_23, ATTRIB_24, ATTRIB_25, &#13;&#10;ATTRIB_26, ATTRIB_27, ATTRIB_28, ATTRIB_29, ATTRIB_30, ATTRIB_31, ATTRIB_32, ATTRIB_33, ATTRIB_01, ATTRIB_02, &#13;&#10;CASE WHEN UPPER(TYPE) IN('FIDELITE') THEN 'RGPD' ELSE ATTRIB_03 END as ATTRIB_03,&#13;&#10;CASE WHEN UPPER(TYPE) IN('FIDELITE') THEN 'RGPD' ELSE ATTRIB_04 END as ATTRIB_04,&#13;&#10;CASE WHEN UPPER(TYPE) IN('FIDELITE') THEN 'RGPD' ELSE ATTRIB_05 END as ATTRIB_05,&#13;&#10;ATTRIB_06, ATTRIB_07, ATTRIB_34, ATTRIB_35, ATTRIB_36, ATTRIB_37, ATTRIB_38, ATTRIB_39, ATTRIB_40, ATTRIB_41, ATTRIB_42, ATTRIB_43, ATTRIB_44, ATTRIB_45, ATTRIB_46, ATTRIB_47;&#13;&#10;Select CONCAT_WS('|',ROW_ID), ROW_ID,&#13;&#10;CASE WHEN UPPER(TYPE) IN('FNACPLUS','DARTYPLUS') THEN NAME ELSE 'NON RGPD' END as NAME, &#13;&#10;CASE WHEN UPPER(TYPE) IN('FIDELITE') THEN ATTRIB_03 ELSE 'NON RGPD' END as ATTRIB_03,&#13;&#10;CASE WHEN UPPER(TYPE) IN('FIDELITE') THEN ATTRIB_04 ELSE 'NON RGPD' END as ATTRIB_04,&#13;&#10;CASE WHEN UPPER(TYPE) IN('FIDELITE') THEN ATTRIB_05 ELSE 'NON RGPD' END as ATTRIB_05;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_9">
+      <column comment="" key="false" name="hive_insert_static" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="hbase_insert_static" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_20"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;hive_insert_static&quot;"/>
+      <elementValue elementRef="VALUE" value="row25.hive_insert_static"/>
+      <elementValue elementRef="KEY" value="&quot;hbase_insert_static&quot;"/>
+      <elementValue elementRef="VALUE" value="row25.hbase_insert_static"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_20">
+      <column comment="" key="false" name="hive_insert_static" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="hbase_insert_static" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tJDBCClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCClose_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <elementParameter name="PROPERTIES" value="{&quot;@type&quot;:&quot;org.talend.components.jdbc.tjdbcclose.TJDBCCloseProperties&quot;,&quot;referencedComponent&quot;:{&quot;referenceType&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;COMPONENT_INSTANCE&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.Arrays$ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;THIS_COMPONENT&quot;},{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;COMPONENT_TYPE&quot;},{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;COMPONENT_INSTANCE&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties&lt;P extends org.talend.daikon.properties.Properties&gt;.ReferenceType&quot;,&quot;name&quot;:&quot;referenceType&quot;,&quot;tags&quot;:null},&quot;componentInstanceId&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;JBL_FLUX_BASE_VERS_HADOOP_1_tJDBCConnection_1&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;ADD_QUOTES&quot;:true},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;componentInstanceId&quot;,&quot;tags&quot;:null},&quot;referenceDefinitionName&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;tJDBCConnection&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;referenceDefinitionName&quot;,&quot;tags&quot;:null},&quot;reference&quot;:null,&quot;name&quot;:&quot;referencedComponent&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;name&quot;:&quot;root&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null}"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;déconnexion Hive OK&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
+  </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="JBL_FLUX_BASE_VERS_HADOOP" componentVersion="3.2" offsetLabelX="0" offsetLabelY="0" posX="448" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_FLUX_BASE_VERS_HADOOP_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+    <elementParameter field="CHECK" name="START" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tFixedFlowInput_9"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_FLUX_BASE_VERS_HADOOP"/>
+    <elementParameter field="TEXT" name="HINT" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value=""/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.nom_base_source=&quot;siebel&quot;;&#10;context.nom_table_cible=&quot;s_contact_xm_darty&quot;;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <connection connectorName="FLOW" label="row25" lineStyle="0" metaname="tFixedFlowInput_9" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_9" target="tSetGlobalVar_20">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="hive_insert_static"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="hbase_insert_static"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row25"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_9" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_9" target="JBL_FLUX_BASE_VERS_HADOOP_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_20" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_20" target="tJava_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJDBCClose_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJDBCClose_1" offsetLabelX="0" offsetLabelY="0" source="tJDBCClose_1" target="tWarn_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFixedFlowInput_9">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_9"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_FLUX_BASE_VERS_HADOOP_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_818f082c-86e4-4577-b522-7d9d26c073d8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3GqJZQFU3nfoPp9vZuXlR7jTKwR/zDS1iozvrACYPnJfZFCSe0F15x2EiBMqfNDTcHDGX8vcJL9p
+1VdbkQGyGA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a5a0763f-c773-47b4-82d7-b4740e241c8a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RxoJkWHR5rujvueXaO2kR6FfoJWcmPFh3Gx5w7FJzG29bct1dyQOCxnQ6kUx3yv5Y0DlMguWvJvt
+4LdpOU1RAw==</DigestValue></Reference></SignedInfo><SignatureValue>pluBBJUsAnTHb5JgrK+nb0wzWrXCDV2JLO9CABbqEJX/jBuJ4q33sAcn4VFUcM0/+8C58L3J94gE
+RiuaTRdqMcU9rv+/olIjsOLGUCeMZP8BG98a45M98VuyT2O6MYukWzHfaDyoHrsHm2tY28ucu+oX
+H92X7fqZMbgAjmVqIuUI6zOG3d0knjicRMWUnHuynPuREayjHJqnI5L/hDkPlkluRqqHiQTGCWYX
+tg5Afjydn/Qp0MhbKxFiTz6DkffqfRh4raLwkHMxldQAvngAGHqi0eBC+axLo8Q4ENGnNTGmnJ/L
+kdXmWYFo+g/TbmXOGzsDHYeD5klBves4kNZijw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a5a0763f-c773-47b4-82d7-b4740e241c8a" Target="#_818f082c-86e4-4577-b522-7d9d26c073d8"><Timestamp>2020-08-10 05:54:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore" xmi:version="2.0">
+  <model:JobletProcess defaultContext="Default">
+    <context confirmationNeeded="false" name="Default"/>
+    <parameters>
+      <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+      <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+      <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+      <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+      <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+      <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+      <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+      <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+      <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="ORACLE_10"/>
+      <routinesParameter id="_zvZf4G-lEeipGPbF0FwUvA" name="DataOperation"/>
+      <routinesParameter id="_zvsa0G-lEeipGPbF0FwUvA" name="Mathematical"/>
+      <routinesParameter id="_zwLjAG-lEeipGPbF0FwUvA" name="Numeric"/>
+      <routinesParameter id="_zwlysG-lEeipGPbF0FwUvA" name="Relational"/>
+      <routinesParameter id="_zt6SIG-lEeipGPbF0FwUvA" name="SQLike"/>
+      <routinesParameter id="_zxACYG-lEeipGPbF0FwUvA" name="StringHandling"/>
+      <routinesParameter id="_zxaSEG-lEeipGPbF0FwUvA" name="TalendDataGenerator"/>
+      <routinesParameter id="_zx0hwG-lEeipGPbF0FwUvA" name="TalendDate"/>
+      <routinesParameter id="_zyIDwG-lEeipGPbF0FwUvA" name="TalendString"/>
+      <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+      <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+      <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+      <routinesParameter id="_vL2V8FqNEei_XfYzc95zxg" name="JobletFluxBaseVersHadoop"/>
+      <routinesParameter id="_uwlkMD1rEeinEKNqHdAwXQ" name="Number"/>
+      <routinesParameter id="_Cbfy8G4cEei_P8UU2qZPRg" name="DQTechnical"/>
+      <routinesParameter id="_CZg18G4cEei_P8UU2qZPRg" name="DataQuality"/>
+      <routinesParameter id="_CbJNoG4cEei_P8UU2qZPRg" name="DqStringHandling"/>
+    </parameters>
+    <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1"/>
+      <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+      <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+      <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+      <elementParameter field="TABLE" name="VALUES">
+        <elementValue elementRef="SCHEMA_COLUMN" value="date_execution"/>
+        <elementValue elementRef="VALUE" value="&quot;1900-01-01&quot;"/>
+      </elementParameter>
+      <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+      <elementParameter field="TABLE" name="INTABLE">
+        <elementValue elementRef="date_execution" value=""/>
+        <elementValue elementRef="date_execution" value=""/>
+        <elementValue elementRef="date_execution" value=""/>
+      </elementParameter>
+      <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+      <elementParameter field="MEMO" name="INLINECONTENT" value=""/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tFixedFlowInput_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1"/>
+      <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+      <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileExist_1_FILENAME&quot;))"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
+      <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="APPEND" value="false"/>
+      <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+      <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+      <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+      <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+      <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+      <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+      <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+      <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+      <elementParameter field="CHECK" name="CREATE" value="true"/>
+      <elementParameter field="CHECK" name="SPLIT" value="false"/>
+      <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000"/>
+      <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+      <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1"/>
+      <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+      <metadata connector="FLOW" name="tFileOutputDelimited_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+      <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+      <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="//globalMap.put(&quot;date_execution&quot;, TalendDate.getDate(&quot;YYYYMMDD&quot;));&#10;globalMap.put(&quot;date_execution&quot;, &quot;1900-01-01&quot;);&#10;&#10;&#10;System.out.println(&quot;Initialisation du flux, traitement depuis : &quot; + (String) globalMap.get(&quot;date_execution&quot;));"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tJava_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_1"/>
+      <elementParameter field="FILE" name="FILE_NAME" value="(String)globalMap.get(&quot;file_name_date_execution&quot;)"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    </node>
+    <node componentName="tFileRowCount" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileRowCount_1"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileExist_1_FILENAME&quot;))"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="CHECK" name="IGNORE_EMPTY_ROW" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tFileRowCount_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="8" offsetLabelY="0" posX="576" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+      <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+      <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileExist_1_FILENAME&quot;))"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+      <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+      <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+      <elementParameter field="TEXT" name="HEADER" value="0"/>
+      <elementParameter field="TEXT" name="FOOTER" value="0"/>
+      <elementParameter field="TEXT" name="LIMIT" value=""/>
+      <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+      <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+      <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;C:/Talend-Studio-r104014-V5.3.1/workspace&quot;"/>
+      <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+      <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+      <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+      <elementParameter field="CHECK" name="RANDOM" value="false"/>
+      <elementParameter field="TEXT" name="NB_RANDOM" value="10"/>
+      <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+      <elementParameter field="TABLE" name="TRIMSELECT">
+        <elementValue elementRef="SCHEMA_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRIM" value="false"/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+      <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+      <elementParameter field="TEXT" name="DESTINATION" value=""/>
+      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tFileInputDelimited_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="REJECT" name="REJECT">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tSampleRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSampleRow_1"/>
+      <elementParameter field="LABEL" name="INFO_RANGE" value="Range let you choose a list of line numbers and/or a list of ranges.&#10;&#10;- &quot;1,5&quot; : line 1 and 5&#10;- &quot;10..20&quot; : lines 10 to 20&#10;- &quot;23..45,48,50..54&quot; : lines 23 to 45, line 48 and lines 50 to 54&#10;- &quot;1..10&quot; : 10 first lines&#10;&#10;&#9;  "/>
+      <elementParameter field="MEMO_JAVA" name="RANGE" value="((Integer)globalMap.get(&quot;tFileRowCount_1_COUNT&quot;)).toString()"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tSampleRow_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;date_execution&quot;, input_row.date_execution);&#10;&#10;&#10;System.out.println(&quot;Traitement depuis : &quot; + (String) globalMap.get(&quot;date_execution&quot;));"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tJavaRow_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;\nLancement de l'initialisation de la date d'execution (delta) se trouvant dans le chemin &quot; + globalMap.get(&quot;file_name_date_execution&quot;));"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+      <metadata connector="FLOW" name="tJava_2"/>
+    </node>
+    <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tFileOutputDelimited_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tJava_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="OUTPUT_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_1" target="tFixedFlowInput_1">
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_1_EXISTS&quot;))"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_1" target="tFileRowCount_1">
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Boolean)globalMap.get(&quot;tFileExist_1_EXISTS&quot;))"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileRowCount_1" offsetLabelX="0" offsetLabelY="0" source="tFileRowCount_1" target="tFileInputDelimited_1">
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tSampleRow_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tSampleRow_1" offsetLabelX="0" offsetLabelY="0" source="tSampleRow_1" target="tJavaRow_1">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="OUTPUT_2">
+      <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+        <elementValue elementRef="TRACE_COLUMN" value="date_execution"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+      <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+      <elementParameter field="TABLE" name="CONDITIONS"/>
+      <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="TRIGGER_INPUT_1" offsetLabelX="0" offsetLabelY="0" source="TRIGGER_INPUT_1" target="tJava_2">
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tFileExist_1">
+      <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+      <elementParameter field="RADIO" name="NONE" value="true"/>
+      <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+      <elementParameter field="TABLE" name="HASH_KEYS"/>
+      <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+      <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+      <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+      <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileRowCount_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="false"/>
+      <elementParameter field="CHECK" name="START" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" name="OUTPUT_1">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </jobletNodes>
+    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_2"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="false"/>
+      <elementParameter field="CHECK" name="START" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" name="OUTPUT_2">
+        <column comment="" key="false" name="date_execution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </jobletNodes>
+    <jobletNodes componentName="TRIGGER_INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96" trigger="true">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+      <elementParameter field="CHECK" name="START" value="true"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+    </jobletNodes>
+  </model:JobletProcess>
+  <TalendProperties:ByteArray innerContent="89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7AF40000032C49444154789CC5975B4853711CC7BF1114410F3D48F510D45BD09B19E483B76A1084D9249D9897D49A9754EAC9A07A28A3B7E84AE55113350DCD4B8E5444F38268B99CBD88D10531422B2B3412F421EADBEF781CD8B6B3EDCC5983CF7E3B3BDB7E9FF3FB7FCF390C24F13F597C0A0F0F7FAFE27CF35F6E07FC0311FBF6CCE554623E5B01A34CA18C34EDFE955C81F280048C905D8FED795598CFAF06CF7781975E8045FD604E23682D0553CAF0D6F0121821AF1AB367EAC13BAFC1AA0F60D9047875143CFB0CCC7A02669483490A4602CA8080E5B81D7D1D2CB915E0CD5760E334D839073EFE0A968CCB2446C0DCA760429D4C4296254E41845E53DD0CF814A8414F619DD6D0F60D1CFC09B6CE6853B8FC123CD50DC637C91444E0A8826623021E71FDA2B5121F0B44E0864CE0C124D8F405AC9D026FBD012F4816AC9DE0E1063055041215F41A5902BF0432ABD09B5B035E7480D7C6C0DBD2F8BAC814CBF84F4B10532403A65A30DDC70402CEC0B14A5CB1DE07F365D44512BA737609DF73B0B00F3CDE0EC63E0263CAB50C1C519018F40CC8634D6639E633E4144C6F93D477688D936CE0213933A224A0C9D23C45C1ACB7A30E3803F2D81893BDA5E6440998269330CB721C7C28475D051E28D5469FA6602156C136A3A7A15F02533F2698DA14C6B08490FD96BB78671591938A469682DF6605E37B15348429D810F4EB80B3B95A97A61122AC8F2B8165F97A4BF362A147D81AB40C389B378EDDA3AF2392C6EB8422A152D8B1E20C1869EE22922B3884CD016720D0E64B026B851C41F12B03A12633D58F7AC39FC60E07A32593D443F66FF2980155A05D6EA47D9231FB24393A4D8ECF909FE6C8EF0BC605A47A44DD171919FDD92D036A83D512181EFE1B75BF5B06822560B76B02523934E4194F02869740BD2C7B12181CD404A4BA3130A061D95944E9D962580072CBC5B0E0F08E2AD0DFAF8F9BC0E20BFF9620DAD712F4F4681390AA8BDB120453A0AB4B1390AACB4A32E053A0A3431390AA4BC019F047A0AD4D1390BA486BAB3BAB9A019B4D1390AACBAA66A0B9591390AA8B6E069CD7FC5DF1058BB86E3B05BCFDD56A6860B429D44C15E7F5DF75DB63065C7EB05BC5CBF64AFF9CB6B865E07FF1073F036B3DCBCB274D0000000049454E44AE426082"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3ccd1030-07ca-46a5-8df5-8dd887275569"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pb9bbskta/v4qmmbDkca0FVhg25/pQSF3fxvjcc4j4aRSXFeH+pUmqZbJQheiLddHNEWymxP3YD8
+jur9LJ38iw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_45d5fcf3-db72-4403-b1b3-8750f4a0ef02"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aiunVHmwRYcd9LadoS2y7OvoF7Ut+7gfKO0KoiZPOx2zqM4zf9wpFdbTWFPLQ6xJOQSMitqCbpMc
+u6C4+s49qQ==</DigestValue></Reference></SignedInfo><SignatureValue>j5BNQetsrRnT7eh9cxQuDLoYBwA2bmtaPMa6dqluFyAnZVzThVN8FtZhfEtIZH0ifPOmSAEcilT3
+Nk1HvGymWaCgpas8D2NebA7EROC3jZTy79zdONHBUaB1QNuxOD8RG5eE1Mu+LPNSF75PyI/qXILu
+UCWnYAu1PDGjDwbMT5msPrJqDRJGq8bhMUJ79gLmROLR9Rj+DfvlWVFFdKz8dsymWNQLnX4++ET4
+TvgXUEEY3Hma9Ii0JQ/iR0/dhZPdbIKQXxyKUYdu6VzhsyAP1X0vgqQiCye4nvgAKLooFJAoz/RE
+a9EbHaUY5Wv8HSjHCG5T9zk1+PCSMOWAftgVIw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_45d5fcf3-db72-4403-b1b3-8750f4a0ef02" Target="#_3ccd1030-07ca-46a5-8df5-8dd887275569"><Timestamp>2020-08-31 08:14:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

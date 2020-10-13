@@ -1,0 +1,57 @@
+package routines;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class FnacDartyRoutines {
+
+	public static boolean validateEmail(String email) {
+
+		String EMAIL_REGEX = "^[\\w-\\+]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+		Pattern pattern;
+		Matcher matcher;
+		pattern = Pattern.compile(EMAIL_REGEX, Pattern.CASE_INSENSITIVE);
+		matcher = pattern.matcher(email);
+		return matcher.matches();
+
+	}
+	
+	/* *******************************************************************/
+	
+	public static boolean validateFrenchPhoneNumber(String phoneNumber) {
+
+		String PHONE_REGEX = "^(?:(?:\\+|00)33[\\s.-]{0,3}(?:\\(0\\)[\\s.-]{0,3})?|0)[1-9](?:(?:[\\s.-]?\\d{2}){4}|\\d{2}(?:[\\s.-]?\\d{3}){2})$";
+		Pattern pattern;
+		Matcher matcher;
+		pattern = Pattern.compile(PHONE_REGEX, Pattern.CASE_INSENSITIVE);
+		matcher = pattern.matcher(phoneNumber);
+		return matcher.matches();
+	
+	}
+	
+	/* *******************************************************************/
+	
+	public static boolean validateWorldPhoneNumber(String worldPhoneNumber) {
+		
+		String WORLD_PHONE_REGEX = "^\\+?[0-9. ()-]{10,25}$";
+		Pattern pattern;
+		Matcher matcher;
+		pattern = Pattern.compile(WORLD_PHONE_REGEX, Pattern.CASE_INSENSITIVE);
+		matcher = pattern.matcher(worldPhoneNumber);
+		return matcher.matches();
+		
+	}
+	
+	/* **********************************************************************/
+	
+    public static boolean isDouble(String data){
+    	boolean returnVal = true;
+    	
+    	try{
+    		Double.parseDouble(data);
+    	}catch(Exception ex){
+    		returnVal = false;
+       	}
+    	return returnVal;
+    }
+}

@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="SXI521" xmi:version="2.0">
+  <context confirmationNeeded="false" name="SXI521">
+    <contextParameter comment="Constante GRP" name="HFM_Constante_GRP" prompt="HFM_Constante_GRP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="GRP"/>
+    <contextParameter comment="Valeur None pour Audit dans HFM" name="HFM_None_Audit" prompt="HFM_None_Audit?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_AU"/>
+    <contextParameter comment="Valeur None pour Channel dans HFM" name="HFM_None_Channel" prompt="HFM_None_Channel?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_CH"/>
+    <contextParameter comment="Valeur None pour Finnotes" name="HFM_None_Finnotes" prompt="HFM_None_Finnotes?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_FI"/>
+    <contextParameter comment="Valeur None pour Flow dans HFM" name="HFM_None_Flow" prompt="HFM_None_Flow?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_F"/>
+    <contextParameter comment="Valeur None pour Function" name="HFM_None_Function" prompt="HFM_None_Function?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_FU"/>
+    <contextParameter comment="Valeur None pour ICP" name="HFM_None_ICP" prompt="HFM_None_ICP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_IC"/>
+    <contextParameter comment="Valeur None pour Product dans HFM" name="HFM_None_Product" prompt="HFM_None_Product?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_PR"/>
+    <contextParameter comment="Valeur None pour Share dans HFM" name="HFM_None_Share" prompt="HFM_None_Share?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_SH"/>
+    <contextParameter comment="Valeur None pour Store dans HFM" name="HFM_None_Store" prompt="HFM_None_Store?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_ST"/>
+    <contextParameter comment="Valeur None pour Version dans HFM" name="HFM_None_Version" prompt="HFM_None_Version?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_VE"/>
+    <contextParameter comment="Prefixe à ajouter à la période SAP pour donner la période HFM" name="HFM_Prefixe_Periode" prompt="HFM_Prefixe_Periode?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="M"/>
+    <contextParameter comment="Scenario par défaut" name="HFM_Scenario" prompt="HFM_Scenario?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="ACTUAL"/>
+    <contextParameter comment="View par défaut" name="HFM_View" prompt="HFM_View?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="YTD"/>
+    <contextParameter comment="Valeur BIL" name="SAP_Constante_BIL" prompt="SAP_Constante_BIL?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="BIL"/>
+    <contextParameter comment="Fichier des comptes CC Exclus" name="SAP_HFM_Fic_CC_Exclus" prompt="SAP_HFM_Fic_CC_Exclus?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="CC_Exclus.txt"/>
+    <contextParameter comment="Fichier en provenance de SAP" name="SAP_HFM_Fic_Ent" prompt="SAP_HFM_Fic_Ent?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="sap.txt"/>
+    <contextParameter comment="Fichier d'erreurs" name="SAP_HFM_Fic_Err" prompt="SAP_HFM_Fic_Err?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="err"/>
+    <contextParameter comment="Fichier vers HFM" name="SAP_HFM_Fic_Sor" prompt="SAP_HFM_Fic_Sor?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="hfm"/>
+    <contextParameter comment="Fichier temporraire avec None" name="SAP_HFM_Fic_Temp_None" prompt="SAP_HFM_Fic_Temp_None?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="temp_none"/>
+    <contextParameter comment="Fichier temporraire après application des transformations" name="SAP_HFM_Fic_Temp_Trans" prompt="SAP_HFM_Fic_Temp_Trans?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="temp_trans"/>
+    <contextParameter comment="Fichier de mapping des Entities" name="SAP_HFM_Fic_Trans_Entity" prompt="SAP_HFM_Fic_Trans_Entity?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="entity.txt"/>
+    <contextParameter comment="Fichier de mapping des finnotes" name="SAP_HFM_Fic_Trans_Finnotes" prompt="SAP_HFM_Fic_Trans_Finnotes?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="finnotes.txt"/>
+    <contextParameter comment="Fichier de mapping des Functions" name="SAP_HFM_Fic_Trans_Function" prompt="SAP_HFM_Fic_Trans_Function?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="function.txt"/>
+    <contextParameter comment="Fichier de mapping des ICP" name="SAP_HFM_Fic_Trans_ICP" prompt="SAP_HFM_Fic_Trans_ICP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="icp.txt"/>
+    <contextParameter comment="Fichier de changement de signe des montants" name="SAP_HFM_Fic_Trans_Montant" prompt="SAP_HFM_Fic_Trans_Montant?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="montant.txt"/>
+    <contextParameter comment="Répertoire du fichier d'entrée" name="SAP_HFM_Rep_Ent" prompt="SAP_HFM_Rep_Ent?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="//sxi521/Décisionnel/25 - Pegase/SAP_HFM/in/"/>
+    <contextParameter comment="Répertoire du fichier d'erreurs" name="SAP_HFM_Rep_Err" prompt="SAP_HFM_Rep_Err?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="//sxi521/Décisionnel/25 - Pegase/SAP_HFM/Err/"/>
+    <contextParameter comment="Répertoire du fichier de sortie" name="SAP_HFM_Rep_Sor" prompt="SAP_HFM_Rep_Sor?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="//sxi521/Décisionnel/25 - Pegase/SAP_HFM/Out/"/>
+    <contextParameter comment="Répertorie des fichiers temporaires" name="SAP_HFM_Rep_Temp" prompt="SAP_HFM_Rep_Temp?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="//sxi521/Décisionnel/25 - Pegase/SAP_HFM/Temp/"/>
+    <contextParameter comment="Répertoire des fichiers de mapping" name="SAP_HFM_Rep_Trans" prompt="SAP_HFM_Rep_Trans?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="//sxi521/Décisionnel/25 - Pegase/Mappings/"/>
+    <contextParameter comment="Fichiers avec No Data au lieu des montants" name="SAP_HFM_Fic_NoData" prompt="SAP_HFM_Fic_NoData?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="NoData"/>
+    <contextParameter comment="Valeu NoData ppour chargement HFM" name="HFM_Constante_NoData" prompt="HFM_Constante_NoData?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="NODATA"/>
+    <contextParameter comment="Type des fichiers à générer" name="HFM_Type_Fichier" prompt="HFM_Type_Fichier?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value=".txt"/>
+    <contextParameter comment="Date du jour" name="Date_Courante_OP" prompt="Date_Courante_OP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Liste des stés SL à mapper si GRP" name="SAP_Liste_SL_Partenaires_GRP" prompt="SAP_Liste_SL_Partenaires_GRP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_List Of Value" value="&quot;907&quot;"/>
+    <contextParameter comment="Value par défaut" name="HFM_Constante_Value" prompt="HFM_Constante_Value?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier des cumuls exclus dans HFM" name="HFM_Fic_CC_Exclus" prompt="HFM_Fic_CC_Exclus?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Valeur FIL pour mapping ICP" name="SAP_Constante_FIL" prompt="SAP_Constante_FIL?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier de transcodification des socitétés Chrysalis" name="HFM_Fic_Trans_Soc_Chrys" prompt="HFM_Fic_Trans_Soc_Chrys?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Entete du fichier données HFM" name="HFM_Entete_Fichier_Data" prompt="HFM_Entete_Fichier_Data?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Répertoire des paramètres callculés par OP" name="OP_Rep_Param" prompt="OP_Rep_Param?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier contenant la date courabnte" name="OP_Fic_Date_Courante" prompt="OP_Fic_Date_Courante?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier de contexte à charger" name="SAP_HFM_Fic_Contexte" prompt="SAP_HFM_Fic_Contexte?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="HFM_Other_Flow" prompt="HFM_Other_Flow?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="CLO"/>
+    <contextParameter comment="" name="ctxContextFile" prompt="ctxContextFile?" promptNeeded="false" type="id_String" value="&quot;//sxi521/Décisionnel/25 - Pegase/SAP_HFM/conf/context.csv&quot;"/>
+    <contextParameter comment="" name="ctxDateOP_File" prompt="ctxDateOP_File?" promptNeeded="false" type="id_String" value="&quot;//sxi521/Décisionnel/25 - Pegase/SAP_HFM/conf/Date_Courante_OP.txt&quot;"/>
+    <contextParameter comment="" name="pegase_rep_logs" prompt="pegase_rep_logs?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="//sxi521/Décisionnel/25 - Pegase/logs/"/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value="&quot;SAP&quot;"/>
+  </context>
+  <context confirmationNeeded="false" name="LOCAL">
+    <contextParameter comment="Constante GRP" name="HFM_Constante_GRP" prompt="HFM_Constante_GRP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="GRP"/>
+    <contextParameter comment="Valeur None pour Audit dans HFM" name="HFM_None_Audit" prompt="HFM_None_Audit?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_AU"/>
+    <contextParameter comment="Valeur None pour Channel dans HFM" name="HFM_None_Channel" prompt="HFM_None_Channel?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_CH"/>
+    <contextParameter comment="Valeur None pour Finnotes" name="HFM_None_Finnotes" prompt="HFM_None_Finnotes?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_FI"/>
+    <contextParameter comment="Valeur None pour Flow dans HFM" name="HFM_None_Flow" prompt="HFM_None_Flow?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_F"/>
+    <contextParameter comment="Valeur None pour Function" name="HFM_None_Function" prompt="HFM_None_Function?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_FU"/>
+    <contextParameter comment="Valeur None pour ICP" name="HFM_None_ICP" prompt="HFM_None_ICP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_IC"/>
+    <contextParameter comment="Valeur None pour Product dans HFM" name="HFM_None_Product" prompt="HFM_None_Product?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_PR"/>
+    <contextParameter comment="Valeur None pour Share dans HFM" name="HFM_None_Share" prompt="HFM_None_Share?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_SH"/>
+    <contextParameter comment="Valeur None pour Store dans HFM" name="HFM_None_Store" prompt="HFM_None_Store?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_ST"/>
+    <contextParameter comment="Valeur None pour Version dans HFM" name="HFM_None_Version" prompt="HFM_None_Version?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_VE"/>
+    <contextParameter comment="Prefixe à ajouter à la période SAP pour donner la période HFM" name="HFM_Prefixe_Periode" prompt="HFM_Prefixe_Periode?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="M"/>
+    <contextParameter comment="Scenario par défaut" name="HFM_Scenario" prompt="HFM_Scenario?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="ACTUAL"/>
+    <contextParameter comment="View par défaut" name="HFM_View" prompt="HFM_View?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="YTD"/>
+    <contextParameter comment="Valeur BIL" name="SAP_Constante_BIL" prompt="SAP_Constante_BIL?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="BIL"/>
+    <contextParameter comment="Fichier des comptes CC Exclus" name="SAP_HFM_Fic_CC_Exclus" prompt="SAP_HFM_Fic_CC_Exclus?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="CC_Exclus.txt"/>
+    <contextParameter comment="Fichier en provenance de SAP" name="SAP_HFM_Fic_Ent" prompt="SAP_HFM_Fic_Ent?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="sap.txt"/>
+    <contextParameter comment="Fichier d'erreurs" name="SAP_HFM_Fic_Err" prompt="SAP_HFM_Fic_Err?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="err"/>
+    <contextParameter comment="Fichier vers HFM" name="SAP_HFM_Fic_Sor" prompt="SAP_HFM_Fic_Sor?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="hfm"/>
+    <contextParameter comment="Fichier temporraire avec None" name="SAP_HFM_Fic_Temp_None" prompt="SAP_HFM_Fic_Temp_None?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="temp_none"/>
+    <contextParameter comment="Fichier temporraire après application des transformations" name="SAP_HFM_Fic_Temp_Trans" prompt="SAP_HFM_Fic_Temp_Trans?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="temp_trans"/>
+    <contextParameter comment="Fichier de mapping des Entities" name="SAP_HFM_Fic_Trans_Entity" prompt="SAP_HFM_Fic_Trans_Entity?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="entity.txt"/>
+    <contextParameter comment="Fichier de mapping des finnotes" name="SAP_HFM_Fic_Trans_Finnotes" prompt="SAP_HFM_Fic_Trans_Finnotes?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="finnotes.txt"/>
+    <contextParameter comment="Fichier de mapping des Functions" name="SAP_HFM_Fic_Trans_Function" prompt="SAP_HFM_Fic_Trans_Function?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="function.txt"/>
+    <contextParameter comment="Fichier de mapping des ICP" name="SAP_HFM_Fic_Trans_ICP" prompt="SAP_HFM_Fic_Trans_ICP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="icp.txt"/>
+    <contextParameter comment="Fichier de changement de signe des montants" name="SAP_HFM_Fic_Trans_Montant" prompt="SAP_HFM_Fic_Trans_Montant?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="montant.txt"/>
+    <contextParameter comment="Répertoire du fichier d'entrée" name="SAP_HFM_Rep_Ent" prompt="SAP_HFM_Rep_Ent?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="C:/Talend_Copernic/in/"/>
+    <contextParameter comment="Répertoire du fichier d'erreurs" name="SAP_HFM_Rep_Err" prompt="SAP_HFM_Rep_Err?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="C:/Talend_Copernic/Err/"/>
+    <contextParameter comment="Répertoire du fichier de sortie" name="SAP_HFM_Rep_Sor" prompt="SAP_HFM_Rep_Sor?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="C:/Talend_Copernic/Out/"/>
+    <contextParameter comment="Répertorie des fichiers temporaires" name="SAP_HFM_Rep_Temp" prompt="SAP_HFM_Rep_Temp?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="C:/Talend_Copernic/Temp/"/>
+    <contextParameter comment="Répertoire des fichiers de mapping" name="SAP_HFM_Rep_Trans" prompt="SAP_HFM_Rep_Trans?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="C:/Talend_Copernic/Mapping/"/>
+    <contextParameter comment="Fichiers avec No Data au lieu des montants" name="SAP_HFM_Fic_NoData" prompt="SAP_HFM_Fic_NoData?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="NoData"/>
+    <contextParameter comment="Valeu NoData ppour chargement HFM" name="HFM_Constante_NoData" prompt="HFM_Constante_NoData?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="NODATA"/>
+    <contextParameter comment="Type des fichiers à générer" name="HFM_Type_Fichier" prompt="HFM_Type_Fichier?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value=".txt"/>
+    <contextParameter comment="Date du jour" name="Date_Courante_OP" prompt="Date_Courante_OP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Liste des stés SL à mapper si GRP" name="SAP_Liste_SL_Partenaires_GRP" prompt="SAP_Liste_SL_Partenaires_GRP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_List Of Value" value="&quot;907&quot;"/>
+    <contextParameter comment="Value par défaut" name="HFM_Constante_Value" prompt="HFM_Constante_Value?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier des cumuls exclus dans HFM" name="HFM_Fic_CC_Exclus" prompt="HFM_Fic_CC_Exclus?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Valeur FIL pour mapping ICP" name="SAP_Constante_FIL" prompt="SAP_Constante_FIL?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier de transcodification des socitétés Chrysalis" name="HFM_Fic_Trans_Soc_Chrys" prompt="HFM_Fic_Trans_Soc_Chrys?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Entete du fichier données HFM" name="HFM_Entete_Fichier_Data" prompt="HFM_Entete_Fichier_Data?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Répertoire des paramètres callculés par OP" name="OP_Rep_Param" prompt="OP_Rep_Param?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier contenant la date courabnte" name="OP_Fic_Date_Courante" prompt="OP_Fic_Date_Courante?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier de contexte à charger" name="SAP_HFM_Fic_Contexte" prompt="SAP_HFM_Fic_Contexte?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="HFM_Other_Flow" prompt="HFM_Other_Flow?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="CLO"/>
+    <contextParameter comment="" name="ctxContextFile" prompt="ctxContextFile?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ctxDateOP_File" prompt="ctxDateOP_File?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="répertoire de logs des jobs du projet" name="pegase_rep_logs" prompt="pegase_rep_logs?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="C:/Talend_Copernic/logs/"/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value="&quot;SAP&quot;"/>
+  </context>
+  <context confirmationNeeded="false" name="Recette">
+    <contextParameter comment="Constante GRP" name="HFM_Constante_GRP" prompt="HFM_Constante_GRP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="GRP"/>
+    <contextParameter comment="Valeur None pour Audit dans HFM" name="HFM_None_Audit" prompt="HFM_None_Audit?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_AU"/>
+    <contextParameter comment="Valeur None pour Channel dans HFM" name="HFM_None_Channel" prompt="HFM_None_Channel?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_CH"/>
+    <contextParameter comment="Valeur None pour Finnotes" name="HFM_None_Finnotes" prompt="HFM_None_Finnotes?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_FI"/>
+    <contextParameter comment="Valeur None pour Flow dans HFM" name="HFM_None_Flow" prompt="HFM_None_Flow?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_F"/>
+    <contextParameter comment="Valeur None pour Function" name="HFM_None_Function" prompt="HFM_None_Function?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_FU"/>
+    <contextParameter comment="Valeur None pour ICP" name="HFM_None_ICP" prompt="HFM_None_ICP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_IC"/>
+    <contextParameter comment="Valeur None pour Product dans HFM" name="HFM_None_Product" prompt="HFM_None_Product?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_PR"/>
+    <contextParameter comment="Valeur None pour Share dans HFM" name="HFM_None_Share" prompt="HFM_None_Share?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_SH"/>
+    <contextParameter comment="Valeur None pour Store dans HFM" name="HFM_None_Store" prompt="HFM_None_Store?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_ST"/>
+    <contextParameter comment="Valeur None pour Version dans HFM" name="HFM_None_Version" prompt="HFM_None_Version?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="N_VE"/>
+    <contextParameter comment="Prefixe à ajouter à la période SAP pour donner la période HFM" name="HFM_Prefixe_Periode" prompt="HFM_Prefixe_Periode?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="M"/>
+    <contextParameter comment="Scenario par défaut" name="HFM_Scenario" prompt="HFM_Scenario?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="ACTUAL"/>
+    <contextParameter comment="View par défaut" name="HFM_View" prompt="HFM_View?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="YTD"/>
+    <contextParameter comment="Valeur BIL" name="SAP_Constante_BIL" prompt="SAP_Constante_BIL?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="BIL"/>
+    <contextParameter comment="Fichier des comptes CC Exclus" name="SAP_HFM_Fic_CC_Exclus" prompt="SAP_HFM_Fic_CC_Exclus?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="CC_Exclus.txt"/>
+    <contextParameter comment="Fichier en provenance de SAP" name="SAP_HFM_Fic_Ent" prompt="SAP_HFM_Fic_Ent?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="sap.txt"/>
+    <contextParameter comment="Fichier d'erreurs" name="SAP_HFM_Fic_Err" prompt="SAP_HFM_Fic_Err?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="err"/>
+    <contextParameter comment="Fichier vers HFM" name="SAP_HFM_Fic_Sor" prompt="SAP_HFM_Fic_Sor?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="hfm"/>
+    <contextParameter comment="Fichier temporraire avec None" name="SAP_HFM_Fic_Temp_None" prompt="SAP_HFM_Fic_Temp_None?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="temp_none"/>
+    <contextParameter comment="Fichier temporraire après application des transformations" name="SAP_HFM_Fic_Temp_Trans" prompt="SAP_HFM_Fic_Temp_Trans?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="temp_trans"/>
+    <contextParameter comment="Fichier de mapping des Entities" name="SAP_HFM_Fic_Trans_Entity" prompt="SAP_HFM_Fic_Trans_Entity?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="entity.txt"/>
+    <contextParameter comment="Fichier de mapping des finnotes" name="SAP_HFM_Fic_Trans_Finnotes" prompt="SAP_HFM_Fic_Trans_Finnotes?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="finnotes.txt"/>
+    <contextParameter comment="Fichier de mapping des Functions" name="SAP_HFM_Fic_Trans_Function" prompt="SAP_HFM_Fic_Trans_Function?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="function.txt"/>
+    <contextParameter comment="Fichier de mapping des ICP" name="SAP_HFM_Fic_Trans_ICP" prompt="SAP_HFM_Fic_Trans_ICP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="icp.txt"/>
+    <contextParameter comment="Fichier de changement de signe des montants" name="SAP_HFM_Fic_Trans_Montant" prompt="SAP_HFM_Fic_Trans_Montant?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_File" value="montant.txt"/>
+    <contextParameter comment="Répertoire du fichier d'entrée" name="SAP_HFM_Rep_Ent" prompt="SAP_HFM_Rep_Ent?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="/data/io/PEGASE/in/"/>
+    <contextParameter comment="Répertoire du fichier d'erreurs" name="SAP_HFM_Rep_Err" prompt="SAP_HFM_Rep_Err?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="/data/io/PEGASE/in/err/"/>
+    <contextParameter comment="Répertoire du fichier de sortie" name="SAP_HFM_Rep_Sor" prompt="SAP_HFM_Rep_Sor?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="/data/io/PEGASE/in/out/"/>
+    <contextParameter comment="Répertorie des fichiers temporaires" name="SAP_HFM_Rep_Temp" prompt="SAP_HFM_Rep_Temp?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="/data/io/PEGASE/in/tmp/"/>
+    <contextParameter comment="Répertoire des fichiers de mapping" name="SAP_HFM_Rep_Trans" prompt="SAP_HFM_Rep_Trans?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_Directory" value="/data/io/PEGASE/in/mapping/"/>
+    <contextParameter comment="Fichiers avec No Data au lieu des montants" name="SAP_HFM_Fic_NoData" prompt="SAP_HFM_Fic_NoData?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="NoData"/>
+    <contextParameter comment="Valeu NoData ppour chargement HFM" name="HFM_Constante_NoData" prompt="HFM_Constante_NoData?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="NODATA"/>
+    <contextParameter comment="Type des fichiers à générer" name="HFM_Type_Fichier" prompt="HFM_Type_Fichier?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value=".txt"/>
+    <contextParameter comment="Date du jour" name="Date_Courante_OP" prompt="Date_Courante_OP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Liste des stés SL à mapper si GRP" name="SAP_Liste_SL_Partenaires_GRP" prompt="SAP_Liste_SL_Partenaires_GRP?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_List Of Value" value="&quot;907&quot;"/>
+    <contextParameter comment="Value par défaut" name="HFM_Constante_Value" prompt="HFM_Constante_Value?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier des cumuls exclus dans HFM" name="HFM_Fic_CC_Exclus" prompt="HFM_Fic_CC_Exclus?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Valeur FIL pour mapping ICP" name="SAP_Constante_FIL" prompt="SAP_Constante_FIL?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier de transcodification des socitétés Chrysalis" name="HFM_Fic_Trans_Soc_Chrys" prompt="HFM_Fic_Trans_Soc_Chrys?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Entete du fichier données HFM" name="HFM_Entete_Fichier_Data" prompt="HFM_Entete_Fichier_Data?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Répertoire des paramètres callculés par OP" name="OP_Rep_Param" prompt="OP_Rep_Param?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier contenant la date courabnte" name="OP_Fic_Date_Courante" prompt="OP_Fic_Date_Courante?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="Fichier de contexte à charger" name="SAP_HFM_Fic_Contexte" prompt="SAP_HFM_Fic_Contexte?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="null"/>
+    <contextParameter comment="" name="HFM_Other_Flow" prompt="HFM_Other_Flow?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="CLO"/>
+    <contextParameter comment="" name="ctxContextFile" prompt="ctxContextFile?" promptNeeded="false" type="id_String" value="&quot;/data/io/PEGASE/in/conf/context.csv&quot;"/>
+    <contextParameter comment="" name="ctxDateOP_File" prompt="ctxDateOP_File?" promptNeeded="false" type="id_String" value="&quot;/data/io/PEGASE/in/conf/Date_Courante_OP.txt&quot;"/>
+    <contextParameter comment="" name="pegase_rep_logs" prompt="pegase_rep_logs?" promptNeeded="false" repositoryContextId="_ea_-cPb-EeOGRa6m0CCKcQ" type="id_String" value="/data/io/PEGASE/logs/"/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value="&quot;SAP&quot;"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;]}"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="416"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="32"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="true"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="context.pegase_rep_logs"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="true"/>
+    <routinesParameter id="_J6pocAKGEeS1VcE7L3mYaQ" name="DQTechnical"/>
+    <routinesParameter id="_LVlKkPbvEeOBf4J3cT6sLA" name="DataOperation"/>
+    <routinesParameter id="_J6JSIAKGEeS1VcE7L3mYaQ" name="DataQuality"/>
+    <routinesParameter id="_J6dbMAKGEeS1VcE7L3mYaQ" name="DqStringHandling"/>
+    <routinesParameter id="_LYGTEPbvEeOBf4J3cT6sLA" name="Mathematical"/>
+    <routinesParameter id="_LYyPkPbvEeOBf4J3cT6sLA" name="Numeric"/>
+    <routinesParameter id="_LZezIPbvEeOBf4J3cT6sLA" name="Relational"/>
+    <routinesParameter id="_LdZCwPbvEeOBf4J3cT6sLA" name="SQLike"/>
+    <routinesParameter id="_LaMk0PbvEeOBf4J3cT6sLA" name="StringHandling"/>
+    <routinesParameter id="_La2FEPbvEeOBf4J3cT6sLA" name="TalendDataGenerator"/>
+    <routinesParameter id="_Lblr8PbvEeOBf4J3cT6sLA" name="TalendDate"/>
+    <routinesParameter id="_Lc1CEPbvEeOBf4J3cT6sLA" name="TalendString"/>
+  </parameters>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.ctxContextFile"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="0"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;D:/Olivier&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="key"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="value"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value=""/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" name="key" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="value" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tContextLoad" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tContextLoad_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tContextLoad_1">
+      <column defaultValue="" key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Context : NBre de lignes chargées &quot;+((Integer)globalMap.get(&quot;tContextLoad_1_NB_LINE&quot;))"/>
+    <elementParameter field="TEXT" name="CODE" value="0"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;this is a warning&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_2"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.ctxDateOP_File"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="0"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;D:/Olivier&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="key"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="value"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value=""/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_2">
+      <column comment="" key="false" name="key" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="value" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" name="key" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="value" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tContextLoad" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tContextLoad_2"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tContextLoad_2">
+      <column defaultValue="" key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.SAP_HFM_Rep_Ent+&quot;/&quot;+context.source+&quot;/&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;*&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="0" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;traitement intégration fichier : &quot;+(String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_3"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Interface_SAP_HFM2"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_VKZEIBytEeSWz7ENX3OZ_g"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Recette"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Rep_Ent"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.SAP_HFM_Rep_Ent+&quot;/&quot;+context.source+&quot;/&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Rep_Sor"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.SAP_HFM_Rep_Sor+&quot;/&quot;+context.source+&quot;/&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Fic_Temp_None"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.source+&quot;_&quot;+context.SAP_HFM_Fic_Temp_None"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Fic_Temp_Trans"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.source+&quot;_&quot;+context.SAP_HFM_Fic_Temp_Trans"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Fic_Err"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.source+&quot;_&quot;+context.SAP_HFM_Fic_Err"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Fic_Ent"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="(String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Fic_Sor"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.source+context.SAP_HFM_Fic_Sor"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="HFM_Fic_CC_Exclus"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.source+context.HFM_Fic_CC_Exclus"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SAP_HFM_Fic_NoData"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.source+context.SAP_HFM_Fic_NoData"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tRunJob_1"/>
+  </node>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tContextLoad_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="key"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="value"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFileInputDelimited_2">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tWarn_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tContextLoad_1" offsetLabelX="0" offsetLabelY="0" source="tContextLoad_1" target="tWarn_2">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tContextLoad_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="value"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="key"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tWarn_3">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_3" offsetLabelX="0" offsetLabelY="0" source="tWarn_3" target="tRunJob_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_50dbed01-cdaf-4348-b3d6-1d4a62e60e60"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ObwHnHLuKgwtW7+aXHYpXpdmjBhl86hD2BPLkPtgAEMH0IpuF2dMuc68CxXk1j8x4x2HAn6hsOc/
+f95F4DUL4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e849582d-0ff7-4b8f-94b7-71b80a3ce9e4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QVaeZSH81eDiyaEoJjDLvHAG0yJB+rCrWz7MgHCu2DMvhwWVy+1Y3WZm6Aleg5IwLD5vRC4NSbmS
+evHn8TI3xg==</DigestValue></Reference></SignedInfo><SignatureValue>l5meM8ni9SaBSDYs5uvPkDQ0lqkSk0il3abjzYfREjZYaMvy797XIcROCMjZ1k/eOQnov9wn1Swn
+v211tONa3umCEihfznO5HbfHjhGs9+xevz3P6c8DJu+vPtk/uWZMpi8YUviHxunjoDDfQ4u/nIDq
+haeRe/KWqnEbIh6fiBoB2d5U6pW1IY2QnNe5LOmA9iiQ9usKFq0qHSViRAfTg/UZcwVvEIMHrhII
+HLEpDIfoIKqJxA3RQ7MhWRl1nyAztgpfbKis/3nCXg281RHdrGZsXYor1wIRx9hlivyo35UAwxUD
+xj9YqlEYjyvXmCoSVibRTBo+BKd3fCkKL04Hmw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e849582d-0ff7-4b8f-94b7-71b80a3ce9e4" Target="#_50dbed01-cdaf-4348-b3d6-1d4a62e60e60"><Timestamp>2020-08-10 05:32:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

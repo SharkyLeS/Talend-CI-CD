@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <model:JobletProcess defaultContext="DEV_DARTY" jobType="Standard">
+    <context confirmationNeeded="false" name="DEV_DARTY">
+      <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+      <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+      <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:ST4mySzO4f9Vzxyt4Ib2tdCD/Aqpjwl5WQQmQy3UXG3fanFEqCGQ"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1536"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="XKI351"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLDEV"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+      <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Canal" prompt="C80_MQDarty_NCG_CONNECTION_Canal?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="SYSTEM.EXPL.SVRCONN"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Port" prompt="C80_MQDarty_NCG_CONNECTION_Port?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_Integer" value="14034"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Pwd" prompt="C80_MQDarty_NCG_CONNECTION_Pwd?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_QueueManager" prompt="C80_MQDarty_NCG_CONNECTION_QueueManager?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="HDPDEV"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Server" prompt="C80_MQDarty_NCG_CONNECTION_Server?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="10.135.0.174"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_User" prompt="C80_MQDarty_NCG_CONNECTION_User?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+      <contextParameter comment="" name="C01_ClusterDarty_HDFS_Group" prompt="C01_ClusterDarty_HDFS_Group?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="C01_ClusterDarty_HDFS_User_Name" prompt="C01_ClusterDarty_HDFS_User_Name?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="talend"/>
+      <contextParameter comment="" name="C01_ClusterDarty_JobtrackerURI" prompt="C01_ClusterDarty_JobtrackerURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1:9001"/>
+      <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="true" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="maprfs://hdpsrvdev1:7222"/>
+      <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1"/>
+      <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_DbDwh_Name" prompt="C10_Hive_connection_Hive_DbDwh_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdwh"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_DbHisto_Name" prompt="C10_Hive_connection_Hive_DbHisto_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="historique"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpsrvdev1"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+      <contextParameter comment="" name="DartyEncoding" prompt="DartyEncoding?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="UTF-8"/>
+      <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+      <contextParameter comment="" name="FilePath_StopNgo_Json" prompt="FilePath_StopNgo_Json?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Json.txt"/>
+      <contextParameter comment="" name="FilePath_StopNgo_Nominal" prompt="FilePath_StopNgo_Nominal?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Nominal.txt"/>
+      <contextParameter comment="" name="ProfondeurHisto" prompt="ProfondeurHisto?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="null"/>
+      <contextParameter comment="" name="ShardingGV11" prompt="ShardingGV11?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="1"/>
+      <contextParameter comment="" name="TimerCheckLoop" prompt="TimerCheckLoop?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+      <contextParameter comment="" name="TimerLoopStopNGo" prompt="TimerLoopStopNGo?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+    </context>
+    <context confirmationNeeded="false" name="REC_DARTY">
+      <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+      <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+      <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="talend"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:AcSDmnOwH1cDRYhPoDGMhvl4Okzm3X+jev1nJbbvzsk4kH27ORh6"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1536"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="talend"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="test"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLREC"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+      <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Canal" prompt="C80_MQDarty_NCG_CONNECTION_Canal?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="APP.HDPREC.SVRCONN"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Port" prompt="C80_MQDarty_NCG_CONNECTION_Port?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_Integer" value="1414"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Pwd" prompt="C80_MQDarty_NCG_CONNECTION_Pwd?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_QueueManager" prompt="C80_MQDarty_NCG_CONNECTION_QueueManager?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="HDPREC"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Server" prompt="C80_MQDarty_NCG_CONNECTION_Server?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="10.135.3.165"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_User" prompt="C80_MQDarty_NCG_CONNECTION_User?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+      <contextParameter comment="" name="C01_ClusterDarty_HDFS_Group" prompt="C01_ClusterDarty_HDFS_Group?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="C01_ClusterDarty_HDFS_User_Name" prompt="C01_ClusterDarty_HDFS_User_Name?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="talend"/>
+      <contextParameter comment="" name="C01_ClusterDarty_JobtrackerURI" prompt="C01_ClusterDarty_JobtrackerURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvrec1:9001"/>
+      <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="true" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="maprfs://hdpsrvrec1:7222"/>
+      <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvrec1"/>
+      <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_DbDwh_Name" prompt="C10_Hive_connection_Hive_DbDwh_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdwh"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_DbHisto_Name" prompt="C10_Hive_connection_Hive_DbHisto_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="historique"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpsrvrec1"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+      <contextParameter comment="" name="DartyEncoding" prompt="DartyEncoding?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="UTF-8"/>
+      <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+      <contextParameter comment="" name="FilePath_StopNgo_Json" prompt="FilePath_StopNgo_Json?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Json.txt"/>
+      <contextParameter comment="" name="FilePath_StopNgo_Nominal" prompt="FilePath_StopNgo_Nominal?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Nominal.txt"/>
+      <contextParameter comment="" name="ProfondeurHisto" prompt="ProfondeurHisto?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="null"/>
+      <contextParameter comment="" name="ShardingGV11" prompt="ShardingGV11?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="1"/>
+      <contextParameter comment="" name="TimerCheckLoop" prompt="TimerCheckLoop?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+      <contextParameter comment="" name="TimerLoopStopNGo" prompt="TimerLoopStopNGo?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+    </context>
+    <context confirmationNeeded="false" name="PROD_DARTY">
+      <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+      <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+      <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:mqAFJql6eYwKEAT4/5kVpYrAeUSX4bIuGamYM53JqMIZyrzf8AQW"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1530"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="XLI351"/>
+      <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLPRD"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+      <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+      <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+      <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Canal" prompt="C80_MQDarty_NCG_CONNECTION_Canal?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="SYSTEM.ADMIN.SVRCONN"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Port" prompt="C80_MQDarty_NCG_CONNECTION_Port?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_Integer" value="1414"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Pwd" prompt="C80_MQDarty_NCG_CONNECTION_Pwd?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_QueueManager" prompt="C80_MQDarty_NCG_CONNECTION_QueueManager?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="HDPPRD"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Server" prompt="C80_MQDarty_NCG_CONNECTION_Server?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="10.135.3.224"/>
+      <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_User" prompt="C80_MQDarty_NCG_CONNECTION_User?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+      <contextParameter comment="" name="C01_ClusterDarty_HDFS_Group" prompt="C01_ClusterDarty_HDFS_Group?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="C01_ClusterDarty_HDFS_User_Name" prompt="C01_ClusterDarty_HDFS_User_Name?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="talend"/>
+      <contextParameter comment="" name="C01_ClusterDarty_JobtrackerURI" prompt="C01_ClusterDarty_JobtrackerURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvprd1:9001"/>
+      <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="maprfs://hdpsrvprd1:7222"/>
+      <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpprd1"/>
+      <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_DbDwh_Name" prompt="C10_Hive_connection_Hive_DbDwh_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdwh"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_DbHisto_Name" prompt="C10_Hive_connection_Hive_DbHisto_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="historique"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpprd1"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+      <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+      <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+      <contextParameter comment="" name="DartyEncoding" prompt="DartyEncoding?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="null"/>
+      <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+      <contextParameter comment="" name="FilePath_StopNgo_Json" prompt="FilePath_StopNgo_Json?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Json.txt"/>
+      <contextParameter comment="" name="FilePath_StopNgo_Nominal" prompt="FilePath_StopNgo_Nominal?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Nominal.txt"/>
+      <contextParameter comment="" name="ProfondeurHisto" prompt="ProfondeurHisto?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="null"/>
+      <contextParameter comment="" name="ShardingGV11" prompt="ShardingGV11?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="1"/>
+      <contextParameter comment="" name="TimerCheckLoop" prompt="TimerCheckLoop?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+      <contextParameter comment="" name="TimerLoopStopNGo" prompt="TimerLoopStopNGo?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+    </context>
+    <parameters>
+      <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value=" -Xms256M -Xmx1024M"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+      <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+      <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
+      <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+      <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" show="false" value="false"/>
+      <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" show="false" value="25000"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+      <elementParameter field="ICON_SELECTION" name="ICONSELECTION" value=""/>
+      <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" show="false" value="false"/>
+      <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+      <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+      <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;D:/Users/stephane.robin/workspace/in.csv&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+      <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+      <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_10"/>
+      <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+      <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:p3nNLZ2yPUaiyuVuy9/Fqm20yxFkr+hmFLRRx00P"/>
+      <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+      <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+      <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+      <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+      <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="true"/>
+      <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="true"/>
+      <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+      <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+      <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+      <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+      <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+      <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+      <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+      <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+      <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+      <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+      <routinesParameter id="_bEhqog_7EeOQIqDoiWFwgQ" name="DataOperation"/>
+      <routinesParameter id="_bFHggA_7EeOQIqDoiWFwgQ" name="Mathematical"/>
+      <routinesParameter id="_bF0EEA_7EeOQIqDoiWFwgQ" name="Numeric"/>
+      <routinesParameter id="_bGh1wA_7EeOQIqDoiWFwgQ" name="Relational"/>
+      <routinesParameter id="_bKDD0A_7EeOQIqDoiWFwgQ" name="SQLike"/>
+      <routinesParameter id="_bHJg0A_7EeOQIqDoiWFwgQ" name="StringHandling"/>
+      <routinesParameter id="_bHzBEA_7EeOQIqDoiWFwgQ" name="TalendDataGenerator"/>
+      <routinesParameter id="_bIin8A_7EeOQIqDoiWFwgQ" name="TalendDate"/>
+      <routinesParameter id="_bJN9YA_7EeOQIqDoiWFwgQ" name="TalendString"/>
+      <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+      <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+      <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+      <routinesParameter id="_S4cRUNwNEeqEC6MUGsyuDQ" name="TalendStringUtil"/>
+    </parameters>
+    <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="256">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+      <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+      <elementParameter field="FILE" name="FILENAME" value="context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Dwh+context.C60_FilesName_DWH_H_Orga"/>
+      <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+      <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+      <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+      <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+      <elementParameter field="TEXT" name="HEADER" value="0"/>
+      <elementParameter field="TEXT" name="FOOTER" value="0"/>
+      <elementParameter field="TEXT" name="LIMIT" value=""/>
+      <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+      <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+      <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;C:/Talend/Talend-Studio-r99271-V5.2.2/workspace&quot;"/>
+      <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+      <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+      <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+      <elementParameter field="CHECK" name="RANDOM" value="false"/>
+      <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+      <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+      <elementParameter field="TABLE" name="TRIMSELECT">
+        <elementValue elementRef="SCHEMA_COLUMN" value="CFILIALE"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CLIEU"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="TRIM" value="false"/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+      <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+      <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+      <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+      <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+        <elementValue elementRef="SCHEMA_COLUMN" value="CFILIALE"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CLIEU"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="DECODE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="DECODE" value="false"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
+      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__ FI_IN_REF"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFileInputDelimited_1">
+        <column comment="" key="false" length="-1" name="CFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LNLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DDEBMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DFINMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CMAGOUVPUB" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY0" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DCHARGE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="REJECT" name="REJECT">
+        <column comment="" key="false" length="-1" name="CFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LNLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DDEBMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DFINMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CMAGOUVPUB" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY0" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DCHARGE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_2"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="false"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;DataOutGV15&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+      <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" show="false" value=""/>
+      <elementParameter field="TABLE" name="THRESHLODS"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" label="metadata" name="tFlowMeter_2">
+        <column comment="NOM TABLE" key="false" length="4" name="TABLE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="TYPE LIGNE ?" key="false" length="1" name="TYPELIGNE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° D ORDRE DS LA VENTE" key="false" length="5" name="NORDRE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC ARTICLE AYANT CARAC SPE" key="false" length="7" name="NCODIC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC DU GROUPE DE L ARTICLE" key="false" length="7" name="NCODICGRP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="NUMERO SEQUENCE" key="false" length="2" name="NSEQ" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 1" key="false" length="5" name="CARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 1" key="false" length="5" name="CVCARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 2" key="false" length="5" name="CARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 2" key="false" length="5" name="CVCARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 3" key="false" length="5" name="CARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 3" key="false" length="5" name="CVCARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 4" key="false" length="5" name="CARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 4" key="false" length="5" name="CVCARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 5" key="false" length="5" name="CARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 5" key="false" length="5" name="CVCARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR ANNULATION CARACTERIST" key="false" length="1" name="WANNULCAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="DATE SYSTEME M.A.J COLONNES" key="false" length="13" name="DSYST" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LNLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DDEBMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DFINMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CMAGOUVPUB" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY0" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DCHARGE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="384">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+      <elementParameter field="EXTERNAL" name="MAP" value=""/>
+      <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+      <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+      <elementParameter field="IMAGE" name="PREVIEW" value="_zvH-ACnXEeO--tPUbpec2Q-tMap_1-PREVIEW.bmp"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+      <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+      <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+      <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+      <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+      <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+      <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="Mapping_RTGV15"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" label="metadata" name="XB_MomDataEnrichi">
+        <column comment="NOM TABLE" key="false" length="4" name="TABLE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="TYPE LIGNE ?" key="false" length="1" name="TYPELIGNE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° D ORDRE DS LA VENTE" key="false" length="5" name="NORDRE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC ARTICLE AYANT CARAC SPE" key="false" length="7" name="NCODIC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC DU GROUPE DE L ARTICLE" key="false" length="7" name="NCODICGRP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="NUMERO SEQUENCE" key="false" length="2" name="NSEQ" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 1" key="false" length="5" name="CARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 1" key="false" length="5" name="CVCARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 2" key="false" length="5" name="CARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 2" key="false" length="5" name="CVCARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 3" key="false" length="5" name="CARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 3" key="false" length="5" name="CVCARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 4" key="false" length="5" name="CARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 4" key="false" length="5" name="CVCARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 5" key="false" length="5" name="CARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 5" key="false" length="5" name="CVCARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR ANNULATION CARACTERIST" key="false" length="1" name="WANNULCAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="DATE SYSTEME M.A.J COLONNES" key="false" length="13" name="DSYST" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LNLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DDEBMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DFINMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CMAGOUVPUB" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY0" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DCHARGE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="FLOW" label="MQ_RTGV15" name="XF_Referentiel">
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+      <nodeData xsi:type="TalendMapper:MapperData">
+        <uiProperties/>
+        <varTables name="Var" sizeState="INTERMEDIATE">
+          <mapperTableEntries expression="row1.NLIEU+row1.NSOCIETE+row1.NVENTE+row1.NCODIC+row1.NCODICGRP+row1.NSEQ+routines.DartyRoutines.ReverseTimeStamp(row1.DSYST) " name="KEY" type="id_String"/>
+        </varTables>
+        <outputTables activateExpressionFilter="true" expressionFilter="!Relational.ISNULL(row1.NVENTE)&amp;&amp;row1.NVENTE.matches(&quot;[+-]?\\d*(\\.\\d+)?&quot;)&amp;&amp; StringHandling.LEN(row1.NVENTE)==7&#10;" name="XB_MomDataEnrichi" sizeState="INTERMEDIATE">
+          <mapperTableEntries expression="row1.TABLE " name="TABLE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.TYPELIGNE " name="TYPELIGNE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NSOCIETE " name="NSOCIETE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NLIEU " name="NLIEU" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NORDRE " name="NORDRE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NVENTE " name="NVENTE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NCODIC " name="NCODIC" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NCODICGRP " name="NCODICGRP" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NSEQ " name="NSEQ" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CARACTSPE1 " name="CARACTSPE1" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CVCARACTSPE1 " name="CVCARACTSPE1" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CARACTSPE2 " name="CARACTSPE2" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CVCARACTSPE2 " name="CVCARACTSPE2" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CARACTSPE3 " name="CARACTSPE3" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CVCARACTSPE3 " name="CVCARACTSPE3" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CARACTSPE4 " name="CARACTSPE4" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CVCARACTSPE4 " name="CVCARACTSPE4" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CARACTSPE5 " name="CARACTSPE5" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.CVCARACTSPE5 " name="CVCARACTSPE5" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.WANNULCAR " name="WANNULCAR" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.DSYST " name="DSYST" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.LCFILIALE " name="LCFILIALE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.CZONDV " name="CZONDV" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.LCZONDV " name="LCZONDV" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.LNLIEU " name="LNLIEU" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.CCANAL " name="CCANAL" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.LCCANAL " name="LCCANAL" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.DDEBMAG " name="DDEBMAG" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.DFINMAG " name="DFINMAG" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.CMAGOUVPUB " name="CMAGOUVPUB" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.SURFACEY0 " name="SURFACEY0" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.SURFACEY1 " name="SURFACEY1" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.SURFACEY2 " name="SURFACEY2" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.SURFACEY3 " name="SURFACEY3" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.SURFACEY4 " name="SURFACEY4" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.SURFACEY5 " name="SURFACEY5" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.CFILRESTIT " name="CFILRESTIT" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.LFILRESTIT " name="LFILRESTIT" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="FX_ref.DCHARGE " name="DCHARGE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="Var.KEY  " name="KEY" nullable="true" type="id_String"/>
+        </outputTables>
+        <outputTables activateExpressionFilter="true" expressionFilter="!Relational.ISNULL(row1.NVENTE)&amp;&amp;row1.NVENTE.matches(&quot;[+-]?\\d*(\\.\\d+)?&quot;)&amp;&amp; StringHandling.LEN(row1.NVENTE)==7" name="XF_Referentiel" sizeState="INTERMEDIATE">
+          <mapperTableEntries expression="row1.NLIEU " name="NLIEU" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NSOCIETE " name="NSOCIETE" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NVENTE " name="NVENTE" nullable="true" type="id_String"/>
+        </outputTables>
+        <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+          <mapperTableEntries name="TABLE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="TYPELIGNE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NSOCIETE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NLIEU" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NORDRE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NVENTE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NCODIC" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NCODICGRP" nullable="true" type="id_String"/>
+          <mapperTableEntries name="NSEQ" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CARACTSPE1" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CVCARACTSPE1" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CARACTSPE2" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CVCARACTSPE2" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CARACTSPE3" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CVCARACTSPE3" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CARACTSPE4" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CVCARACTSPE4" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CARACTSPE5" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CVCARACTSPE5" nullable="true" type="id_String"/>
+          <mapperTableEntries name="WANNULCAR" nullable="true" type="id_String"/>
+          <mapperTableEntries name="DSYST" nullable="true" type="id_String"/>
+        </inputTables>
+        <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="FX_ref" sizeState="INTERMEDIATE">
+          <mapperTableEntries expression="row1.NSOCIETE " name="CFILIALE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="LCFILIALE" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CZONDV" nullable="true" type="id_String"/>
+          <mapperTableEntries name="LCZONDV" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="row1.NLIEU" name="CLIEU" nullable="true" type="id_String"/>
+          <mapperTableEntries expression="" name="LNLIEU" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CCANAL" nullable="true" type="id_String"/>
+          <mapperTableEntries name="LCCANAL" nullable="true" type="id_String"/>
+          <mapperTableEntries name="DDEBMAG" nullable="true" type="id_String"/>
+          <mapperTableEntries name="DFINMAG" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CMAGOUVPUB" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SURFACEY0" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SURFACEY1" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SURFACEY2" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SURFACEY3" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SURFACEY4" nullable="true" type="id_String"/>
+          <mapperTableEntries name="SURFACEY5" nullable="true" type="id_String"/>
+          <mapperTableEntries name="CFILRESTIT" nullable="true" type="id_String"/>
+          <mapperTableEntries name="LFILRESTIT" nullable="true" type="id_String"/>
+          <mapperTableEntries name="DCHARGE" nullable="true" type="id_String"/>
+        </inputTables>
+      </nodeData>
+    </node>
+    <node componentName="tHBaseOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="320">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHBaseOutput_2"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHBaseConnection_1"/>
+      <elementParameter field="CLOSED_LIST" name="HBASE_VERSION" show="false" value="EMR_5_15_0"/>
+      <elementParameter field="HADOOP_DISTRIBUTION" name="HBASE" show="false" value=""/>
+      <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value=""/>
+      <elementParameter field="CLOSED_LIST" name="HADOOP_CUSTOM_VERSION" show="false" value="HADOOP_1"/>
+      <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" show="false" value="&quot;localhost&quot;"/>
+      <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" show="false" value="&quot;2181&quot;"/>
+      <elementParameter field="CHECK" name="SET_ZNODE_PARENT" show="false" value="false"/>
+      <elementParameter field="TEXT" name="ZNODE_PARENT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CHECK" name="USE_KRB" show="false" value="false"/>
+      <elementParameter field="TEXT" name="HBASE_MASTER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+      <elementParameter field="TEXT" name="HBASE_REGIONSERVER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+      <elementParameter field="CHECK" name="USE_KEYTAB" show="false" value="false"/>
+      <elementParameter field="TEXT" name="PRINCIPAL" show="false" value="&quot;hdfs&quot;"/>
+      <elementParameter field="FILE" name="KEYTAB_PATH" show="false" value="&quot;/tmp/hdfs.headless.keytab&quot;"/>
+      <elementParameter field="CHECK" name="USE_MAPRTICKET" show="false" value="false"/>
+      <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;anonymous&quot;"/>
+      <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" show="false" value="enc:system.encryption.key.v1:PVk4k1NNC8r/pO63teSyCbrXuT2GU5l1ALy60fOR"/>
+      <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" show="false" value="&quot;demo.mapr.com&quot;"/>
+      <elementParameter field="TEXT" name="MAPRTICKET_DURATION" show="false" value="86400L"/>
+      <elementParameter field="TEXT" name="TABLE" value="context.C80_MQDarty_NCG_RTGV15_HBase"/>
+      <elementParameter field="CHECK" name="SET_TABLE_NS_MAPPING" value="false"/>
+      <elementParameter field="TEXT" name="TABLE_NS_MAPPING" show="false" value="&quot;*:/tables&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+      <elementParameter field="CHECK" name="CUSTOM_ROW_KEY" value="true"/>
+      <elementParameter field="TEXT" name="ROW_KEY" value="XB_MomDataEnrichi.KEY"/>
+      <elementParameter field="TABLE" name="FAMILIES">
+        <elementValue elementRef="SCHEMA_COLUMN" value="TABLE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="TYPELIGNE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NSOCIETE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NLIEU"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NORDRE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NVENTE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NCODIC"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NCODICGRP"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NSEQ"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE1"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE1"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE2"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE2"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE3"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE3"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE4"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE4"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE5"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE5"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="WANNULCAR"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DSYST"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="KEY"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="CUSTOM_TIMESTAMP_COLUMN" value="false"/>
+      <elementParameter field="PREV_COLUMN_LIST" name="TIMESTAMP_COLUMN" show="false" value="TABLE"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+      <elementParameter field="CHECK" name="USE_BATCH_MODE" value="false"/>
+      <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="500000"/>
+      <elementParameter field="TABLE" name="HBASE_PARAMETERS" show="false"/>
+      <elementParameter field="TABLE" name="FAMILY_PARAMETERS" show="false"/>
+      <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false"/>
+      <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;"/>
+      <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false"/>
+      <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" label="metadata" name="tHBaseOutput_2">
+        <column comment="NOM TABLE" key="false" length="4" name="TABLE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="TYPE LIGNE ?" key="false" length="1" name="TYPELIGNE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° D ORDRE DS LA VENTE" key="false" length="5" name="NORDRE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC ARTICLE AYANT CARAC SPE" key="false" length="7" name="NCODIC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC DU GROUPE DE L ARTICLE" key="false" length="7" name="NCODICGRP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="NUMERO SEQUENCE" key="false" length="2" name="NSEQ" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 1" key="false" length="5" name="CARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 1" key="false" length="5" name="CVCARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 2" key="false" length="5" name="CARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 2" key="false" length="5" name="CVCARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 3" key="false" length="5" name="CARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 3" key="false" length="5" name="CVCARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 4" key="false" length="5" name="CARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 4" key="false" length="5" name="CVCARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 5" key="false" length="5" name="CARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 5" key="false" length="5" name="CVCARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR ANNULATION CARACTERIST" key="false" length="1" name="WANNULCAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="DATE SYSTEME M.A.J COLONNES" key="false" length="13" name="DSYST" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LNLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DDEBMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DFINMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CMAGOUVPUB" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY0" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DCHARGE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    </node>
+    <node componentName="tJava" componentVersion="0.101" offsetLabelX="1" offsetLabelY="1" posX="288" posY="128">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="context.ficPropertiesName = context.Dir_conf+&quot;/&quot;+context.CtxPathFile;&#10;"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tJava_1"/>
+    </node>
+    <node componentName="JBL_LoadingConf" componentVersion="5.2" offsetLabelX="0" offsetLabelY="0" posX="416" posY="128">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_LoadingConf_1"/>
+      <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+      <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
+      <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tJava_1"/>
+      <elementParameter field="TEXT" name="LABEL" value="JBL_LoadingConf"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+    </node>
+    <node componentName="tHBaseConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHBaseConnection_1"/>
+      <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" value="MAPR"/>
+      <elementParameter field="CLOSED_LIST" name="HBASE_VERSION" value="MAPR500"/>
+      <elementParameter field="HADOOP_DISTRIBUTION" name="HBASE" value=""/>
+      <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value="commons-configuration-1.6.jar;mapr-hbase-5.0.0-mapr.jar;commons-lang-2.6.jar;protobuf-java-2.5.0.jar;commons-collections-3.2.1.jar;json-20080701.jar;slf4j-api-1.7.5.jar;hbase-common-0.98.12-mapr-1506.jar;htrace-core-2.04.jar;guava-13.0.1.jar;maprfs-5.0.0-mapr.jar;netty-3.6.6.Final.jar;commons-codec-1.7.jar;hadoop-common-2.7.0.jar;zookeeper-3.4.5-mapr-1503.jar;log4j-1.2.15.jar;hbase-protocol-0.98.12-mapr-1506.jar;hadoop-auth-2.7.0.jar;hbase-client-0.98.12-mapr-1506.jar;slf4j-log4j12-1.7.5.jar;commons-logging-1.1.1.jar"/>
+      <elementParameter field="CLOSED_LIST" name="HADOOP_CUSTOM_VERSION" show="false" value="HADOOP_1"/>
+      <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="context.C01_ClusterDarty_Zookeeper_Host"/>
+      <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" value="context.C01_ClusterDarty_Zookeeper_Port"/>
+      <elementParameter field="CHECK" name="SET_ZNODE_PARENT" value="false"/>
+      <elementParameter field="TEXT" name="ZNODE_PARENT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
+      <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+      <elementParameter field="TEXT" name="HBASE_MASTER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+      <elementParameter field="TEXT" name="HBASE_REGIONSERVER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+      <elementParameter field="CHECK" name="USE_KEYTAB" show="false" value="false"/>
+      <elementParameter field="TEXT" name="PRINCIPAL" show="false" value="&quot;hdfs&quot;"/>
+      <elementParameter field="FILE" name="KEYTAB_PATH" show="false" value="&quot;/tmp/hdfs.headless.keytab&quot;"/>
+      <elementParameter field="CHECK" name="USE_MAPRTICKET" value="false"/>
+      <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;anonymous&quot;"/>
+      <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" show="false" value="enc:system.encryption.key.v1:hY3dBvBdQPgHrOZyS+Zu3Q/64LFeWq1JqJVap3Mu"/>
+      <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" show="false" value="&quot;demo.mapr.com&quot;"/>
+      <elementParameter field="TEXT" name="MAPRTICKET_DURATION" show="false" value="86400L"/>
+      <elementParameter field="TABLE" name="HBASE_PARAMETERS"/>
+      <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false"/>
+      <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;"/>
+      <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false"/>
+      <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    </node>
+    <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="128">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_1"/>
+      <elementParameter field="TABLE" name="VARIABLES">
+        <elementValue elementRef="KEY" value="&quot;DateFileName&quot;"/>
+        <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.getCurrentDate())"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+    </node>
+    <node componentName="JBL_INITIALISATION_MQ" componentVersion="1.1" offsetLabelX="0" offsetLabelY="0" posX="928" posY="128">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_INITIALISATION_MQ_1"/>
+      <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+      <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+      <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
+      <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_1"/>
+      <elementParameter field="TEXT" name="LABEL" value="JBL_INITIALISATION_MQ"/>
+      <elementParameter field="TEXT" name="HINT" value=""/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value=""/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+    </node>
+    <node componentName="DARTY_tHBaseOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="256">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DARTY_tHBaseOutput_1"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHBaseConnection_1"/>
+      <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" show="false" value="MAPR"/>
+      <elementParameter field="CLOSED_LIST" name="HBASE_VERSION" show="false" value="MAPR212"/>
+      <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value="log4j-1.2.16.jar;guava-11.0.2.jar;hadoop-0.20.2-dev-core.jar;hbase-0.94.5-mapr.jar;zookeeper-3.4.5.jar;commons-lang-2.5.jar;commons-logging-1.1.1.jar"/>
+      <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" show="false" value="&quot;all&quot;&quot;10.132.20.102&quot;"/>
+      <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" show="false" value="&quot;5181&quot;"/>
+      <elementParameter field="TEXT" name="TABLE" value="context.C80_MQDarty_NCG_RTGV15_HBase"/>
+      <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+      <elementParameter field="CHECK" name="CUSTOM_ROW_KEY" value="true"/>
+      <elementParameter field="TEXT" name="ROW_KEY" value="XB_MomDataEnrichi.KEY"/>
+      <elementParameter field="TABLE" name="FAMILIES">
+        <elementValue elementRef="SCHEMA_COLUMN" value="TABLE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="TYPELIGNE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NSOCIETE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NLIEU"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NORDRE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NVENTE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NCODIC"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NCODICGRP"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="NSEQ"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE1"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE1"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE2"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE2"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE3"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE3"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE4"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE4"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CARACTSPE5"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CVCARACTSPE5"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="WANNULCAR"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DSYST"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="KEY"/>
+        <elementValue elementRef="FAMILY_COLUMN" value="&quot;all&quot;"/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+      <elementParameter field="TABLE" name="HBASE_PARAMETERS" show="false">
+        <elementValue elementRef="PROPERTY" value="&quot;all&quot;"/>
+        <elementValue elementRef="VALUE" value="null"/>
+      </elementParameter>
+      <elementParameter field="TABLE" name="FAMILY_PARAMETERS" show="false">
+        <elementValue elementRef="FAMILY_NAME" value="&quot;all&quot;"/>
+        <elementValue elementRef="FAMILY_INMEMORY" value=""/>
+        <elementValue elementRef="FAMILY_BLOCKCACHEENABLED" value=""/>
+        <elementValue elementRef="FAMILY_BLOOMFILTERTYPE" value=""/>
+        <elementValue elementRef="FAMILY_BLOCKSIZE" value=""/>
+        <elementValue elementRef="FAMILY_COMPACTIONCOMPRESSIONTYPE" value=""/>
+        <elementValue elementRef="FAMILY_COMPRESSIONTYPE" value=""/>
+        <elementValue elementRef="FAMILY_MAXVERSIONS" value=""/>
+        <elementValue elementRef="FAMILY_SCOPE" value=""/>
+        <elementValue elementRef="FAMILY_TIMETOLIVE" value=""/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="LABEL" value="HB_OUT_NCG_RTGV15"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="DARTY_tHBaseOutput_1">
+        <column comment="NOM TABLE" key="false" length="4" name="TABLE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="TYPE LIGNE ?" key="false" length="1" name="TYPELIGNE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° D ORDRE DS LA VENTE" key="false" length="5" name="NORDRE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC ARTICLE AYANT CARAC SPE" key="false" length="7" name="NCODIC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC DU GROUPE DE L ARTICLE" key="false" length="7" name="NCODICGRP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="NUMERO SEQUENCE" key="false" length="2" name="NSEQ" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 1" key="false" length="5" name="CARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 1" key="false" length="5" name="CVCARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 2" key="false" length="5" name="CARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 2" key="false" length="5" name="CVCARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 3" key="false" length="5" name="CARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 3" key="false" length="5" name="CVCARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 4" key="false" length="5" name="CARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 4" key="false" length="5" name="CVCARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 5" key="false" length="5" name="CARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 5" key="false" length="5" name="CVCARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR ANNULATION CARACTERIST" key="false" length="1" name="WANNULCAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="DATE SYSTEME M.A.J COLONNES" key="false" length="13" name="DSYST" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCFILIALE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCZONDV" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LNLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LCCANAL" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DDEBMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DFINMAG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CMAGOUVPUB" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY0" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SURFACEY5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="CFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="LFILRESTIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DCHARGE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tMap_1">
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+        <elementValue elementRef="TRACE_COLUMN" value="TABLE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="TYPELIGNE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSOCIETE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NORDRE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NVENTE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NCODIC"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NCODICGRP"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSEQ"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WANNULCAR"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DSYST"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+      <elementParameter field="CHECK" name="USEROWLABEL" value="false"/>
+      <elementParameter field="TEXT" name="METTERLABEL" value="&quot;DataInGV15&quot;"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="FLOW" label="FX_ref" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+        <elementValue elementRef="TRACE_COLUMN" value="CFILIALE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="FX_ref"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFlowMeter_2" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_2" target="tHBaseOutput_2">
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+        <elementValue elementRef="TRACE_COLUMN" value="TABLE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="TYPELIGNE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSOCIETE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NORDRE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NVENTE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NCODIC"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NCODICGRP"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSEQ"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WANNULCAR"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DSYST"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="KEY"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="FLOW" label="XB_MomDataEnrichi" lineStyle="0" metaname="XB_MomDataEnrichi" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFlowMeter_2">
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+        <elementValue elementRef="TRACE_COLUMN" value="TABLE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="TYPELIGNE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSOCIETE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NORDRE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NVENTE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NCODIC"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NCODICGRP"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSEQ"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CARACTSPE5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CVCARACTSPE5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="WANNULCAR"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DSYST"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCFILIALE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CZONDV"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCZONDV"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LNLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CCANAL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LCCANAL"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DDEBMAG"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DFINMAG"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CMAGOUVPUB"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY0"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY1"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY2"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY3"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY4"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="SURFACEY5"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="CFILRESTIT"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="LFILRESTIT"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DCHARGE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="KEY"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="XB_MomDataEnrichi"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="FLOW" label="XF_Referentiel" lineStyle="0" metaname="XF_Referentiel" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="OUTPUT_1">
+      <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+        <elementValue elementRef="TRACE_COLUMN" value="NLIEU"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NSOCIETE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="NVENTE"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="XF_Referentiel"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="JBL_LoadingConf_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="JBL_LoadingConf_1" offsetLabelX="0" offsetLabelY="0" source="JBL_LoadingConf_1" target="tHBaseConnection_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHBaseConnection_1" offsetLabelX="0" offsetLabelY="0" source="tHBaseConnection_1" target="tSetGlobalVar_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="JBL_INITIALISATION_MQ_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+      <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    </connection>
+    <note opaque="true" posX="64" posY="0" sizeHeight="65" sizeWidth="801" text="RTGV15&#9; - Options&#13;&#10;Description: traitement du flux de données pour enrichissement et envoi dans HBASE"/>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_LoadingConf_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHBaseConnection_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="JBL_INITIALISATION_MQ_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="DARTY_tHBaseOutput_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="96" posY="384">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="true"/>
+      <elementParameter field="TECHNICAL" name="SCHEMA_TYPE:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+      <elementParameter field="TECHNICAL" name="SCHEMA_TYPE:REPOSITORY_SCHEMA_TYPE" show="false" value="_P6xZEO37EeKIsJogfE185Q - metadata"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" label="metadata" name="INPUT_1">
+        <column comment="NOM TABLE" key="false" length="4" name="TABLE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="TYPE LIGNE ?" key="false" length="1" name="TYPELIGNE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° D ORDRE DS LA VENTE" key="false" length="5" name="NORDRE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC ARTICLE AYANT CARAC SPE" key="false" length="7" name="NCODIC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODIC DU GROUPE DE L ARTICLE" key="false" length="7" name="NCODICGRP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="NUMERO SEQUENCE" key="false" length="2" name="NSEQ" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 1" key="false" length="5" name="CARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 1" key="false" length="5" name="CVCARACTSPE1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 2" key="false" length="5" name="CARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 2" key="false" length="5" name="CVCARACTSPE2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 3" key="false" length="5" name="CARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 3" key="false" length="5" name="CVCARACTSPE3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 4" key="false" length="5" name="CARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 4" key="false" length="5" name="CVCARACTSPE4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE CARACTERISTIQUE SPECIF 5" key="false" length="5" name="CARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR CODE CARESTISTIQUE 5" key="false" length="5" name="CVCARACTSPE5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="VALEUR ANNULATION CARACTERIST" key="false" length="1" name="WANNULCAR" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="DATE SYSTEME M.A.J COLONNES" key="false" length="13" name="DSYST" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </jobletNodes>
+    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="512">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
+      <elementParameter field="CHECK" name="START" show="false" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" label="nvente" name="OUTPUT_1">
+        <column comment="CODE LIEU (MAGASIN)" key="false" length="3" name="NLIEU" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="CODE SOCIETE MAGASIN" key="false" length="3" name="NSOCIETE" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="N° DE VENTE" key="false" length="7" name="NVENTE" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </jobletNodes>
+  </model:JobletProcess>
+  <TalendProperties:ByteArray innerContent="89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7AF40000032C49444154789CC5975B4853711CC7BF1114410F3D48F510D45BD09B19E483B76A1084D9249D9897D49A9754EAC9A07A28A3B7E84AE55113350DCD4B8E5444F38268B99CBD88D10531422B2B3412F421EADBEF781CD8B6B3EDCC5983CF7E3B3BDB7E9FF3FB7FCF390C24F13F597C0A0F0F7FAFE27CF35F6E07FC0311FBF6CCE554623E5B01A34CA18C34EDFE955C81F280048C905D8FED795598CFAF06CF7781975E8045FD604E23682D0553CAF0D6F0121821AF1AB367EAC13BAFC1AA0F60D9047875143CFB0CCC7A02669483490A4602CA8080E5B81D7D1D2CB915E0CD5760E334D839073EFE0A968CCB2446C0DCA760429D4C4296254E41845E53DD0CF814A8414F619DD6D0F60D1CFC09B6CE6853B8FC123CD50DC637C91444E0A8826623021E71FDA2B5121F0B44E0864CE0C124D8F405AC9D026FBD012F4816AC9DE0E1063055041215F41A5902BF0432ABD09B5B035E7480D7C6C0DBD2F8BAC814CBF84F4B10532403A65A30DDC70402CEC0B14A5CB1DE07F365D44512BA737609DF73B0B00F3CDE0EC63E0263CAB50C1C519018F40CC8634D6639E633E4144C6F93D477688D936CE0213933A224A0C9D23C45C1ACB7A30E3803F2D81893BDA5E6440998269330CB721C7C28475D051E28D5469FA6602156C136A3A7A15F02533F2698DA14C6B08490FD96BB78671591938A469682DF6605E37B15348429D810F4EB80B3B95A97A61122AC8F2B8165F97A4BF362A147D81AB40C389B378EDDA3AF2392C6EB8422A152D8B1E20C1869EE22922B3884CD016720D0E64B026B851C41F12B03A12633D58F7AC39FC60E07A32593D443F66FF2980155A05D6EA47D9231FB24393A4D8ECF909FE6C8EF0BC605A47A44DD171919FDD92D036A83D512181EFE1B75BF5B06822560B76B02523934E4194F02869740BD2C7B12181CD404A4BA3130A061D95944E9D962580072CBC5B0E0F08E2AD0DFAF8F9BC0E20BFF9620DAD712F4F4681390AA8BDB120453A0AB4B1390AACB4A32E053A0A3431390AA4BC019F047A0AD4D1390BA486BAB3BAB9A019B4D1390AACBAA66A0B9591390AA8B6E069CD7FC5DF1058BB86E3B05BCFDD56A6860B429D44C15E7F5DF75DB63065C7EB05BC5CBF64AFF9CB6B865E07FF1073F036B3DCBCB274D0000000049454E44AE426082"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9bcf1c13-3561-400e-b538-7bb8fb8e6f84"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Yvnp4kaImyQALMZuFf/uhqk3OvgPd8llff88/YY+cbBns3aYxHmP7RobMJoFbiyKsFsmUbzdQpLT
+qEZrLa6xoA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_73663fa9-36a6-40ef-bcc1-64627c56603d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UmIerTNmRZwuG6j/GLeMkFGS7ADqPfbalq6+6X3TNwSQFcvNAhRSvAlUoSHzZ1TZxukdvzfAZmQq
+A/xjqYqScA==</DigestValue></Reference></SignedInfo><SignatureValue>niXi42M1SJmVEmBv4+p7prBRd5r4nx/P4OIU8625Bn7tHE4YG3NUaFW9hT7jr4gSDFfEhH2KMpEz
+p279WFlC0K3hO1HeTPp60/1wobSCPi5ZMermn2mfdXnnZ2gQsJp8KvDoa0xaoneZif9WocNeaqoi
+AEmQsMkn4PYEiSLFrdXzRVJW/f5ixvPLuI9C3UM0bItEMSdGdFFOJt3WtcdTIuIuqmnWAHZWQ/WU
+M8hh1Hh/IJzbOioeI3Fmsu8D64AZWx1IeGOtkLHF2CY4rVFKxT4XSl/6hsJ3omngAntratiV5C9Y
+DyUEvVTrfKiGJf2mneZJbhRn+tQtpeN7v5749Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_73663fa9-36a6-40ef-bcc1-64627c56603d" Target="#_9bcf1c13-3561-400e-b538-7bb8fb8e6f84"><Timestamp>2020-10-08 13:50:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

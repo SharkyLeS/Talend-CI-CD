@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="DEV_FNACDARTY" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="DEV_FNACDARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="D:\data\conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="\"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:znD+Q48AFQUygrBp885bNbW6+4FDohJypMWX8IJ4s68eDqwRprs="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="dev_dwh_dty_dwh"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <context confirmationNeeded="false" name="REC_FNACDARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="/"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:0tSveSFo1FZhqMfOyf4Ixx7NSV3CXVVgyIlRFcl/Fp75/C7a1ns="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="BCH_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="BCH_DWH_DTY_DWH"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="BCH_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="BCH_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:PUZJ7sQE4B0CJqZ6jG0CtyuFOLgg/S+t1C9YlA2Vl8m+cZFcL90="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="null"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="null"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="null"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="null"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="null"/>
+  </context>
+  <context confirmationNeeded="false" name="RECETTE_FNACDARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="D:\data\conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="\"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:QLhcvFnvxKVL0D4lYvwS+JWY18KUorIAK27B3Mri+qOUkzMYiYA="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="dev_dwh_dty_dwh"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD_FNACDARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="D:\data\conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="\"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:G++jScnNfeGo7N3HeeJiE6sjDvYpwsta0gLOIZRgxQU//rn0jqM="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="dev_dwh_dty_dwh"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <context confirmationNeeded="false" name="REC_DARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="D:\data\conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="\"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:dyITOGjFeyqNwgQRRQM1svXvw/DzutcIDsNfgCMIvPVVhoQp0ME="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="dev_dwh_dty_dwh"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD_DARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="D:\data\conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="\"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:/ceyXwsoc46IcVTZ6pkspDfh0p3/qZDJyXU5yyVj+3Tu06Bx/Fo="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="dev_dwh_dty_dwh"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <context confirmationNeeded="false" name="DEV_DARTY">
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" type="id_String" value="D:\data\conf"/>
+    <contextParameter comment="" name="java_library_path" prompt="java_library_path?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="slhOuAslh" prompt="slhOuAslh?" promptNeeded="false" type="id_String" value="\"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" type="id_String" value="context_SEFIC.properties"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_Password" value="enc:system.encryption.key.v1:W5GCNM5TMoUafJD53HPJDi6SdpjmgqPKIpPHy9XS5wikBCI0Llo="/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_ksU24AGiEeut5bApq-XXuA" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="teradata_database" prompt="teradata_database?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GRP_TCH"/>
+    <contextParameter comment="" name="teradata_dwh_db" prompt="teradata_dwh_db?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="dev_dwh_dty_dwh"/>
+    <contextParameter comment="" name="teradata_host" prompt="teradata_host?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="teradatapra.fnac.dom"/>
+    <contextParameter comment="" name="teradata_password" prompt="teradata_password?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+    <contextParameter comment="" name="teradata_user" prompt="teradata_user?" promptNeeded="false" repositoryContextId="_ngevsEm6EeqfKNnwBKivsg" type="id_String" value="DEV_DWH_GROUPE_USR_TLD"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx4096M&quot;]}"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="64"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:gWQ2aUBsFcEgrg/6rqTTeRMHGm3iZZu9hXrlraUt"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/Users/Youssef.hassab/workspace2/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" show="false" value="_qeNT4P2aEeqt9cI6Uyj3Vg"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="URL" show="false" value=""/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="context.AMC_V7_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.AMC_V7_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.AMC_V7_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="context.AMC_V7_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.AMC_V7_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.AMC_V7_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.AMC_V7_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:+cdHlQDRE8iUErQjS5XMaTLCN/wmeL64MWPb899ri+XrQtWlUzPkJF9RVHe6+AY36xei"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;statcatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;logcatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;flowmetercatcher&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_JItB0Fa7Eemx7oITcxo6JA" name="DataOperation"/>
+    <routinesParameter id="_JJK74Fa7Eemx7oITcxo6JA" name="Mathematical"/>
+    <routinesParameter id="_JJpdAFa7Eemx7oITcxo6JA" name="Numeric"/>
+    <routinesParameter id="_JKCekFa7Eemx7oITcxo6JA" name="Relational"/>
+    <routinesParameter id="_JHVv4Fa7Eemx7oITcxo6JA" name="SQLike"/>
+    <routinesParameter id="_JKcuQFa7Eemx7oITcxo6JA" name="StringHandling"/>
+    <routinesParameter id="_JK4zIFa7Eemx7oITcxo6JA" name="TalendDataGenerator"/>
+    <routinesParameter id="_JLXUQFa7Eemx7oITcxo6JA" name="TalendDate"/>
+    <routinesParameter id="_JLzZIFa7Eemx7oITcxo6JA" name="TalendString"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    <routinesParameter id="_vL2V8FqNEei_XfYzc95zxg" name="JobletFluxBaseVersHadoop"/>
+    <routinesParameter id="_uwlkMD1rEeinEKNqHdAwXQ" name="Number"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    <routinesParameter id="_vL2V8FqNEei_XfYzc95zxg" name="JobletFluxBaseVersHadoop"/>
+    <routinesParameter id="_uwlkMD1rEeinEKNqHdAwXQ" name="Number"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    <routinesParameter id="_vL2V8FqNEei_XfYzc95zxg" name="JobletFluxBaseVersHadoop"/>
+    <routinesParameter id="_uwlkMD1rEeinEKNqHdAwXQ" name="Number"/>
+    <routinesParameter id="_ih9GoOyREeqMIYHwedsWjw" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;generalContextFile&quot;, context.Dir_conf + context.slhOuAslh + context.CtxPathFile);&#10;System.setProperty(&quot;java.library.path&quot;,context.java_library_path);&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExist_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="FILE" name="FILE_NAME" value="(String) globalMap.get(&quot;generalContextFile&quot;)"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(jobName + &quot;: loading Context file &quot; + (String) globalMap.get(&quot;generalContextFile&quot;));&#10;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="jobName + &quot;: cannot open file &quot; + (String) globalMap.get(&quot;generalContextFile&quot;)"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tFileInputProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputProperties_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="FILE_FORMAT" value="PROPERTIES_FORMAT"/>
+    <elementParameter field="CLOSED_LIST" name="RETRIVE_MODE" show="false" value="RETRIVE_BY_SECTION"/>
+    <elementParameter field="TEXT" name="SECTION_NAME" show="false" value="&quot;section&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="(String) globalMap.get(&quot;generalContextFile&quot;)"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputProperties_1">
+      <column key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tContextLoad" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tContextLoad_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tContextLoad_1">
+      <column defaultValue="" key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tTeradataConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataConnection_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="HOST" value="context.teradata_host"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.teradata_dwh_db"/>
+    <elementParameter field="TEXT" name="USER" value="context.teradata_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:GivVafu2bzf6uyUCVy2FRPt6MtzWeKUwfWnuzAK2tjoZ7MEebsVDBD6yXVaTVa04HbqpmBw="/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="CHECK" name="QUERY_BAND" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:BzvAdQIKExNON25xrGyzzHPAb+oxSyO/Sx/mzQVs"/>
+    <elementParameter field="DBTABLE" name="TABLE" value=" &quot;CARTE_CADEAUX_BURN&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;MERGE INTO &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T1&#13;&#10;USING &#13;&#10;(&#13;&#10;SELECT&#13;&#10;Rtem53.nregltnem as NUM_CARTE_CADEAU,&#13;&#10;cc.montant_carte_cadeau,&#13;&#10;Rtem53.nsociete || Rtem53.nlieu ||Rtem53.nvente as VENTE_UTILISATION,&#13;&#10;(Rtem53.nsociete || Rtem53.nlieu) as ENTITE,&#13;&#10;Rtem53.nsociete as NSOCIETE,&#13;&#10;Rtem53.nlieu as NLIEU,&#13;&#10;Rtem53.nvente as NVENTE,&#13;&#10;Rtem53.NTRANS as NTRANS,&#13;&#10;Rtem53.pregltvte as MONTANT_PAIEMENT_CC,&#13;&#10;RTGV11.ctypenreg,&#9;&#13;&#10;RTGV11.ncodic as codic,&#13;&#10;RTGV11.cmoddel&#9;,&#13;&#10;CASE &#13;&#10;&#9;WHEN RTGV11.DDELIV IS NOT NULL AND  TRIM(RTGV11.DDELIV) &lt;&gt; ''&#13;&#10;&#9;&#9;THEN CAST(RTGV11.DDELIV&#9;AS DATE  FORMAT 'yyyymmdd')&#13;&#10;&#9;ELSE&#13;&#10;&#9;&#9;NULL&#13;&#10;END  AS DDELIV,&#13;&#10;RTGV11.cenreg&#9;,&#13;&#10;RTGV11.qvendue&#9;,&#13;&#10;RTGV11.pvunit&#9;,&#13;&#10;RTGV11.pvunitf&#9;,&#13;&#10;RTGV11.pvtotal&#9;,&#13;&#10;RTGV11.tauxtva&#9;,&#13;&#10;RTGV11.wemporte&#9;,&#13;&#10;CASE &#13;&#10;&#9;WHEN RTGV11.DCOMPTA IS NOT NULL AND  TRIM(RTGV11.DCOMPTA) &lt;&gt; ''&#13;&#10;&#9;&#9;THEN CAST(RTGV11.DCOMPTA&#9;AS DATE  FORMAT 'yyyymmdd')&#13;&#10;&#9;ELSE&#13;&#10;&#9;&#9;NULL&#13;&#10;END  AS DCOMPTA,&#13;&#10;CASE &#13;&#10;&#9;WHEN RTGV11.DCREATION IS NOT NULL AND  TRIM(RTGV11.DCREATION) &lt;&gt; ''&#13;&#10;&#9;&#9;THEN CAST(RTGV11.DCREATION&#9;AS DATE  FORMAT 'yyyymmdd')&#13;&#10;&#9;ELSE&#13;&#10;&#9;&#9;NULL&#13;&#10;END  AS DCREATION,&#13;&#10;CASE &#13;&#10;&#9;WHEN RTGV11.DANNULATION IS NOT NULL AND  TRIM(RTGV11.DANNULATION) &lt;&gt; ''&#13;&#10;&#9;&#9;THEN CAST(RTGV11.DANNULATION&#9;AS DATE  FORMAT 'yyyymmdd')&#13;&#10;&#9;ELSE&#13;&#10;&#9;&#9;NULL&#13;&#10;END  AS DANNULATION,&#13;&#10;RTGV11.dsyst&#9;,&#13;&#10;RTGV11.DSTAT&#9;,&#13;&#10;RTGV11.nseqnq&#9;,&#13;&#10;CASE &#13;&#10;&#9;WHEN RTGV11.DTOPE IS NOT NULL AND  TRIM(RTGV11.DTOPE) &lt;&gt; ''&#13;&#10;&#9;&#9;THEN CAST(RTGV11.DTOPE&#9;AS DATE  FORMAT 'yyyymmdd')&#13;&#10;&#9;ELSE&#13;&#10;&#9;&#9;NULL&#13;&#10;END  AS DTOPE,&#13;&#10;RTGV11.typvte&#9;,&#13;&#10;RTGV11.TS_CHARGE_HDP AS TS_CHARGE,&#13;&#10;((&#13;&#10;CASE&#13;&#10;&#9;WHEN RTGV11.ctypenreg='1' AND trim(RTGV11.cenreg)&lt;&gt;'' &#13;&#10;&#9;&#9;THEN 0&#13;&#10;&#9;WHEN RTGV11.ctypenreg='1' AND trim(RTGV11.cenreg)=''  &#13;&#10;&#9;&#9;THEN 1&#13;&#10;&#9;WHEN RTGV11.ctypenreg='2' &#13;&#10;&#9;&#9;THEN 0&#13;&#10;&#9;ELSE 1&#13;&#10;END &#13;&#10;)*&#13;&#10;(&#13;&#10;case &#13;&#10;&#9;when substring(cmoddel from 1 for 1)='R' &#13;&#10;&#9;&#9;then -1 &#13;&#10;&#9;else 1 &#13;&#10;END  &#13;&#10;)* &#13;&#10;(RTGV11.qvendue))&#13;&#10;as VOLUME_UNITAIRE,&#13;&#10;(&#13;&#10;CASE&#13;&#10;&#9;WHEN RTGV11.ctypenreg = '2' &#13;&#10;&#9;&#9;then RTGV11.pvtotal*-1   &#13;&#10;&#9;WHEN RTGV11.ctypenreg='3' or RTGV11.ctypenreg='4' &#13;&#10;&#9;&#9;THEN &#13;&#10;         CASE&#13;&#10;             WHEN RTGV11.PVTOTAL&lt;&gt;0 &#13;&#10;             &#9;then RTGV11.PVTOTAL&#13;&#10;             ELSE&#13;&#10;                 case  &#13;&#10;                 &#9;when RTGV11.PVUNITF&lt;&gt;RTGV11.pvtotal &#13;&#10;                 &#9;&#9;then  RTGV11.PVUNITF &#13;&#10;                 &#9;else     RTGV11.PVTOTAL &#13;&#10;                 end&#13;&#10;         END&#13;&#10; &#9;ELSE &#13;&#10;       CASE&#13;&#10;             WHEN  TRIM(cenreg) = '' OR cenreg is null  &#13;&#10;             &#9;then &#13;&#10;            &#9;&#9;case  &#13;&#10;            &#9;&#9;&#9;when RTGV11.PVUNITF&lt;&gt;RTGV11.pvtotal &#13;&#10;            &#9;&#9;&#9;&#9;then  RTGV11.PVUNITF &#13;&#10;            &#9;&#9;&#9;else     RTGV11.PVTOTAL &#13;&#10;            &#9;&#9;end &#13;&#10;             ELSE &#13;&#10;                  pvtotal * (-1)   &#13;&#10;&#9;&#9;END&#13;&#10;    END&#13;&#10; &#13;&#10;          &#13;&#10; ) AS PRIX_TOTAL&#13;&#10;&#13;&#10;FROM &#13;&#10;&quot; + context.teradata_dwh_db + &quot;.Ncg_rtem53 rtem53&#13;&#10;Inner join &quot; + context.teradata_dwh_db + &quot;.ncg_rtgv10 rtgv10&#13;&#10;   on rtem53.nsociete=rtgv10.nsociete &#13;&#10;   and rtem53.nlieu=rtgv10.nlieu &#13;&#10;   and rtem53.nvente=rtgv10.nvente&#13;&#10;Inner join &quot; + context.teradata_dwh_db + &quot;.ncg_rtgv11 rtgv11&#13;&#10;   on rtgv11.nsociete= rtgv10.nsociete &#13;&#10;   and rtgv11.nlieu=rtgv10.nlieu &#13;&#10;   and rtgv11.nvente=rtgv10.nvente&#13;&#10;Inner join &quot; + context.teradata_dwh_db + &quot;.carte_cadeaux cc&#13;&#10;on Rtem53.nregltnem = cc.num_carte_cadeau&#13;&#10;&#9;) T2&#13;&#10;ON T1.NUM_CARTE_CADEAU = T2.NUM_CARTE_CADEAU&#13;&#10;AND T1.VENTE_UTILISATION = T2.VENTE_UTILISATION &#13;&#10;AND T1.ENTITE = T2.ENTITE&#13;&#10;AND T1.NSOCIETE = T2.NSOCIETE&#13;&#10;AND T1.NLIEU = T2.NLIEU&#13;&#10;AND T1.NVENTE = T2.NVENTE &#13;&#10;AND T1.NTRANS = T2.NTRANS &#13;&#10;AND T1.NSEQNQ = T2.NSEQNQ&#13;&#10;AND T1.DCREATION = T2.DCREATION&#13;&#10;WHEN MATCHED THEN&#13;&#10;UPDATE SET &#13;&#10;MONTANT_PAIEMENT_CC = T2.MONTANT_PAIEMENT_CC,&#13;&#10;MONTANT_CARTE_CADEAU = T2.MONTANT_CARTE_CADEAU,&#13;&#10;CTYPENREG = T2.CTYPENREG,&#13;&#10;CMODDEL = T2.CMODDEL,&#13;&#10;DDELIV = T2.DDELIV,&#13;&#10;QVENDUE = T2.QVENDUE,&#13;&#10;PVUNIT = T2.PVUNIT,&#13;&#10;PVUNITF = T2.PVUNITF,&#13;&#10;PVTOTAL = T2.PVTOTAL,&#13;&#10;TAUXTVA = T2.TAUXTVA,&#13;&#10;WEMPORTE = T2.WEMPORTE,&#13;&#10;DCOMPTA = T2.DCOMPTA,&#13;&#10;DANNULATION = T2.DANNULATION,&#13;&#10;DSYST = T2.DSYST,&#13;&#10;TYPVTE = T2.TYPVTE,&#13;&#10;TS_CHARGE = T2.TS_CHARGE,&#13;&#10;VOLUME_UNITAIRE = T2.VOLUME_UNITAIRE,&#13;&#10;PRIX_TOTAL = T2.PRIX_TOTAL,&#13;&#10;CODIC = T2.CODIC,&#13;&#10;CENREG = T2.CENREG,&#13;&#10;DSTAT = T2.DSTAT,&#13;&#10;DTOPE = T2.DTOPE,&#13;&#10;D_MAJ=CURRENT_TIMESTAMP(0)&#13;&#10;WHEN NOT MATCHED THEN&#13;&#10;INSERT  (&#13;&#10;T1.VENTE_UTILISATION,&#13;&#10;T1.ENTITE,&#13;&#10;T1.NSOCIETE,&#13;&#10;T1.NLIEU,&#13;&#10;T1.NVENTE,&#13;&#10;T2.NTRANS,&#13;&#10;T1.MONTANT_PAIEMENT_CC,&#13;&#10;T1.NUM_CARTE_CADEAU,&#13;&#10;T1.MONTANT_CARTE_CADEAU,&#13;&#10;T1.CTYPENREG,&#13;&#10;T1.CODIC,&#13;&#10;T1.CMODDEL,&#13;&#10;T1.DDELIV,&#13;&#10;T1.CENREG,&#13;&#10;T1.QVENDUE,&#13;&#10;T1.PVUNIT,&#13;&#10;T1.PVUNITF,&#13;&#10;T1.PVTOTAL,&#13;&#10;T1.TAUXTVA,&#13;&#10;T1.WEMPORTE,&#13;&#10;T1.DCOMPTA,&#13;&#10;T1.DCREATION,&#13;&#10;T1.DANNULATION,&#13;&#10;T1.DSYST,&#13;&#10;T1.DSTAT,&#13;&#10;T1.NSEQNQ,&#13;&#10;T1.DTOPE,&#13;&#10;T1.TYPVTE,&#13;&#10;T1.TS_CHARGE,&#13;&#10;T1.VOLUME_UNITAIRE,&#13;&#10;T1.PRIX_TOTAL&#13;&#10;)&#13;&#10;VALUES (&#13;&#10;T2.VENTE_UTILISATION,&#13;&#10;T2.ENTITE,&#13;&#10;T2.NSOCIETE,&#13;&#10;T2.NLIEU,&#13;&#10;T2.NVENTE,&#13;&#10;T2.NTRANS,&#13;&#10;T2.MONTANT_PAIEMENT_CC,&#13;&#10;T2.NUM_CARTE_CADEAU,&#13;&#10;T2.MONTANT_CARTE_CADEAU,&#13;&#10;T2.CTYPENREG,&#13;&#10;T2.CODIC,&#13;&#10;T2.CMODDEL,&#13;&#10;T2.DDELIV,&#13;&#10;T2.CENREG,&#13;&#10;T2.QVENDUE,&#13;&#10;T2.PVUNIT,&#13;&#10;T2.PVUNITF,&#13;&#10;T2.PVTOTAL,&#13;&#10;T2.TAUXTVA,&#13;&#10;T2.WEMPORTE,&#13;&#10;T2.DCOMPTA,&#13;&#10;T2.DCREATION,&#13;&#10;T2.DANNULATION,&#13;&#10;T2.DSYST,&#13;&#10;T2.DSTAT,&#13;&#10;T2.NSEQNQ,&#13;&#10;T2.DTOPE,&#13;&#10;T2.TYPVTE,&#13;&#10;T2.TS_CHARGE,&#13;&#10;T2.VOLUME_UNITAIRE,&#13;&#10;T2.PRIX_TOTAL&#13;&#10;)&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="CARTE_CADEAUX_BURN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_2"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:LHIYO80lDk8QXRPXrZ+qrariL1qgJJsN/a5hweEp"/>
+    <elementParameter field="DBTABLE" name="TABLE" value=" &quot;CARTE_CADEAUX_BURN&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T1&#13;&#10;SET VOLUME = &#13;&#10;(&#13;&#10;SELECT T3.VOLUME_UNITAIRE_SUM &#13;&#10;FROM &#13;&#10;(&#13;&#10;SELECT &#13;&#10;SUM(T2.VOLUME_UNITAIRE) AS VOLUME_UNITAIRE_SUM,&#13;&#10;T2.NSOCIETE,&#13;&#10;T2.NLIEU,&#13;&#10;T2.NTRANS,&#13;&#10;T2.CODIC,&#13;&#10;T2.CENREG,&#13;&#10;T2.CTYPENREG&#13;&#10;FROM &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T2 &#13;&#10;GROUP BY T2.NSOCIETE,T2.NLIEU, T2.NTRANS,T2.CODIC,T2.CENREG,T2.CTYPENREG&#13;&#10;) T3&#13;&#10;WHERE T3.NSOCIETE = T1.NSOCIETE&#13;&#10;AND T3.NLIEU = T1.NLIEU&#13;&#10;AND T3.NTRANS = T1.NTRANS&#13;&#10;AND T3.CODIC = T1.CODIC&#13;&#10;AND T3.CENREG = T1.CENREG&#13;&#10;AND T3.CTYPENREG = T1.CTYPENREG&#13;&#10;)&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="CARTE_CADEAUX_BURN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;***************************&quot;);&#10;System.out.println((String) globalMap.get(&quot;tTeradataRow_1_QUERY&quot;));&#10;System.out.println(&quot;************* FIN DE CALCUL DES LIGNES DE VENTES D’UTILISATIONS (UPDATE/INSERT)&quot;);&#10;System.out.println(&quot;***************************&quot;);&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_4"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;***************************&quot;);&#10;System.out.println((String) globalMap.get(&quot;tTeradataRow_2_QUERY&quot;));&#10;System.out.println(&quot;************* FIN DE CALCUL DU VOLUME PAR CODIC DANS LE PANIER (UPDATE) &quot;);&#10;System.out.println(&quot;***************************&quot;);&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_4"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_3"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zMbQ7m/9uSSDUp/AmxElCdbWm5HAiK9L/5F9dkl6"/>
+    <elementParameter field="DBTABLE" name="TABLE" value=" &quot;CARTE_CADEAUX_BURN&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T1 SET &#13;&#10;CA_TTC = CASE &#13;&#10;&#9;&#9;&#9;WHEN T1.VOLUME&lt;&gt;0 &#13;&#10;&#9;&#9;&#9;THEN T1.PRIX_TOTAL &#13;&#10;&#9;&#9;&#9;ELSE 0 &#13;&#10;&#9;&#9;END,&#13;&#10;CA_HT =  CASE &#13;&#10;&#9;&#9;&#9;WHEN T1.VOLUME&lt;&gt;0 &#13;&#10;&#9;&#9;&#9;THEN (((T1.PRIX_TOTAL)*100)/(100+ T1.TAUXTVA)) &#13;&#10;&#9;&#9;&#9;ELSE 0 &#13;&#10;&#9;&#9;END&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="CARTE_CADEAUX_BURN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_3"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_5"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;***************************&quot;);&#10;System.out.println((String) globalMap.get(&quot;tTeradataRow_3_QUERY&quot;));&#10;System.out.println(&quot;************* FIN DE CALCUL DU CA À PRENDRE EN COMPTE POUR LA VENTILATION (UPDATE) &quot;);&#10;System.out.println(&quot;***************************&quot;);&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_5"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_4"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:YR/z8l7/y74luz8Tibi7yOQALGZXNAnsYvC2pMt+"/>
+    <elementParameter field="DBTABLE" name="TABLE" value=" &quot;CARTE_CADEAUX_BURN&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T1 &#13;&#10;SET TOTAL_PANIER=&#13;&#10;(&#13;&#10;SELECT T3.SUM_CA_TTC &#13;&#10;FROM ( &#13;&#10;SELECT &#13;&#10;SUM(T2.CA_TTC) AS SUM_CA_TTC, &#13;&#10;T2.NSOCIETE, T2.NLIEU, T2.NTRANS&#13;&#10;FROM &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T2 &#13;&#10;GROUP BY T2.NSOCIETE, T2.NLIEU, T2.NTRANS&#13;&#10;) T3 &#13;&#10;WHERE T3.NSOCIETE = T1.NSOCIETE&#13;&#10;AND T3.NLIEU = T1.NLIEU&#13;&#10;AND T3.NTRANS = T1.NTRANS&#13;&#10;)&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="CARTE_CADEAUX_BURN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_4"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_6"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;***************************&quot;);&#10;System.out.println((String) globalMap.get(&quot;tTeradataRow_4_QUERY&quot;));&#10;System.out.println(&quot;************* FIN DE CALCUL DU MONTANT TOTAL DE LA VENTE D’ÉMISSION  (UPDATE) &quot;);&#10;System.out.println(&quot;***************************&quot;);&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_6"/>
+  </node>
+  <node componentName="tTeradataRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="1024">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_5"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tTeradataConnection_1"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Teradata"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:DPKBmV3rUJq+KR7jVUYWMvitWggzRfw6BdDdG1P1"/>
+    <elementParameter field="DBTABLE" name="TABLE" value=" &quot;CARTE_CADEAUX_BURN&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE &quot; + context.teradata_dwh_db + &quot;.CARTE_CADEAUX_BURN T1 &#13;&#10;SET VENTILATION_PAIEMENT_CC= ((T1.MONTANT_PAIEMENT_CC*T1.CA_TTC)/ NULLIF(T1.TOTAL_PANIER, 0))&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Note : this value must &lt; 16383"/>
+    <elementParameter field="CHECK" name="QUERY_BAND" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE_QUERY_LOGGING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="QUERY_BAND_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="CARTE_CADEAUX_BURN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tTeradataRow_5"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="1024">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_7"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;***************************&quot;);&#10;System.out.println((String) globalMap.get(&quot;tTeradataRow_5_QUERY&quot;));&#10;System.out.println(&quot;************* FIN DE VENTILATION DU MONTANT DE LA CC SUR LES LIGNES DE VENTES  (UPDATE) &quot;);&#10;System.out.println(&quot;***************************&quot;);&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_7"/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;terajdbc4.jar&quot;"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tLibraryLoad_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFileExist_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_1" target="tDie_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="! (Boolean) globalMap.get(&quot;tFileExist_1_EXISTS&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_1" target="tJava_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(Boolean) globalMap.get(&quot;tFileExist_1_EXISTS&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tFileInputProperties_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputProperties_1" target="tContextLoad_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="key"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="value"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputProperties_1" target="tTeradataConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataConnection_1" offsetLabelX="0" offsetLabelY="0" source="tTeradataConnection_1" target="tTeradataRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tTeradataRow_1" target="tJava_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tTeradataRow_1" target="tTeradataRow_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tTeradataRow_2" target="tJava_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tTeradataRow_2" target="tTeradataRow_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk9"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tTeradataRow_3" target="tTeradataRow_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk11"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tTeradataRow_3" target="tJava_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk8"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tTeradataRow_4" target="tJava_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_4" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tTeradataRow_4" target="tTeradataRow_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tTeradataRow_5" offsetLabelX="0" offsetLabelY="0" source="tTeradataRow_5" target="tJava_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk12"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tLibraryLoad_1" offsetLabelX="0" offsetLabelY="0" source="tLibraryLoad_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExist_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputProperties_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="LECTURE FICHIER CONTEXT"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="CALCUL LIGNES DE VENTES D’UTILISATIONS  (UPDATE/INSERT)"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="VOLUME"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_3"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="CA_TTC ET CA_HT"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_4"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="TOTAL_PANIER"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_6"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tTeradataRow_5"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="VENTILATION_PAIEMENT_CC"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_7"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4c11b5d1-39d7-4ac2-90df-fd1c1ec12b61"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>maSEWF+j30waB3/PcVk8pJ5apAFxvAPYJENTNIBeFfu/+nnrDwRzyTAqTGzPyC1rid8cB5ORnVm+
+Dusz+OG7xA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a6314d0c-eecd-46fd-881c-2dd96c02d411"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FKZdfwj+J5vEjNxggtvbY7P+jsmzio92nu1oQKmOQW5IZ6U7KDrP4KwVo6lin8yqCkPh4OcMFj8H
+s0jIgum6Ig==</DigestValue></Reference></SignedInfo><SignatureValue>AQ87E1xdxYGhpLSAHTrBpjXbpBuSPIOw51thhzZE/+ZedKwlcDo54aie8YI2opUnBksZCmA0wVPR
+i4VanGkNmfvA6tQniefOazWQmb6SjHM05tU7rLzuy/LzkHiKKPtJI15vsgdTZxOMAIbpWnjM708z
+osZcwmtc7vcrVwVNWWzcELLqGxKw7MJ3A7UipUa+HBlo3hOmNj42Fo8351XoivjUV5ACY3aR5fZw
+cxiIfCNaOtU0vO+4CTXKUtA2nNkvUbNnOjPZ+R2eMpALN1JL1dPGgv3cQzeywo+JznWg2WFJTIwS
+qIWvikU+khFr2UcQmxl1WIFq/pBYVJkukAQIzg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a6314d0c-eecd-46fd-881c-2dd96c02d411" Target="#_4c11b5d1-39d7-4ac2-90df-fd1c1ec12b61"><Timestamp>2020-10-01 11:02:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="DEV_DARTY" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="DEV_DARTY">
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="date_File" prompt="date_File?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+    <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+    <contextParameter comment="" name="FILE_NAME_CURRENT_DEZIPPED_INPUT" prompt="FILE_NAME_CURRENT_DEZIPPED_INPUT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_OLD_DWH" prompt="FILE_NAME_OLD_DWH?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_CURRENT_DEZIPPED" prompt="FILE_NAME_CURRENT_DEZIPPED?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_OLD_DWH_INPUT" prompt="FILE_NAME_OLD_DWH_INPUT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:tlOkFaowNn7t8qjCvSYBnVqhnDyJAZfo2rSWGVmSHMEeu1jT00W9"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1536"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="XKI351"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+    <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLDEV"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_Password" value="enc:system.encryption.key.v1:4FoeDhCfEeumvI5Gi+5D+iPkHw2gyWotT7DaB1v5Wjt0cetI3qo="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_user"/>
+  </context>
+  <context confirmationNeeded="false" name="REC_DARTY">
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="date_File" prompt="date_File?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+    <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+    <contextParameter comment="" name="FILE_NAME_CURRENT_DEZIPPED_INPUT" prompt="FILE_NAME_CURRENT_DEZIPPED_INPUT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_OLD_DWH" prompt="FILE_NAME_OLD_DWH?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_CURRENT_DEZIPPED" prompt="FILE_NAME_CURRENT_DEZIPPED?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_OLD_DWH_INPUT" prompt="FILE_NAME_OLD_DWH_INPUT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:f5Ug6InDysqpRDQxaCkDw98vFVObG9/rRtg8GM0CuO8/bUOPHAFm"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="talend"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1536"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="test"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="talend"/>
+    <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLREC"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_Password" value="enc:system.encryption.key.v1:lH7OXyOZwrNyzz4rDMiuvLFSNan6i+Dy9f0JSKVPYNTBUu7h3Ck="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_user"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD_DARTY">
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="date_File" prompt="date_File?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+    <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+    <contextParameter comment="" name="FILE_NAME_CURRENT_DEZIPPED_INPUT" prompt="FILE_NAME_CURRENT_DEZIPPED_INPUT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_OLD_DWH" prompt="FILE_NAME_OLD_DWH?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_CURRENT_DEZIPPED" prompt="FILE_NAME_CURRENT_DEZIPPED?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FILE_NAME_OLD_DWH_INPUT" prompt="FILE_NAME_OLD_DWH_INPUT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:NW8NtZp4dHVTthB561qmVxc6rf3JzYPtgvIW/ynxiIzkyGr2fvJg"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1530"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="XLI351"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+    <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLPRD"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="5432"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_Password" value="enc:system.encryption.key.v1:ZkPnIHU9DZWf2ERC+dAdz1iMmw7dLOjEv50EgCp0c2bqyQ4ac1M="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="taldbprd1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_user"/>
+  </context>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="AMC_V7_Login" prompt="AMC_V7_Login?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_user"/>
+    <contextParameter comment="" name="AMC_V7_Password" prompt="AMC_V7_Password?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_Password" value="enc:system.encryption.key.v1:VYSmmIHS8+2YGBuqK9qnFL/EkaST26oGW3I+Ydi4RxPhm6nt2AA="/>
+    <contextParameter comment="" name="AMC_V7_Database" prompt="AMC_V7_Database?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="talend_amc"/>
+    <contextParameter comment="" name="AMC_V7_Server" prompt="AMC_V7_Server?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="taldbdev1.fnacdarty.net"/>
+    <contextParameter comment="" name="AMC_V7_Schema" prompt="AMC_V7_Schema?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="AMC_V7_AdditionalParams" prompt="AMC_V7_AdditionalParams?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_V7_Port" prompt="AMC_V7_Port?" promptNeeded="false" repositoryContextId="_mACp0OxfEeqjZrb7ud72RQ" type="id_String" value="5432"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:vpaHdHIAkgApSTHplxeHosBF84InRWU8t8CHFWK7"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend/FNACDARTY/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" show="false" value="_MV0HUOxfEeqjZrb7ud72RQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="URL" show="false" value=""/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="context.AMC_V7_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.AMC_V7_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.AMC_V7_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="context.AMC_V7_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.AMC_V7_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.AMC_V7_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.AMC_V7_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:oGvyqH2X/Df37Y9S3mlrSqDOTYbeL5WQTO38Iv4q/tghBJbn3VxR6WJCyY1X0Bce/1kI"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;statcatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;logcatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;flowmetercatcher&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_bEhqog_7EeOQIqDoiWFwgQ" name="DataOperation"/>
+    <routinesParameter id="_bFHggA_7EeOQIqDoiWFwgQ" name="Mathematical"/>
+    <routinesParameter id="_bF0EEA_7EeOQIqDoiWFwgQ" name="Numeric"/>
+    <routinesParameter id="_bGh1wA_7EeOQIqDoiWFwgQ" name="Relational"/>
+    <routinesParameter id="_bKDD0A_7EeOQIqDoiWFwgQ" name="SQLike"/>
+    <routinesParameter id="_bHJg0A_7EeOQIqDoiWFwgQ" name="StringHandling"/>
+    <routinesParameter id="_bHzBEA_7EeOQIqDoiWFwgQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_bIin8A_7EeOQIqDoiWFwgQ" name="TalendDate"/>
+    <routinesParameter id="_bJN9YA_7EeOQIqDoiWFwgQ" name="TalendString"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+    <routinesParameter id="_S4cRUNwNEeqEC6MUGsyuDQ" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_3"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="jobName +&quot;echec Récupration DWH &quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="0"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="TEXT" name="LABEL" value="tWarn_11"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_3"/>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="8" offsetLabelY="1" posX="160" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_3"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Dwh+context.FILE_NAME_OLD_DWH_INPUT"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Users/Ysance/Documents/PROJETS/DARTY/Talend-Studio-r99271-V5.2.2/workspace&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Tmp+context.C30_Directory_HDFS_Work"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="context.FILE_NAME_OLD_DWH"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;Récupération de la dernière vr du DWH pour SCD"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_3"/>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Tmp+context.C30_Directory_HDFS_Dezip+context.FILE_NAME_CURRENT_DEZIPPED_INPUT"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Users/Ysance/Documents/PROJETS/DARTY/Talend-Studio-r99271-V5.2.2/workspace&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Tmp+context.C30_Directory_HDFS_Work"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="context.FILE_NAME_CURRENT_DEZIPPED"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;Déplacer le FC a /TMP/"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_1"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_2"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;copie de &quot;+context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Tmp+context.C30_Directory_HDFS_Dezip+context.FILE_NAME_CURRENT_DEZIPPED_INPUT + &quot; vers &quot;+context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Tmp+context.C30_Directory_HDFS_Work+context.FILE_NAME_CURRENT_DEZIPPED"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_4"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;copie de &quot;+context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Dwh+context.FILE_NAME_OLD_DWH_INPUT+&quot; vers &quot;+context.C30_Directory_HDFS_Racine+context.C30_Directory_HDFS_REF+context.C30_Directory_HDFS_Tmp+context.C30_Directory_HDFS_Work+context.FILE_NAME_OLD_DWH"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_4"/>
+  </node>
+  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tFileCopy_3" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_3" target="tWarn_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError3"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileCopy_1" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_1" target="tWarn_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_2" offsetLabelX="0" offsetLabelY="0" source="tWarn_2" target="tFileCopy_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tWarn_4" offsetLabelX="0" offsetLabelY="0" source="tWarn_4" target="tFileCopy_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <note opaque="true" posX="96" posY="64" sizeHeight="64" sizeWidth="385" text="Archivage des référentiels&#13;&#10;Récupération DWH">
+    <elementParameter field="CHECK" name="FONT_BOLD" value="true"/>
+  </note>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2062d8a0-8640-4d46-b105-685fba2a7812"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>suuZZyz+em3A5dTiqpisNcPVHy5CICyNESRVfVzGBgu5JwpFnC4Cq+IIhZjc4o4mIeBd7Bm8wIJx
+umZdrtuTMw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_356ee461-4673-4fc8-b041-a2c35594e209"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lMtoiaRjmXT1gFxBsP+WqBscb+Ju7OsVxrUTFvxdPcNLHZ4Sh3s1/0EEduZR7G9j/kOnUY35fEKO
+isfnXUnnXg==</DigestValue></Reference></SignedInfo><SignatureValue>AvLbUeWD5x7B/GMIGhbU4x6jExWsmiIjlcj/EXAQuNWTt7V14ZCgBHY1xk8ugwT3rpnnTlxbMkol
+NwWb9k8ZDRBP4MWAuHW+Pq/zqtu1L3/wO52bKfdPUzk/lFWBgosHigozZcnyPp0rBZQH5YDMZCR2
+EYnvrbkgjsrn6FaOdE3LRRC5BQIHA3a3ielblzki+dUygvpiY1/npWhUHJWEkjxcZbIq39NdYr7P
+J72Cw5GWQSKSKhfvkp3g8ocsfI93rLe2doforG0UriMyHPCYhWnBcc19o2PuQZ4ZxJzYwtKSJCLz
+jZIW2vgmU1iUw55zIbMd14Z6R+5WZrrEabcaLw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_356ee461-4673-4fc8-b041-a2c35594e209" Target="#_2062d8a0-8640-4d46-b105-685fba2a7812"><Timestamp>2020-09-22 23:25:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

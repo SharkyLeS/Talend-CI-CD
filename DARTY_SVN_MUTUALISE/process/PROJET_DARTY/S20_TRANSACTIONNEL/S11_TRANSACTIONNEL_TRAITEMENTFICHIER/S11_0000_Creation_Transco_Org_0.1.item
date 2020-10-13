@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="ficPropertiesName" prompt="ficPropertiesName?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="AMC_DARTY_db_AdditionalParams" prompt="AMC_DARTY_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value=""/>
+    <contextParameter comment="" name="AMC_DARTY_db_Login" prompt="AMC_DARTY_db_Login?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Password" prompt="AMC_DARTY_db_Password?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_Password" value="enc:system.encryption.key.v1:oCGfg3U/fOjCDWi+o/SQH2HM/9VMZaLH+mgibUUg1Y/b09dvvt6F"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Port" prompt="AMC_DARTY_db_Port?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="1536"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Schema" prompt="AMC_DARTY_db_Schema?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="TALEND"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Server" prompt="AMC_DARTY_db_Server?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="XKI351"/>
+    <contextParameter comment="" name="AMC_DARTY_db_Sid" prompt="AMC_DARTY_db_Sid?" promptNeeded="false" repositoryContextId="_DX1sIIUyEeSnSfvMkEuXIw" type="id_String" value="HDPTLDEV"/>
+    <contextParameter comment="" name="C100_Tables_RTAC01_HBase" prompt="C100_Tables_RTAC01_HBase?" promptNeeded="false" repositoryContextId="_AYH4MBWHEeOyrZIN8y9_UA" type="id_String" value="NCG_AC01"/>
+    <contextParameter comment="" name="C100_Tables_RTAC01_MqFile" prompt="C100_Tables_RTAC01_MqFile?" promptNeeded="false" repositoryContextId="_AYH4MBWHEeOyrZIN8y9_UA" type="id_String" value="MQ_File_RTAC01.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTAC02_HBase" prompt="C100_Tables_RTAC02_HBase?" promptNeeded="false" repositoryContextId="_AYH4MBWHEeOyrZIN8y9_UA" type="id_String" value="NCG_RTAC03"/>
+    <contextParameter comment="" name="C100_Tables_RTAC02_MqFile" prompt="C100_Tables_RTAC02_MqFile?" promptNeeded="false" repositoryContextId="_AYH4MBWHEeOyrZIN8y9_UA" type="id_String" value="MQ_File_RTAC03.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTEM51_HBase" prompt="C100_Tables_RTEM51_HBase?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="NCG_RTEM51"/>
+    <contextParameter comment="" name="C100_Tables_RTEM51_MqFile" prompt="C100_Tables_RTEM51_MqFile?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTEM51.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTEM52_HBase" prompt="C100_Tables_RTEM52_HBase?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="NCG_RTEM52"/>
+    <contextParameter comment="" name="C100_Tables_RTEM52_MqFile" prompt="C100_Tables_RTEM52_MqFile?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTEM52.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTEM53_HBase" prompt="C100_Tables_RTEM53_HBase?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="NCG_RTEM53"/>
+    <contextParameter comment="" name="C100_Tables_RTEM53_MqFile" prompt="C100_Tables_RTEM53_MqFile?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTEM53.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTEM54_HBase" prompt="C100_Tables_RTEM54_HBase?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="NCG_RTEM54"/>
+    <contextParameter comment="" name="C100_Tables_RTEM54_MqFile" prompt="C100_Tables_RTEM54_MqFile?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTEM54.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTEM55_HBase" prompt="C100_Tables_RTEM55_HBase?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="NCG_RTEM55"/>
+    <contextParameter comment="" name="C100_Tables_RTEM55_MqFile" prompt="C100_Tables_RTEM55_MqFile?" promptNeeded="false" repositoryContextId="_Qpz38FOWEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTEM55.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTPC01_HBase" prompt="C100_Tables_RTPC01_HBase?" promptNeeded="false" repositoryContextId="_FVCU4FOSEeO5W4-aVaO6vg" type="id_String" value="NCG_RTPC01"/>
+    <contextParameter comment="" name="C100_Tables_RTPC01_MqFile" prompt="C100_Tables_RTPC01_MqFile?" promptNeeded="false" repositoryContextId="_FVCU4FOSEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTPC01.txt"/>
+    <contextParameter comment="" name="C100_Tables_RTPC02_HBase" prompt="C100_Tables_RTPC02_HBase?" promptNeeded="false" repositoryContextId="_FVCU4FOSEeO5W4-aVaO6vg" type="id_String" value="NCG_RTPC02"/>
+    <contextParameter comment="" name="C100_Tables_RTPC02_MqFile" prompt="C100_Tables_RTPC02_MqFile?" promptNeeded="false" repositoryContextId="_FVCU4FOSEeO5W4-aVaO6vg" type="id_String" value="MQ_File_RTPC02.txt"/>
+    <contextParameter comment="" name="C130_ElasticSearch_Apport_Retrait" prompt="C130_ElasticSearch_Apport_Retrait?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/enc_idx/Typeapport_retrait/_bulk"/>
+    <contextParameter comment="" name="C130_ElasticSearch_Authorization" prompt="C130_ElasticSearch_Authorization?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="Authorization"/>
+    <contextParameter comment="" name="C130_ElasticSearch_AuthValue" prompt="C130_ElasticSearch_AuthValue?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="Basic dXNlcjpQYXNzdzByZA=="/>
+    <contextParameter comment="" name="C130_ElasticSearch_Cadeaux" prompt="C130_ElasticSearch_Cadeaux?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/cartesc_idx/cartesc/_bulk"/>
+    <contextParameter comment="" name="C130_ElasticSearch_Decompte" prompt="C130_ElasticSearch_Decompte?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/enc_idx/Typedecompte/_bulk"/>
+    <contextParameter comment="" name="C130_ElasticSearch_Encaissements" prompt="C130_ElasticSearch_Encaissements?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/enc_idx/Typeencaissement/_bulk"/>
+    <contextParameter comment="" name="C130_ElasticSearch_HostRunTime" prompt="C130_ElasticSearch_HostRunTime?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="talsrvdev"/>
+    <contextParameter comment="" name="C130_ElasticSearch_PortRunTime" prompt="C130_ElasticSearch_PortRunTime?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="22"/>
+    <contextParameter comment="" name="C130_ElasticSearch_PwdRunTime" prompt="C130_ElasticSearch_PwdRunTime?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="talend"/>
+    <contextParameter comment="" name="C130_ElasticSearch_serv" prompt="C130_ElasticSearch_serv?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="essrvdev1"/>
+    <contextParameter comment="" name="C130_ElasticSearch_URL" prompt="C130_ElasticSearch_URL?" promptNeeded="true" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="essrvdev1:9200"/>
+    <contextParameter comment="" name="C130_ElasticSearch_UserRunTime" prompt="C130_ElasticSearch_UserRunTime?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="talend"/>
+    <contextParameter comment="" name="C130_ElasticSearch_Vente" prompt="C130_ElasticSearch_Vente?" promptNeeded="true" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/ventes_idx/ventes/_bulk"/>
+    <contextParameter comment="" name="C130_ElasticSearch_WYNN_Entree_Mag" prompt="C130_ElasticSearch_WYNN_Entree_Mag?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/wynn_idx/entrees/_bulk/"/>
+    <contextParameter comment="" name="C130_ElasticSearch_WYNN_Lignes_vente" prompt="C130_ElasticSearch_WYNN_Lignes_vente?" promptNeeded="false" repositoryContextId="_yMJpsP81EeKkprRMgJtKDw" type="id_String" value="/wynn_idx/lv/_bulk"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Archive" prompt="C30_Directory_HDFS_Archive?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="archive/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Conf" prompt="C30_Directory_HDFS_Conf?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="conf/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dezip" prompt="C30_Directory_HDFS_Dezip?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dezip/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Dwh" prompt="C30_Directory_HDFS_Dwh?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="dwh/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Input" prompt="C30_Directory_HDFS_Input?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="input/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Json" prompt="C30_Directory_HDFS_Json?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="json/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Mq" prompt="C30_Directory_HDFS_Mq?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="mq/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_MQ_Error" prompt="C30_Directory_HDFS_MQ_Error?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="MQ_Error/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_NCG" prompt="C30_Directory_HDFS_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ncg/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_PCM" prompt="C30_Directory_HDFS_PCM?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="produits/pcm/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Pig" prompt="C30_Directory_HDFS_Pig?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="pig/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Racine" prompt="C30_Directory_HDFS_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/hdfs/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_REF" prompt="C30_Directory_HDFS_REF?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="ref/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Rejets" prompt="C30_Directory_HDFS_Rejets?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="rejets/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Reprise" prompt="C30_Directory_HDFS_Reprise?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="reprise/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Tmp" prompt="C30_Directory_HDFS_Tmp?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="tmp/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Transac" prompt="C30_Directory_HDFS_Transac?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="transac/"/>
+    <contextParameter comment="" name="C30_Directory_HDFS_Work" prompt="C30_Directory_HDFS_Work?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="work/"/>
+    <contextParameter comment="" name="C30_Directory_HIVE_Racine" prompt="C30_Directory_HIVE_Racine?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/user/talend/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_DWH" prompt="C30_Directory_INPUT_DWH?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/DWH/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_FUNC_LOG" prompt="C30_Directory_INPUT_FUNC_LOG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/logs/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_NCG" prompt="C30_Directory_INPUT_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/NCG/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_QLIK" prompt="C30_Directory_INPUT_QLIK?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="qlik/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_TMP" prompt="C30_Directory_INPUT_TMP?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/talend/tmp/"/>
+    <contextParameter comment="" name="C30_Directory_INPUT_Transac_NCG" prompt="C30_Directory_INPUT_Transac_NCG?" promptNeeded="false" repositoryContextId="_UVySEExREeOVjLhu5zZC4Q" type="id_String" value="/data/io/transac/"/>
+    <contextParameter comment="" name="C40_FileName_EndOfFile_Histo" prompt="C40_FileName_EndOfFile_Histo?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="§~~~#§&amp;|"/>
+    <contextParameter comment="" name="C40_FileName_EndOfFile_Histo_Nominal_Queue" prompt="C40_FileName_EndOfFile_Histo_Nominal_Queue?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="\n"/>
+    <contextParameter comment="" name="C40_FilesName_ARCHIVE_HDFS_SUFFIX" prompt="C40_FilesName_ARCHIVE_HDFS_SUFFIX?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="_ARCHIVE.txt"/>
+    <contextParameter comment="" name="C40_FilesName_HISTO_Delimiter_Denormalize" prompt="C40_FilesName_HISTO_Delimiter_Denormalize?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="%"/>
+    <contextParameter comment="" name="C40_FilesName_HISTO_Extension_src" prompt="C40_FilesName_HISTO_Extension_src?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value=".txt"/>
+    <contextParameter comment="" name="C40_FilesName_HISTO_Extension_tmp" prompt="C40_FilesName_HISTO_Extension_tmp?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value=".csv"/>
+    <contextParameter comment="" name="C40_FilesName_HISTO_Mask_Src" prompt="C40_FilesName_HISTO_Mask_Src?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="rtvt"/>
+    <contextParameter comment="" name="C40_FilesName_HISTO_Mask_tmp" prompt="C40_FilesName_HISTO_Mask_tmp?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="HISTO_"/>
+    <contextParameter comment="" name="C40_FilesName_RepriseHistoProperties" prompt="C40_FilesName_RepriseHistoProperties?" promptNeeded="false" repositoryContextId="_Yw7gUExUEeOVjLhu5zZC4Q" type="id_String" value="repriseHisto.properties"/>
+    <contextParameter comment="" name="C50_DB2_flowTable" prompt="C50_DB2_flowTable?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="FLOWMETER"/>
+    <contextParameter comment="" name="C50_DB2_hostname" prompt="C50_DB2_hostname?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="10.135.2.254"/>
+    <contextParameter comment="" name="C50_DB2_instance" prompt="C50_DB2_instance?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="DEV_HDP"/>
+    <contextParameter comment="" name="C50_DB2_logTable" prompt="C50_DB2_logTable?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="LOG"/>
+    <contextParameter comment="" name="C50_DB2_port" prompt="C50_DB2_port?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="60010 "/>
+    <contextParameter comment="" name="C50_DB2_pwd" prompt="C50_DB2_pwd?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="DB2HDP"/>
+    <contextParameter comment="" name="C50_DB2_schema" prompt="C50_DB2_schema?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="DB2HDP"/>
+    <contextParameter comment="" name="C50_DB2_statTable" prompt="C50_DB2_statTable?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="STAT"/>
+    <contextParameter comment="" name="C50_DB2_user" prompt="C50_DB2_user?" promptNeeded="false" repositoryContextId="_kcrD0GcxEeObI6vy3-xhFw" type="id_String" value="DB2HDP"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_H_Articles" prompt="C60_FilesName_DWH_H_Articles?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="H_Article_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_H_Orga" prompt="C60_FilesName_DWH_H_Orga?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="H_Orga_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_H_Prestas" prompt="C60_FilesName_DWH_H_Prestas?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="H_Presta_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_RTGA01" prompt="C60_FilesName_DWH_RTGA01?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="RTGA01_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_RTGA75" prompt="C60_FilesName_DWH_RTGA75?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="RTGA75_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_RTGG40" prompt="C60_FilesName_DWH_RTGG40?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="RTGG40_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWH_RTGV31" prompt="C60_FilesName_DWH_RTGV31?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="RTGV31_DWH.TXT"/>
+    <contextParameter comment="" name="C60_FilesName_DWR_TORG" prompt="C60_FilesName_DWR_TORG?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="DWR_TORG.txt"/>
+    <contextParameter comment="" name="C60_FilesName_DWR_TPRESTA" prompt="C60_FilesName_DWR_TPRESTA?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="DWR_TPRESTA.txt"/>
+    <contextParameter comment="" name="C60_FilesName_DWR_TPRODUIT" prompt="C60_FilesName_DWR_TPRODUIT?" promptNeeded="false" repositoryContextId="_N1b5wExtEeOXjuUzfNQ3pw" type="id_String" value="DWR_TPRODUIT.txt"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTGV02" prompt="C60_FilesName_HISTO_RTGV02?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="RTGV02"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTGV10" prompt="C60_FilesName_HISTO_RTGV10?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="RTGV10"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTGV14" prompt="C60_FilesName_HISTO_RTGV14?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="RTGV14"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT01" prompt="C60_FilesName_HISTO_RTVT01?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt01"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT02" prompt="C60_FilesName_HISTO_RTVT02?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt02"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT03" prompt="C60_FilesName_HISTO_RTVT03?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt03"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT08" prompt="C60_FilesName_HISTO_RTVT08?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt08"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT11" prompt="C60_FilesName_HISTO_RTVT11?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt11"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT12" prompt="C60_FilesName_HISTO_RTVT12?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt12"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT13" prompt="C60_FilesName_HISTO_RTVT13?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt13"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT14" prompt="C60_FilesName_HISTO_RTVT14?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt14"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT15" prompt="C60_FilesName_HISTO_RTVT15?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt15"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT16" prompt="C60_FilesName_HISTO_RTVT16?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt16"/>
+    <contextParameter comment="" name="C60_FilesName_HISTO_RTVT17" prompt="C60_FilesName_HISTO_RTVT17?" promptNeeded="false" repositoryContextId="_m28iEEz_EeOIZ5hB8__v6Q" type="id_String" value="rtvt17"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Canal" prompt="C80_MQDarty_NCG_CONNECTION_Canal?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="SYSTEM.EXPL.SVRCONN"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Port" prompt="C80_MQDarty_NCG_CONNECTION_Port?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_Integer" value="14034"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Pwd" prompt="C80_MQDarty_NCG_CONNECTION_Pwd?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_QueueManager" prompt="C80_MQDarty_NCG_CONNECTION_QueueManager?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="HDPDEV"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_Server" prompt="C80_MQDarty_NCG_CONNECTION_Server?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value="10.135.0.174"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_CONNECTION_User" prompt="C80_MQDarty_NCG_CONNECTION_User?" promptNeeded="false" repositoryContextId="_ENwu0DAnEeOm_JefAsTBpg" type="id_String" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_Canal" prompt="C80_MQDarty_NCG_Error_Canal?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value="SYSTEM.EXPL.SVRCONN"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_Port" prompt="C80_MQDarty_NCG_Error_Port?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value="14034"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_Pwd" prompt="C80_MQDarty_NCG_Error_Pwd?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_QueueManager" prompt="C80_MQDarty_NCG_Error_QueueManager?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value="HDPDEV"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_QueueName" prompt="C80_MQDarty_NCG_Error_QueueName?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value="HDP_Qerror"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_Server" prompt="C80_MQDarty_NCG_Error_Server?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value="10.135.0.174"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_Error_User" prompt="C80_MQDarty_NCG_Error_User?" promptNeeded="false" repositoryContextId="_EsyuoB7YEeO9e9ztb6hCpw" type="id_String" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_FilesName_RTAC03" prompt="C80_MQDarty_NCG_RTAC03_FilesName_RTAC03?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_String" value="MQ_File_RTAC03.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_GRP_QueueName" prompt="C80_MQDarty_NCG_RTAC03_GRP_QueueName?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_String" value="HDP_NCG_RTAC03"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_HBase" prompt="C80_MQDarty_NCG_RTAC03_HBase?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_String" value="NCG_RTAC03"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_Modele" prompt="C80_MQDarty_NCG_RTAC03_Modele?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_String" value="4,1,3,3,8,6,6,14,2,2,1,1,10"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_NbMessage" prompt="C80_MQDarty_NCG_RTAC03_NbMessage?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_Integer" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_TimeOut" prompt="C80_MQDarty_NCG_RTAC03_TimeOut?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_Integer" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTAC03_TraitementName" prompt="C80_MQDarty_NCG_RTAC03_TraitementName?" promptNeeded="false" repositoryContextId="_4tqoECB1EeOlKcEkWg7LBA" type="id_String" value="RTAC03"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV02_FilesName_RTGV02" prompt="C80_MQDarty_NCG_RTGV02_FilesName_RTGV02?" promptNeeded="false" repositoryContextId="_EPr78OrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV02.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV02_HBase" prompt="C80_MQDarty_NCG_RTGV02_HBase?" promptNeeded="false" repositoryContextId="_EPr78OrPEeK6jZF6gowlKw" type="id_String" value="NCG_RTGV02"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV02_Modele" prompt="C80_MQDarty_NCG_RTGV02_Modele?" promptNeeded="false" repositoryContextId="_EPr78OrPEeK6jZF6gowlKw" type="id_String" value="4,1,3,3,5,7,1,5,25,15,3,3,3,3,32,32,5,4,21,32,5,26,10,10,5,78,78,1,5,5,1,14,8,8,3,15"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV02_QueueName" prompt="C80_MQDarty_NCG_RTGV02_QueueName?" promptNeeded="false" repositoryContextId="_EPr78OrPEeK6jZF6gowlKw" type="id_String" value="HDP_NCG_RTGV02"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV02_TraitementName" prompt="C80_MQDarty_NCG_RTGV02_TraitementName?" promptNeeded="false" repositoryContextId="_EPr78OrPEeK6jZF6gowlKw" type="id_String" value="RTGV02"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV03_FilesName_RTGV03" prompt="C80_MQDarty_NCG_RTGV03_FilesName_RTGV03?" promptNeeded="false" repositoryContextId="_HJCHoOrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV03.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV03_HBase" prompt="C80_MQDarty_NCG_RTGV03_HBase?" promptNeeded="false" repositoryContextId="_HJCHoOrPEeK6jZF6gowlKw" type="id_String" value="NCG_RTGV03"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV03_Modele" prompt="C80_MQDarty_NCG_RTGV03_Modele?" promptNeeded="false" repositoryContextId="_HJCHoOrPEeK6jZF6gowlKw" type="id_String" value="4,1,3,3,5,7,1,63,14,10,10,1,1"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV03_QueueName" prompt="C80_MQDarty_NCG_RTGV03_QueueName?" promptNeeded="false" repositoryContextId="_HJCHoOrPEeK6jZF6gowlKw" type="id_String" value="HDP_NCG_RTGV03"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV03_TraitementName" prompt="C80_MQDarty_NCG_RTGV03_TraitementName?" promptNeeded="false" repositoryContextId="_HJCHoOrPEeK6jZF6gowlKw" type="id_String" value="RTGV03"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV04_FilesName_RTGV04" prompt="C80_MQDarty_NCG_RTGV04_FilesName_RTGV04?" promptNeeded="false" repositoryContextId="_vLsy8CdiEeOgIc8qy-J0yQ" type="id_String" value="MQ_File_RTGV04.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV04_HBase" prompt="C80_MQDarty_NCG_RTGV04_HBase?" promptNeeded="false" repositoryContextId="_vLsy8CdiEeOgIc8qy-J0yQ" type="id_String" value="NCG_RTGV04"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV04_Modele" prompt="C80_MQDarty_NCG_RTGV04_Modele?" promptNeeded="false" repositoryContextId="_vLsy8CdiEeOgIc8qy-J0yQ" type="id_String" value="4,1,3,3,7,8,8,1,1,3,8,5,32,1,1,14,1,1,1,1,10"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV04_QueueName" prompt="C80_MQDarty_NCG_RTGV04_QueueName?" promptNeeded="false" repositoryContextId="_vLsy8CdiEeOgIc8qy-J0yQ" type="id_String" value="HDP_NCG_RTGV04"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV04_TraitementName" prompt="C80_MQDarty_NCG_RTGV04_TraitementName?" promptNeeded="false" repositoryContextId="_vLsy8CdiEeOgIc8qy-J0yQ" type="id_String" value="RTGV04"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_FilesName_RTGV10" prompt="C80_MQDarty_NCG_RTGV10_FilesName_RTGV10?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV10.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_HBase" prompt="C80_MQDarty_NCG_RTGV10_HBase?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_String" value="NCG_RTGV10"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_Modele" prompt="C80_MQDarty_NCG_RTGV10_Modele?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_String" value="4,1,3,3,7,5,9,8,2,2,10,10,10,10,10,10,5,10,30,30,30,30,8,1,1,1,1,5,5,30,30,8,3,5,5,14,4,8,8,3,3,3,3,3,5,14,6,1,1,8,8,1,20,6,3,3,8"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_NbMessage" prompt="C80_MQDarty_NCG_RTGV10_NbMessage?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_QueueName" prompt="C80_MQDarty_NCG_RTGV10_QueueName?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_String" value="HDP_NCG_RTGV10"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_TimeOut" prompt="C80_MQDarty_NCG_RTGV10_TimeOut?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_Integer" value="5000"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV10_TraitementName" prompt="C80_MQDarty_NCG_RTGV10_TraitementName?" promptNeeded="false" repositoryContextId="_JfUCgOrPEeK6jZF6gowlKw" type="id_String" value="RTGV10"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11" prompt="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV11.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11_Hive" prompt="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11_Hive?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV11_Hive.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11_Lignes" prompt="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11_Lignes?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="MQ_Lignes_RTGV11.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11_Lignes_Hive" prompt="C80_MQDarty_NCG_RTGV11_FilesName_RTGV11_Lignes_Hive?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="MQ_Lignes_RTGV11_Hive.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_HBase" prompt="C80_MQDarty_NCG_RTGV11_HBase?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="NCG_RTGV11"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_Modele" prompt="C80_MQDarty_NCG_RTGV11_Modele?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="4,1,3,3,7,1,7,7,2,3,8,5,5,6,10,10,10,5,2,6,6,10,1,2,5,1,5,35,6,3,3,5,1,1,1,1,7,8,1,8,8,4,8,3,1,14,4,5,3,3,8,3,20,10,3,3,9,2,6,6,6,3,8,3,3,3,3,3,3,1,2,6,6,10,6,8,5,5,6,10"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_NbMessage" prompt="C80_MQDarty_NCG_RTGV11_NbMessage?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_NbProcessingFile" prompt="C80_MQDarty_NCG_RTGV11_NbProcessingFile?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_QueueName" prompt="C80_MQDarty_NCG_RTGV11_QueueName?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="HDP_NCG_RTGV11"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_TimeOut" prompt="C80_MQDarty_NCG_RTGV11_TimeOut?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_Integer" value=""/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV11_TraitementName" prompt="C80_MQDarty_NCG_RTGV11_TraitementName?" promptNeeded="false" repositoryContextId="_LOikcOrPEeK6jZF6gowlKw" type="id_String" value="RTGV11"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV14_FilesName_RTGV14" prompt="C80_MQDarty_NCG_RTGV14_FilesName_RTGV14?" promptNeeded="false" repositoryContextId="_MnAMMOrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV14.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV14_HBase" prompt="C80_MQDarty_NCG_RTGV14_HBase?" promptNeeded="false" repositoryContextId="_MnAMMOrPEeK6jZF6gowlKw" type="id_String" value="NCG_RTGV14"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV14_Modele" prompt="C80_MQDarty_NCG_RTGV14_Modele?" promptNeeded="false" repositoryContextId="_MnAMMOrPEeK6jZF6gowlKw" type="id_String" value="4,1,3,3,5,7,8,2,5,10,7,8,1,8,14,5,3,3,10,4,3,3,3,9,10,6,5,14"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV14_QueueName" prompt="C80_MQDarty_NCG_RTGV14_QueueName?" promptNeeded="false" repositoryContextId="_MnAMMOrPEeK6jZF6gowlKw" type="id_String" value="HDP_NCG_RTGV14"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV14_TraitementName" prompt="C80_MQDarty_NCG_RTGV14_TraitementName?" promptNeeded="false" repositoryContextId="_MnAMMOrPEeK6jZF6gowlKw" type="id_String" value="RTGV14"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV15_FilesName_RTGV15" prompt="C80_MQDarty_NCG_RTGV15_FilesName_RTGV15?" promptNeeded="false" repositoryContextId="_QOID4OrPEeK6jZF6gowlKw" type="id_String" value="MQ_File_RTGV15.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV15_HBase" prompt="C80_MQDarty_NCG_RTGV15_HBase?" promptNeeded="false" repositoryContextId="_QOID4OrPEeK6jZF6gowlKw" type="id_String" value="NCG_RTGV15"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV15_Modele" prompt="C80_MQDarty_NCG_RTGV15_Modele?" promptNeeded="false" repositoryContextId="_QOID4OrPEeK6jZF6gowlKw" type="id_String" value="4,1,3,3,5,7,7,7,2,5,5,5,5,5,5,5,5,5,5,1,14"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV15_QueueName" prompt="C80_MQDarty_NCG_RTGV15_QueueName?" promptNeeded="false" repositoryContextId="_QOID4OrPEeK6jZF6gowlKw" type="id_String" value="HDP_NCG_RTGV15"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTGV15_TraitementName" prompt="C80_MQDarty_NCG_RTGV15_TraitementName?" promptNeeded="false" repositoryContextId="_QOID4OrPEeK6jZF6gowlKw" type="id_String" value="RTGV15"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTTL04_FilesName_RTTL04" prompt="C80_MQDarty_NCG_RTTL04_FilesName_RTTL04?" promptNeeded="false" repositoryContextId="_aZ_-AAD0EeOKYuX2rLSVQQ" type="id_String" value="MQ_File_RTTL04.txt"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTTL04_HBase" prompt="C80_MQDarty_NCG_RTTL04_HBase?" promptNeeded="false" repositoryContextId="_aZ_-AAD0EeOKYuX2rLSVQQ" type="id_String" value="NCG_RTTL04"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTTL04_Modele" prompt="C80_MQDarty_NCG_RTTL04_Modele?" promptNeeded="false" repositoryContextId="_aZ_-AAD0EeOKYuX2rLSVQQ" type="id_String" value="4,1,3,3,7,7,7,2,8,5,1,3,1,5,6,6,14,8"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTTL04_QueueName" prompt="C80_MQDarty_NCG_RTTL04_QueueName?" promptNeeded="false" repositoryContextId="_aZ_-AAD0EeOKYuX2rLSVQQ" type="id_String" value="HDP_NCG_RTTL04"/>
+    <contextParameter comment="" name="C80_MQDarty_NCG_RTTL04_TraitementName" prompt="C80_MQDarty_NCG_RTTL04_TraitementName?" promptNeeded="false" repositoryContextId="_aZ_-AAD0EeOKYuX2rLSVQQ" type="id_String" value="RTTL04"/>
+    <contextParameter comment="" name="CLOCAL_Cartes_Cadeaux_JSON" prompt="CLOCAL_Cartes_Cadeaux_JSON?" promptNeeded="false" repositoryContextId="_Z-8W4FatEeODOuPNBOS9Aw" type="id_String" value="Cartes_Cadeaux"/>
+    <contextParameter comment="" name="FilesName_Json_Cartes_Cadeaux" prompt="FilesName_Json_Cartes_Cadeaux?" promptNeeded="false" repositoryContextId="_Z-8W4FatEeODOuPNBOS9Aw" type="id_String" value="NCG_Cartes_Cadeaux.json"/>
+    <contextParameter comment="" name="C30_File_Json_Apport_Retrait" prompt="C30_File_Json_Apport_Retrait?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="NCG_Apport_Retrait.json"/>
+    <contextParameter comment="" name="C30_FilesName_Json_Decompte" prompt="C30_FilesName_Json_Decompte?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="NCG_Encaissements_Decompte.json"/>
+    <contextParameter comment="" name="CLOCAL_apport_retrait_JSON" prompt="CLOCAL_apport_retrait_JSON?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="apport_retrait"/>
+    <contextParameter comment="" name="CLOCAL_decompte_JSON" prompt="CLOCAL_decompte_JSON?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="decompte"/>
+    <contextParameter comment="" name="CLOCAL_entete_encaissement_JSON" prompt="CLOCAL_entete_encaissement_JSON?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="entete_encaissement"/>
+    <contextParameter comment="" name="CLOCAL_lignes_encaissement_JSON" prompt="CLOCAL_lignes_encaissement_JSON?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="lignes_encaissement"/>
+    <contextParameter comment="" name="CLOCAL_MQ_Ref_Filename_AR" prompt="CLOCAL_MQ_Ref_Filename_AR?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="MQ_entreesmag_"/>
+    <contextParameter comment="" name="CLOCAL_MQ_Ref_Filename_DE" prompt="CLOCAL_MQ_Ref_Filename_DE?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="MQ_decompte_"/>
+    <contextParameter comment="" name="CLOCAL_OutputJsonFileName_AR" prompt="CLOCAL_OutputJsonFileName_AR?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="Encaissements_ApportRetrait.json"/>
+    <contextParameter comment="" name="CLOCAL_OutputJsonFileName_DE" prompt="CLOCAL_OutputJsonFileName_DE?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="Encaissements_decompte.json"/>
+    <contextParameter comment="" name="CLOCAL_Prefix_Temp_Files_AR" prompt="CLOCAL_Prefix_Temp_Files_AR?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="NCG_Apport_Retrait_"/>
+    <contextParameter comment="" name="CLOCAL_Prefix_Temp_Files_DE" prompt="CLOCAL_Prefix_Temp_Files_DE?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="NCG_Decompte_"/>
+    <contextParameter comment="" name="CLOCAL_reglements_JSON" prompt="CLOCAL_reglements_JSON?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="reglements"/>
+    <contextParameter comment="" name="FilesName_Json_Encaissements" prompt="FilesName_Json_Encaissements?" promptNeeded="false" repositoryContextId="__PFCAFasEeODOuPNBOS9Aw" type="id_String" value="NCG_Encaissements.json"/>
+    <contextParameter comment="" name="C30_FilesName_Json_Ventes" prompt="C30_FilesName_Json_Ventes?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="NCG_Ventes.json"/>
+    <contextParameter comment="" name="CLOCAL_Adresse_JSON" prompt="CLOCAL_Adresse_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Adresse"/>
+    <contextParameter comment="" name="CLOCAL_Email_JSON" prompt="CLOCAL_Email_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Email"/>
+    <contextParameter comment="" name="CLOCAL_Encaissement_JSON" prompt="CLOCAL_Encaissement_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Encaissement"/>
+    <contextParameter comment="" name="CLOCAL_Entete_vente_JSON" prompt="CLOCAL_Entete_vente_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Entete_vente"/>
+    <contextParameter comment="" name="CLOCAL_Lignes_vente_JSON" prompt="CLOCAL_Lignes_vente_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Lignes_vente"/>
+    <contextParameter comment="" name="CLOCAL_Masque" prompt="CLOCAL_Masque?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="*MQ_File_*"/>
+    <contextParameter comment="" name="CLOCAL_Options_JSON" prompt="CLOCAL_Options_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Options"/>
+    <contextParameter comment="" name="CLOCAL_Prefix_Temp_Files" prompt="CLOCAL_Prefix_Temp_Files?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="NCG_Ventes_"/>
+    <contextParameter comment="" name="CLOCAL_Reprise" prompt="CLOCAL_Reprise?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="0"/>
+    <contextParameter comment="" name="CLOCAL_Retours_JSON" prompt="CLOCAL_Retours_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Retours"/>
+    <contextParameter comment="" name="CLOCAL_Vadd_JSON" prompt="CLOCAL_Vadd_JSON?" promptNeeded="false" repositoryContextId="_2Srd0FajEeODOuPNBOS9Aw" type="id_String" value="Vadd"/>
+    <contextParameter comment="" name="C30_File_Json_Lignes_LV" prompt="C30_File_Json_Lignes_LV?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="WYNN_lignes_vente.json"/>
+    <contextParameter comment="" name="CLOCAL_NomBloc_JSON_EM" prompt="CLOCAL_NomBloc_JSON_EM?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="RTAC03_EJ"/>
+    <contextParameter comment="" name="CLOCAL_NomBloc_JSON_LV" prompt="CLOCAL_NomBloc_JSON_LV?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="lv"/>
+    <contextParameter comment="" name="File_Json_RTAC03" prompt="File_Json_RTAC03?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="WYNN_entrees_magasins.json"/>
+    <contextParameter comment="" name="keyFileName_EM" prompt="keyFileName_EM?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="MQ_File_RTAC03.txt"/>
+    <contextParameter comment="" name="keyFileName_LV" prompt="keyFileName_LV?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="MQ_Lignes_RTGV11.txt"/>
+    <contextParameter comment="" name="keyFileName_LV_BatchHive" prompt="keyFileName_LV_BatchHive?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="MQ_Lignes_RTGV11_BatchHive.txt"/>
+    <contextParameter comment="" name="qVenteFileName_EM" prompt="qVenteFileName_EM?" promptNeeded="false" repositoryContextId="_nY_I4FanEeODOuPNBOS9Aw" type="id_String" value="Hive_Qvente_M.txt"/>
+    <contextParameter comment="" name="NB_JOUR_FRAICHEUR" prompt="NB_JOUR_FRAICHEUR?" promptNeeded="false" type="id_String" value="3"/>
+    <contextParameter comment="" name="PCM_ClassName" prompt="PCM_ClassName?" promptNeeded="false" repositoryContextId="_B0cjMLgpEeSB7MFpn69pvQ" type="id_String" value="com.ibm.db2.jcc.DB2Driver"/>
+    <contextParameter comment="" name="PCM_DriverJar" prompt="PCM_DriverJar?" promptNeeded="false" repositoryContextId="_B0cjMLgpEeSB7MFpn69pvQ" type="id_String" value="C:\\dev\\jdbc\\IBM_jdbc.x\\db2jcc4.jar"/>
+    <contextParameter comment="" name="PCM_JdbcUrl" prompt="PCM_JdbcUrl?" promptNeeded="false" repositoryContextId="_B0cjMLgpEeSB7MFpn69pvQ" type="id_String" value="jdbc:db2://uvi351:60002/PCM_REC:retrieveMessagesFromServerOnGetMessage=true;"/>
+    <contextParameter comment="" name="PCM_Login" prompt="PCM_Login?" promptNeeded="false" repositoryContextId="_B0cjMLgpEeSB7MFpn69pvQ" type="id_String" value="qlikview"/>
+    <contextParameter comment="" name="PCM_MappingFile" prompt="PCM_MappingFile?" promptNeeded="false" repositoryContextId="_B0cjMLgpEeSB7MFpn69pvQ" type="id_String" value="mysql_id"/>
+    <contextParameter comment="" name="PCM_Password" prompt="PCM_Password?" promptNeeded="false" repositoryContextId="_B0cjMLgpEeSB7MFpn69pvQ" type="id_Password" value="enc:system.encryption.key.v1:/wCaIChhL2BAP6P/cjpbi3EI7OIseE0/smejgm0urW90rdWU"/>
+    <contextParameter comment="" name="C01_ClusterDarty_HDFS_Group" prompt="C01_ClusterDarty_HDFS_Group?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C01_ClusterDarty_HDFS_Temp_Folder" prompt="C01_ClusterDarty_HDFS_Temp_Folder?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="/tmp/"/>
+    <contextParameter comment="" name="C01_ClusterDarty_HDFS_User_Name" prompt="C01_ClusterDarty_HDFS_User_Name?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="C01_ClusterDarty_JobtrackerURI" prompt="C01_ClusterDarty_JobtrackerURI?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1:9001"/>
+    <contextParameter comment="" name="C01_ClusterDarty_NamenodeURI" prompt="C01_ClusterDarty_NamenodeURI?" promptNeeded="true" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="maprfs://hdpsrvdev1:7222"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Host" prompt="C01_ClusterDarty_Zookeeper_Host?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C01_ClusterDarty_Zookeeper_Port" prompt="C01_ClusterDarty_Zookeeper_Port?" promptNeeded="false" repositoryContextId="_QpUOUOoPEeK5luWzZatnoA" type="id_String" value="5181"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_DbDwh_Name" prompt="C10_Hive_connection_Hive_DbDwh_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdwh"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_DbHisto_Name" prompt="C10_Hive_connection_Hive_DbHisto_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="historique"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_DbNominal_Name" prompt="C10_Hive_connection_Hive_DbNominal_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="nominal"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Host" prompt="C10_Hive_connection_Hive_Host?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="hdpsrvdev1"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Password" prompt="C10_Hive_connection_Hive_Password?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_Port" prompt="C10_Hive_connection_Hive_Port?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="10000"/>
+    <contextParameter comment="" name="C10_Hive_connection_Hive_User_Name" prompt="C10_Hive_connection_Hive_User_Name?" promptNeeded="false" repositoryContextId="_uZ8wEEu4EeO2O_6TsKxq1g" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="CtxPathFile" prompt="CtxPathFile?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="context.properties"/>
+    <contextParameter comment="" name="DartyEncoding" prompt="DartyEncoding?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="UTF-8"/>
+    <contextParameter comment="" name="Dir_conf" prompt="Dir_conf?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="/data/conf"/>
+    <contextParameter comment="" name="FilePath_StopNgo_Json" prompt="FilePath_StopNgo_Json?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Json.txt"/>
+    <contextParameter comment="" name="FilePath_StopNgo_Nominal" prompt="FilePath_StopNgo_Nominal?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="fic_StopnGo_Nominal.txt"/>
+    <contextParameter comment="" name="ProfondeurHisto" prompt="ProfondeurHisto?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="null"/>
+    <contextParameter comment="" name="ShardingGV11" prompt="ShardingGV11?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="1"/>
+    <contextParameter comment="" name="TimerCheckLoop" prompt="TimerCheckLoop?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+    <contextParameter comment="" name="TimerLoopStopNGo" prompt="TimerLoopStopNGo?" promptNeeded="false" repositoryContextId="_4N3Z0Eu7EeO2O_6TsKxq1g" type="id_String" value="60000"/>
+    <contextParameter comment="serveur DB2 pour les logs talend" name="DB2_host" prompt="DB2_host?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="10.135.2.254"/>
+    <contextParameter comment="instance DB2 pour les logs talend" name="DB2_instance" prompt="DB2_instance?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="DEV_HDP"/>
+    <contextParameter comment="login DB2 instance de logs talend" name="DB2_login" prompt="DB2_login?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="db2hdp"/>
+    <contextParameter comment="port DB2 instance de logs talend" name="DB2_port" prompt="DB2_port?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="60010"/>
+    <contextParameter comment="password DB2 instance de logs talend" name="DB2_pwd" prompt="DB2_pwd?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="db2hdp"/>
+    <contextParameter comment="" name="DB2_schema" prompt="DB2_schema?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="db2hdp"/>
+    <contextParameter comment="" name="Local_Logs_Directory" prompt="Local_Logs_Directory?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="/data/talend/logs"/>
+    <contextParameter comment="" name="Local_Logs_FileName" prompt="Local_Logs_FileName?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="logs_files"/>
+    <contextParameter comment="" name="Local_Meters_FileName" prompt="Local_Meters_FileName?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="meter_files"/>
+    <contextParameter comment="" name="Local_Stats_FileName" prompt="Local_Stats_FileName?" promptNeeded="false" repositoryContextId="_LzF0IDgMEeOc7OUZS7QRQQ" type="id_String" value="stats_files"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;]}"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="context.Local_Logs_Directory"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="context.Local_Stats_FileName"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="context.Local_Logs_FileName"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="context.Local_Meters_FileName"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_ReSJwIUvEeSnSfvMkEuXIw"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tOracleOutput_sid"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="URL" value=""/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="context.AMC_DARTY_db_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.AMC_DARTY_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.AMC_DARTY_db_Sid"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.AMC_DARTY_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.AMC_DARTY_db_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.AMC_DARTY_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:suthK+WtjsFmLi+uK62MQ5SPlstj6rr1abX6OdpkEWFOJ15zpxIitKBYM0+n7zO0IXlaQGjJ3PBt"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;STATS&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;LOGS&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;FLOW_METER&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="true"/>
+    <routinesParameter id="_g5N54CnVEeO9EMq_9r9ARg" name="DQTechnical"/>
+    <routinesParameter id="_d9zJcn0KEeOhW6SKEs9SAw" name="DataOperation"/>
+    <routinesParameter id="_g48NECnVEeO9EMq_9r9ARg" name="DataQuality"/>
+    <routinesParameter id="_g5Ev8CnVEeO9EMq_9r9ARg" name="DqStringHandling"/>
+    <routinesParameter id="_d-6jwH0KEeOhW6SKEs9SAw" name="Mathematical"/>
+    <routinesParameter id="_d_z7oH0KEeOhW6SKEs9SAw" name="Numeric"/>
+    <routinesParameter id="_eAl-wH0KEeOhW6SKEs9SAw" name="Relational"/>
+    <routinesParameter id="_eFOnIH0KEeOhW6SKEs9SAw" name="SQLike"/>
+    <routinesParameter id="_eBZ3EH0KEeOhW6SKEs9SAw" name="StringHandling"/>
+    <routinesParameter id="_eCRZwH0KEeOhW6SKEs9SAw" name="TalendDataGenerator"/>
+    <routinesParameter id="_eDL_wH0KEeOhW6SKEs9SAw" name="TalendDate"/>
+    <routinesParameter id="_eEJCAH0KEeOhW6SKEs9SAw" name="TalendString"/>
+    <routinesParameter id="_KNPgoO4eEeKIsJogfE185Q" name="DartyRoutines"/>
+    <routinesParameter id="_vJb9UANsEeO5Fuv1LHXDJQ" name="Date_Darty_to_Timestamp"/>
+    <routinesParameter id="_qF3ugHB8EeKNj_i9n0AV4A" name="HBASEroutines"/>
+  </parameters>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Requête Hive Transco OK&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_3"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Requête Hive Transco KO&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_4"/>
+  </node>
+  <node componentName="tSSH" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSSH_2"/>
+    <elementParameter field="TEXT" name="HOST" value="context.C130_ElasticSearch_HostRunTime"/>
+    <elementParameter field="TEXT" name="PORT" value="context.C130_ElasticSearch_PortRunTime"/>
+    <elementParameter field="TEXT" name="USER" value="context.C130_ElasticSearch_UserRunTime"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" value="PASSWORD"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:l7dKP0TpLPTHMkSG7eezUJ82cxI0feep9A+epbyOXSocvK+rwbXU7QPkdlTJ+sJWRXmptXlO80yKX/R5wsNpLtw="/>
+    <elementParameter field="CHECK" name="PTY" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="STANDARDOUTPUT" value="TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="TO_CONSOLE"/>
+    <elementParameter field="FILE" name="PRIVATEKEY" value="&quot;/.ssh/id_dsa&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSPHRASE" value="enc:system.encryption.key.v1:kEUGvi9aQiGErhxmnU6nlUCxfC9tUEkgy5GdTrPMAY6u1nn4"/>
+    <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TABLE" name="COMMANDS">
+      <elementValue elementRef="COMMAND" value="&quot;cp &quot;+ context.C30_Directory_INPUT_TMP+&quot;TORG_TRANSCO.json  /data/conf/ &quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;scp &quot;+context.C30_Directory_INPUT_TMP+&quot;TORG_TRANSCO.json @&quot;+context.C130_ElasticSearch_serv+&quot;:/apps/wynn/conf/ref&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tSSH_2"/>
+  </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ficPropertiesName = context.Dir_conf+&quot;/&quot;+ context.CtxPathFile;&#10;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#10;//import java.util.List;&#10;//import java.util.List;&#10;import java.text.SimpleDateFormat;&#10;import java.util.Arrays;&#10;import java.util.Calendar;&#10;import java.util.Date;&#10;import java.util.Locale;&#10;import java.util.TimeZone;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="JBL_LoadingConf" componentVersion="5.2" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_LoadingConf_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+    <elementParameter field="CHECK" name="START" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="COMPONENT_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tJava_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="JBL_LoadingConf"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connexion à :&quot;+&quot;jdbc:hive2://&quot;+context.C10_Hive_connection_Hive_Host+&quot;:&quot; +context.C10_Hive_connection_Hive_Port +&quot;/&quot;+context.C10_Hive_connection_Hive_DbDwh_Name"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
+  </node>
+  <node componentName="tHiveConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" value="CUSTOM"/>
+    <elementParameter field="CLOSED_LIST" name="HIVE_VERSION" value="MAPR2"/>
+    <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value="commons-logging-1.1.3.jar;hive-service-0.13.0-mapr-1410.jar;commons-lang-2.6.jar;jdo-api-3.0.1.jar;zookeeper-3.4.5-mapr-1406.jar;slf4j-api-1.7.5.jar;antlr-2.7.7.jar;hadoop-0.20.2-dev-core.jar;libthrift-0.9.0.jar;libfb303-0.9.0.jar;hive-exec-0.13.0-mapr-1410.jar;hive-metastore-0.13.0-mapr-1410.jar;jackson-mapper-asl-1.8.8.jar;guava-13.0.1.jar;maprfs-5.0.0-mapr.jar;maprfs-jni-5.0.0-mapr.jar;httpclient-4.2.5.jar;hive-jdbc-0.13.0-mapr-1410.jar;log4j-1.2.15.jar;jackson-core-asl-1.8.8.jar;httpcore-4.2.jar;slf4j-log4j12-1.7.5.jar"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
+    <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE2"/>
+    <elementParameter field="TEXT" name="HOST" value="context.C10_Hive_connection_Hive_Host"/>
+    <elementParameter field="TEXT" name="TYPE" value="Hive"/>
+    <elementParameter field="TEXT" name="PORT" value="context.C10_Hive_connection_Hive_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.C10_Hive_connection_Hive_User_Name"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:TQUOe+dkr3re4P/CkRCgeKVoE9nABR/2S/ydyoec2iJcM/r9XYTugLUD+8J8a2l+BSc89owG9t3XCEDtwdxdUO7nOazy"/>
+    <elementParameter field="CHECK" name="SET_MAPRED_JT" value="true"/>
+    <elementParameter field="TEXT" name="MAPRED_JT" value="context.C01_ClusterDarty_JobtrackerURI"/>
+    <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="false"/>
+    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;hdfs://localhost:8020&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value=""/>
+    <elementParameter field="CHECK" name="STORE_BY_HBASE" value="false"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" value="&quot;2181&quot;"/>
+    <elementParameter field="CHECK" name="DEFINE_REGISTER_JAR" value="false"/>
+    <elementParameter field="LABEL" name="REGISTER_JAR_NOTE" value="When filling in the Jar path information below, make sure that the JAR files are available on the server."/>
+    <elementParameter field="TABLE" name="REGISTER_JAR"/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connexion à la base Hive: &quot; +context.C10_Hive_connection_Hive_DbDwh_Name + &quot; OK&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connexion à la base Hive: &quot; +context.C10_Hive_connection_Hive_DbDwh_Name + &quot; KO&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="6"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveInput_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" value="HORTONWORKS"/>
+    <elementParameter field="CLOSED_LIST" name="HIVE_VERSION" value="HDP_1_2"/>
+    <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="EMBEDDED"/>
+    <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;10000&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="Hive"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:aUOeX73VT/TX6pfq2sbgXiJh34Y5usfek33PVnM5"/>
+    <elementParameter field="CHECK" name="SET_MAPRED_JT" value="true"/>
+    <elementParameter field="TEXT" name="MAPRED_JT" value="&quot;localhost:50300&quot;"/>
+    <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="true"/>
+    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;hdfs://localhost:8020&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;torg_dwh&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select if(cfiliale in ('908','945','989','991') , 'dge' , if(cfiliale in ('916','961') , 'dgo' ,'dif' )),  czondv, concat (cfiliale,clieu)&#13;&#10;from hdwh.torg_dwh&quot;"/>
+    <elementParameter field="CHECK" name="STORE_BY_HBASE" value="false"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" value="&quot;2181&quot;"/>
+    <elementParameter field="CHECK" name="DEFINE_REGISTER_JAR" value="false"/>
+    <elementParameter field="LABEL" name="REGISTER_JAR_NOTE" value="When filling in the Jar path information below, make sure that the JAR files are available on the server."/>
+    <elementParameter field="TABLE" name="REGISTER_JAR"/>
+    <elementParameter field="LABEL" name="NOTE" value="If you are on Windows, add a '/' in front of the path you type in"/>
+    <elementParameter field="CHECK" name="SET_TEMP_PATH" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_PATH" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="cfiliale"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="czondv"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="magasin"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="__QUERY__"/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tHiveInput_1">
+      <column comment="" key="false" name="cfiliale" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="czondv" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="magasin" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputJSON" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputJSON_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.C30_Directory_INPUT_TMP+&quot;/&quot;+&quot;TORG_TRANSCO.json&quot;"/>
+    <elementParameter field="TEXT" name="DATABLOCKNAME" value="&quot;TORG&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFileOutputJSON_1">
+      <column comment="" key="false" name="cfiliale" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="czondv" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="magasin" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="JBL_LoadingConf_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="JBL_LoadingConf_1" offsetLabelX="0" offsetLabelY="0" source="JBL_LoadingConf_1" target="tWarn_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_1" offsetLabelX="0" offsetLabelY="0" source="tWarn_1" target="tHiveConnection_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tHiveConnection_1" offsetLabelX="0" offsetLabelY="0" source="tHiveConnection_1" target="tDie_1">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tHiveConnection_1" offsetLabelX="2" offsetLabelY="-1" source="tHiveConnection_1" target="tWarn_2">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tHiveInput_1" offsetLabelX="0" offsetLabelY="0" source="tHiveInput_1" target="tFileOutputJSON_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="cfiliale"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="czondv"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="magasin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHiveInput_1" offsetLabelX="0" offsetLabelY="0" source="tHiveInput_1" target="tWarn_3">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tHiveInput_1" offsetLabelX="0" offsetLabelY="0" source="tHiveInput_1" target="tWarn_4">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputJSON_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputJSON_1" target="tSSH_2">
+    <elementParameter field="RADIO" name="PARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="DEPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="REPARTITIONER" value="false"/>
+    <elementParameter field="RADIO" name="NONE" value="true"/>
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="5"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS"/>
+    <elementParameter field="TEXT" name="QUEUE_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="IS_SORTING" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSSH_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="JBL_LoadingConf_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ee4d5e6-6e4e-4ea9-a166-4463b1a3460c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6tNyvrH6wAYsxba4hXRApzTQP/3w8sEY7s/RIy7uakBUHsjQZgzAP7xZqmwymSbL2vN++rBpPk80
+45ZWh9OVUQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fa9b7df8-541c-4848-81e2-0f3bf7a639cb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nRQbEcoV9vteILGMSPMfuMRL+OdIg7LcGHV/pG51y4QTT72JSTEFPTQGJmx95Rm2iosY/u+Z8ISP
+bJk39vf2QA==</DigestValue></Reference></SignedInfo><SignatureValue>AbVZ/TVtHY/aeNeHH0BpPIM6cjskXtAznDizX8G7+Ta0+XSk/OvM4bsvnYarODEwzUliPCWQbCGI
+fkfQNqHH9EmRVxFP4C/f7DYkOtb3b//i5NprBk53gXegBnwCkUjEiI8yhyU6hrW7ZrVo59GXNhWm
+o/m9CmVTxM9arGOjan1B6qRdXE73ojKBxHLJe//i9HaEQ81EN8TLMxXt1x0XZdcsQ+9CQuXSdqAv
+mZ7bJtEUfgzaVWdUvJxpTNjqwo1iZXzFS8Ac2WINm1K/ByfKmBushWmxiDTH56pc4B/9IjYsddO3
+kJrqn435RZBj5j15HUTWmV6q2KgtQF7or4U9xg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fa9b7df8-541c-4848-81e2-0f3bf7a639cb" Target="#_2ee4d5e6-6e4e-4ea9-a166-4463b1a3460c"><Timestamp>2020-08-11 20:09:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
