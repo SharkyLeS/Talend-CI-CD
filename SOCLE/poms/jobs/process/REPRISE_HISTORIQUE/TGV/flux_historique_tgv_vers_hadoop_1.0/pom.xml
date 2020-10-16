@@ -28,7 +28,7 @@
     <talend.pigudf.groupid>org.example.socle.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.socle.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms1024M -Xmx2048M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms1024M -Xmx2048M -Dfile.encoding=UTF-8 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=0 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false </talend.job.jvmargs>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -108,6 +108,11 @@
       <version>2.1.1</version>
     </dependency>
     <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>20.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>guava-13.0.1</artifactId>
       <version>6.0.0</version>
@@ -136,6 +141,11 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>hbase-protocol-0.98.12-mapr-1506</artifactId>
       <version>6.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>hive-exec-0.13.0</artifactId>
+      <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -201,6 +211,11 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>netty-3.6.6.Final</artifactId>
       <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.9</version>
     </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>

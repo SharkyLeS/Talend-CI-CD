@@ -28,7 +28,7 @@
     <talend.pigudf.groupid>org.example.socle.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.socle.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=0 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false </talend.job.jvmargs>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -183,14 +183,14 @@
       <version>0.28.2</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.daikon</groupId>
-      <artifactId>crypto-utils</artifactId>
-      <version>0.31.10</version>
-    </dependency>
-    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>crypto-utils</artifactId>
       <version>6.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.daikon</groupId>
+      <artifactId>crypto-utils</artifactId>
+      <version>0.31.10</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
@@ -216,6 +216,11 @@
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>20.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>guava-13.0.1</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -421,6 +426,11 @@
       <groupId>org.ops4j.pax.url</groupId>
       <artifactId>pax-url-aether-support</artifactId>
       <version>2.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.9</version>
     </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>

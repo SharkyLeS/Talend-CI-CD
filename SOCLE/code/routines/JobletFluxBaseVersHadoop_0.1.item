@@ -226,6 +226,11 @@ public class JobletFluxBaseVersHadoop {
     	TreeSet<String> glob = new TreeSet(Arrays.asList(listGlob));
     	TreeSet<String> key = new TreeSet(Arrays.asList(listKey));
     	
+    	/*TreeSet<String> setcolumnsOutOfSchema=new TreeSet(Arrays.asList(columnsOutOfSchema));
+    	TreeSet<String> glob = new TreeSet(Arrays.asList(listGlob));
+    	globTest.removeAll(setcolumnsOutOfSchemaTest);
+    	TreeSet<String> key = new TreeSet()*/
+    	
     	glob.removeAll(setcolumnsOutOfSchema);
     	glob.removeAll(key);
     	String result = Joiner.on(",").join(glob);
